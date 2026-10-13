@@ -1,0 +1,51 @@
+{
+  "id": "lighthouse",
+  "family": "architecture",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 29072,
+  "bounds": {
+    "min": [
+      -1.0407745838165283,
+      -0.9360191822052002,
+      0.0
+    ],
+    "max": [
+      1.0478625297546387,
+      1.0839588642120361,
+      4.649999618530273
+    ]
+  },
+  "anchors": {
+    "door": [
+      0,
+      -0.82,
+      0.12
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        1.55
+      ],
+      "size": [
+        1.2,
+        1.2,
+        3.1
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 845640
+}

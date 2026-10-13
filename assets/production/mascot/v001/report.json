@@ -1,0 +1,19 @@
+{
+  "stage": "01",
+  "version": "v001",
+  "status": "static_candidate",
+  "rig": false,
+  "animations": [],
+  "collisions": false,
+  "objects": 44,
+  "triangles": 22816,
+  "materials": 11,
+  "units": "meters",
+  "height_approx_m": 1.89,
+  "limitations": [
+    "Separate overlapping meshes; not deformation-ready",
+    "Smooth stylized surface, no individual fur",
+    "References have angle inconsistencies; model is an interpretation"
+  ],
+  "glb_bytes": 552476
+}

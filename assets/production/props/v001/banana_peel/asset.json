@@ -1,0 +1,31 @@
+{
+  "id": "banana_peel",
+  "family": "props",
+  "units": "meters",
+  "up": "Y",
+  "front": "+Z",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 84,
+  "bounds": {
+    "min": [
+      -0.16,
+      0,
+      -0.09
+    ],
+    "max": [
+      0.19,
+      0.022,
+      0.09
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Authored in glTF Y-up to match the existing props kit silhouette; not a Blender v001 rebuild.",
+    "Static closed model; no interiors or gameplay"
+  ],
+  "glb_bytes": 6792
+}

@@ -1,0 +1,31 @@
+{
+  "id": "cloud",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2080,
+  "bounds": {
+    "min": [
+      -0.8000001907348633,
+      -0.40000009536743164,
+      -0.0299999862909317
+    ],
+    "max": [
+      0.8200000524520874,
+      0.40000030398368835,
+      0.8899999856948853
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 53788
+}

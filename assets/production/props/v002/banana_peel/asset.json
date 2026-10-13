@@ -1,0 +1,33 @@
+{
+  "id": "banana_peel",
+  "family": "props",
+  "units": "meters",
+  "up": "Y",
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/banana_peel/banana_peel.glb",
+  "glb": "banana_peel.glb",
+  "glb_bytes": 4576,
+  "glb_bytes_v001": 6792,
+  "sha256": "469c0ed0a7c0e69abacdbc1fc32719a8b40e2a21f49913be2805539ed1f27bdb",
+  "source_sha256": "eb7d121f59485705c57ea82e496f08b5905188eb6656370f76d5746db863b1c1",
+  "triangles": 84,
+  "vertices": 168,
+  "bounds_glb": {
+    "min": [
+      -0.16,
+      0,
+      -0.09
+    ],
+    "max": [
+      0.19,
+      0.022,
+      0.09
+    ]
+  },
+  "size_glb": [
+    0.35,
+    0.022,
+    0.18
+  ],
+  "note": "Variante optimizada de v001 con KHR_mesh_quantization. Sin Draco ni meshopt."
+}

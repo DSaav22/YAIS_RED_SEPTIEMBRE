@@ -1,0 +1,43 @@
+{
+  "id": "tree_round",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 23772,
+  "bounds": {
+    "min": [
+      -1.0700002908706665,
+      -0.9000000953674316,
+      -0.004999995231628418
+    ],
+    "max": [
+      1.0800000429153442,
+      0.8578242659568787,
+      2.91695499420166
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "capsule",
+      "center": [
+        0,
+        0,
+        0.73
+      ],
+      "radius": 0.2,
+      "height": 1.46,
+      "axis": "z"
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 658944
+}

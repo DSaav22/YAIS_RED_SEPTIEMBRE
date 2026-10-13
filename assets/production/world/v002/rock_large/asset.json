@@ -1,0 +1,70 @@
+{
+  "id": "rock_large",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 80,
+  "bounds": {
+    "min": [
+      -0.4827680289745331,
+      -0.39024218916893005,
+      -0.09738674759864807
+    ],
+    "max": [
+      0.48055505752563477,
+      0.39409634470939636,
+      0.7789738178253174
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        -0.0011064857244491577,
+        0.0019270777702331543,
+        0.34079353511333466
+      ],
+      "size": [
+        0.9633230865001678,
+        0.7843385338783264,
+        0.8763605654239655
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 6984,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/rock_large/rock_large.glb",
+  "glb": "rock_large.glb",
+  "glb_bytes_v001": 11260,
+  "sha256": "de612b796b58eb215a5274c7ef4c717a38fb6504838c834441937430569db3b7",
+  "source_sha256": "7b26414a58d207305ee121e9a7ac1946c2566ca81390032709c09a731c874007",
+  "vertices": 240,
+  "bounds_glb": {
+    "min": [
+      -0.4828,
+      -0.0974,
+      -0.3941
+    ],
+    "max": [
+      0.4806,
+      0.779,
+      0.3902
+    ]
+  },
+  "size_glb": [
+    0.9633,
+    0.8764,
+    0.7843
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

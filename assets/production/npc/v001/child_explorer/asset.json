@@ -1,0 +1,50 @@
+{
+  "meshes": 121,
+  "triangles": 57600,
+  "bounds_z_up": {
+    "min": [
+      -0.2587738037109375,
+      -0.20253904163837433,
+      0.0
+    ],
+    "max": [
+      0.2587738037109375,
+      0.2590000033378601,
+      1.2134426832199097
+    ]
+  },
+  "height_m": 1.2134,
+  "id": "child_explorer",
+  "label": "Niño explorador",
+  "version": "v001",
+  "status": "static_review_candidate",
+  "rig": false,
+  "animations": [],
+  "units": "meters",
+  "front": "-Y",
+  "up": "Z",
+  "reference": "02-primary-child-npcs-turnaround.png",
+  "collision": {
+    "implemented": false,
+    "proposal": "capsule",
+    "bounds_z_up": {
+      "min": [
+        -0.2587738037109375,
+        -0.20253904163837433,
+        0.0
+      ],
+      "max": [
+        0.2587738037109375,
+        0.2590000033378601,
+        1.2134426832199097
+      ]
+    }
+  },
+  "limitations": [
+    "Static posed assembly, not a deformation-ready mesh",
+    "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+    "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+    "Multiple objects and materials: not yet mobile optimized"
+  ],
+  "glb_bytes": 1165484
+}

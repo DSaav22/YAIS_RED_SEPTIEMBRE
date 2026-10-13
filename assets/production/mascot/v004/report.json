@@ -1,0 +1,27 @@
+{
+  "stage": "02a",
+  "version": "v004",
+  "status": "visual_revision_not_approved",
+  "rig": false,
+  "animations": [],
+  "collisions": false,
+  "objects": 55,
+  "triangles": 183182,
+  "materials": 12,
+  "reference": "assets/references-3d/technical/01-mascot-orthographic-turnaround.png",
+  "changes": [
+    "Pear-shaped head and fused torso/thighs",
+    "Vertical snout and paired nostrils",
+    "Smaller eyes and ears",
+    "Bent arms gripping backpack straps",
+    "Cinnamon paws; toe and finger creases",
+    "Portable sculpted short coat"
+  ],
+  "limitations": [
+    "Static pose, no rig or deformation topology",
+    "Sculpted fur needs mobile LOD and performance tests",
+    "Reference interpretation; not an exact reconstruction"
+  ],
+  "units": "meters",
+  "glb_bytes": 8297300
+}

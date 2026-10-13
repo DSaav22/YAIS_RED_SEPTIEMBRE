@@ -1,0 +1,81 @@
+{
+  "id": "path_straight",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 10644,
+  "bounds": {
+    "min": [
+      -1,
+      -1,
+      -0.23999999463558197
+    ],
+    "max": [
+      1,
+      1,
+      0.19279998540878296
+    ]
+  },
+  "anchors": {
+    "north": [
+      0,
+      1,
+      0
+    ],
+    "south": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.1
+      ],
+      "size": [
+        2,
+        2,
+        0.2
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 183884,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/path_straight/path_straight.glb",
+  "glb": "path_straight.glb",
+  "glb_bytes_v001": 302432,
+  "sha256": "83df990dc7a1b5fa1a4c087588d9cd8b65963eef388d07a341a9d8ae0bf0dd04",
+  "source_sha256": "95f649e64ba3e1f4179740c60983be6aba65125200602ce81185457605de64ec",
+  "vertices": 7246,
+  "bounds_glb": {
+    "min": [
+      -1,
+      -0.24,
+      -1
+    ],
+    "max": [
+      1,
+      0.1928,
+      1
+    ]
+  },
+  "size_glb": [
+    2,
+    0.4329,
+    2
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

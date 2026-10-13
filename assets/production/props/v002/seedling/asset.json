@@ -1,0 +1,56 @@
+{
+  "id": "seedling",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1248,
+  "bounds": {
+    "min": [
+      -0.3328000009059906,
+      -0.25,
+      -0.02499999850988388
+    ],
+    "max": [
+      0.35300004482269287,
+      0.25,
+      0.671999990940094
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 33972,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/seedling/seedling.glb",
+  "glb": "seedling.glb",
+  "glb_bytes_v001": 56928,
+  "sha256": "bb6503c07ccc93e2c790660a97d6e523e006f74b7c8a551cb1260c3d058f29af",
+  "source_sha256": "32235a8b9372c2f4caf11a65db7d499fa09a252b3926b37b10c7ee06e62f9fd4",
+  "vertices": 1360,
+  "bounds_glb": {
+    "min": [
+      -0.3328,
+      -0.025,
+      -0.25
+    ],
+    "max": [
+      0.353,
+      0.672,
+      0.25
+    ]
+  },
+  "size_glb": [
+    0.6858,
+    0.697,
+    0.5
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

@@ -1,0 +1,78 @@
+{
+  "id": "educator",
+  "label": "Educadora",
+  "version": "v002",
+  "source": "npc/v002/educator/educator.blend",
+  "stage": "first_deformation_rig",
+  "rig": true,
+  "bones": 17,
+  "max_influences": 2,
+  "source_meshes": 104,
+  "export_meshes": 1,
+  "triangles": 74636,
+  "clips": [
+    {
+      "name": "Idle",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Walk",
+      "seconds": 1.6,
+      "frames": 49,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Wave",
+      "seconds": 2.4,
+      "frames": 73,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Listen",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "TalkGesture",
+      "seconds": 2.8,
+      "frames": 85,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    }
+  ],
+  "in_place": true,
+  "root_motion": false,
+  "blender_axes": "Z-up / front -Y",
+  "gltf_axes": "Y-up / front +Z",
+  "limitations": [
+    "First deformation pass, not final retopology",
+    "No individual fingers or facial/lip-sync rig",
+    "Original dense fur/geometry retained; no mobile FPS claim",
+    "Runtime collision and navigation not included"
+  ],
+  "locomotion": {
+    "clip": "Walk",
+    "meters_per_cycle": 0.33333333333333337,
+    "duration_seconds": 1.6
+  },
+  "glb_bytes": 2607540,
+  "derived_from": "assets/production/animated/v001/educator/asset.json",
+  "glb": "educator.glb",
+  "bytes": 1465556,
+  "sha256": "9be4f47a42e642580d8bcb72916a863b0ae4aba0d21a9a5127f3734019bccc49",
+  "source_sha256": "0377f373e05c40b5d8bf0e5f6a882e76cbae1411dc1f3e40ab9ce0f393b3e153",
+  "vertices": 39996,
+  "note": "Clips idénticos a v001: quantize no toca la animación, solo la precisión de almacenamiento de los atributos de malla."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "crumpled_wrapper",
+  "family": "props",
+  "units": "meters",
+  "up": "Y",
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/crumpled_wrapper/crumpled_wrapper.glb",
+  "glb": "crumpled_wrapper.glb",
+  "glb_bytes": 3756,
+  "glb_bytes_v001": 4856,
+  "sha256": "29ed5a586b7c8c34a85b3ae46be79d3fd0450cb4acd1e3c4bd6751403bb4c55e",
+  "source_sha256": "009a6290d4bc15aa1738412d84342d5efc87dc462baf6bfcc92a22e5f945d2ea",
+  "triangles": 48,
+  "vertices": 96,
+  "bounds_glb": {
+    "min": [
+      -0.07,
+      0,
+      -0.055
+    ],
+    "max": [
+      0.08,
+      0.045,
+      0.05
+    ]
+  },
+  "size_glb": [
+    0.15,
+    0.045,
+    0.105
+  ],
+  "note": "Variante optimizada de v001 con KHR_mesh_quantization. Sin Draco ni meshopt."
+}

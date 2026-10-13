@@ -1,0 +1,41 @@
+# Compuerta de calidad en CI (Constitución VIII: las reglas se hacen cumplir
+# con mecanismos). Corre lo mismo que `npm run verify` en local: typecheck,
+# lint, tests, check:safety y build. No se fusiona nada con esta compuerta roja.
+
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+# Un solo trabajo por rama: cancela la corrida anterior si llega un push nuevo.
+concurrency:
+  group: verify-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Clonar el repositorio
+        uses: actions/checkout@v4
+        with:
+          # El repositorio versiona los binarios de arte (~222 MB). Un clon
+          # superficial evita arrastrar todo el historial en cada corrida.
+          fetch-depth: 1
+
+      - name: Instalar Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.14.0"
+          cache: npm
+
+      - name: Instalar dependencias desde el lockfile
+        run: npm ci
+
+      - name: Verificar
+        run: npm run verify

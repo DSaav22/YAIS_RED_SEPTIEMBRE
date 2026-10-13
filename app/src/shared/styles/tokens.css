@@ -1,0 +1,103 @@
+/* Tokens de diseño compartidos (T-001-05, PLAN-001 "Decisión visual").
+   Un solo lugar para color, espacio, tipografía y medidas de interacción.
+   `base.css` los consume para el reset y los estados globales; los
+   componentes de `app/src/game/` los consumen por clase y por
+   `var(--token)`, nunca con estilos inline (AGENTS.md). */
+
+:root {
+  color-scheme: light;
+
+  /* Color
+     Constitución VII: cada par texto/fondo se documenta con su razón de
+     contraste (fórmula de luminancia relativa WCAG 2.1,
+     ratio = (L_claro + 0.05) / (L_oscuro + 0.05)), calculada de verdad
+     y no de memoria. Mínimos exigidos: 4.5:1 para texto normal, 3:1
+     para texto grande o elementos no textuales (p. ej. el anillo de
+     foco). Los usos concretos y sus valores quedan anotados junto a la
+     regla que los aplica en `base.css` e `index.css`; aquí solo se
+     resumen los pares que definen los tokens de color:
+
+       --color-texto        sobre --color-fondo:            14.50:1
+       --color-texto        sobre --color-superficie:       16.20:1
+       --color-texto-suave  sobre --color-fondo:              7.68:1
+       --color-texto-suave  sobre --color-superficie:         8.59:1
+       --color-borrador-texto sobre --color-borrador-fondo: 10.77:1
+       --color-acento-texto (blanco) sobre --color-acento:    7.80:1
+       --color-acento como anillo de foco (no-texto, min 3:1):
+         sobre --color-fondo:            6.98:1
+         sobre --color-superficie:       7.80:1
+         sobre --color-borrador-fondo:   6.85:1
+
+     Todos superan el mínimo exigido con margen. */
+  --color-fondo: #f5f2ec;
+  --color-superficie: #ffffff;
+  --color-texto: #1d2125;
+  --color-texto-suave: #454d55;
+  --color-borde: #d8d2c6;
+  --color-acento: #0b5d4f;
+  --color-acento-texto: #ffffff;
+  /* Cielo de la escena 3D. Es decorativo y nunca lleva texto encima: el
+     lienzo es transparente y este color se ve por detrás, así que el color
+     del cielo vive con el resto de los tokens y no incrustado en el código
+     de la escena. */
+  --color-cielo: #d3e7f2;
+  /* El mar. Hasta ahora el agua se pintaba con el mismo color que el cielo y
+     no había línea de horizonte: once islas flotando en la nada. Más saturado
+     y más oscuro que el cielo, y con contraste de sobra contra el césped. */
+  --color-mar: #7fb4cf;
+
+  /* Pasteles decorativos del disco que hay detrás del icono de cada tarjeta
+     de decisión (lámina `isla-acuerdos-core-screens.png`: cada opción lleva
+     su propio color). Son decoración y nunca llevan texto encima; lo único
+     que se apoya en ellos es el trazo del icono, en --color-texto, y todos
+     superan con holgura el 3:1 que WCAG pide para un elemento no textual:
+       sol 12.85:1 · coral 11.35:1 · turquesa 11.83:1 · hoja 12.08:1
+     El color nunca es el único significado: la silueta del icono, el texto
+     de la opción y el orden dicen lo mismo sin él. */
+  --color-tarjeta-sol: #fbe3a8;
+  --color-tarjeta-coral: #f8cfc4;
+  --color-tarjeta-turquesa: #bfe3e5;
+  --color-tarjeta-hoja: #cfe6b8;
+  --color-borrador-fondo: #fdefd2;
+  --color-borrador-borde: #8a5a00;
+  --color-borrador-texto: #4a3000;
+
+  /* Espacio */
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2rem;
+
+  /* Tipografía
+     El escenario real es un dispositivo proyectado en un aula, no un
+     móvil en la mano: la escala parte de un cuerpo más grande que el
+     estándar web (20px/1.25rem en vez de 16px) y crece con `clamp()`
+     para salas donde la imagen proyectada es grande. El interlineado
+     generoso ayuda a leer a distancia. */
+  --fuente-familia: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --fuente-tamano-cuerpo: 1.25rem;
+  --fuente-tamano-opcion: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
+  --fuente-tamano-subtitulo: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);
+  --fuente-tamano-titulo: clamp(1.75rem, 1.2rem + 2.5vw, 2.75rem);
+  --fuente-interlineado: 1.6;
+  --fuente-interlineado-titulo: 1.2;
+
+  /* Interacción: mínimo táctil exigido por AC-6. `.objetivo-tactil` en
+     `base.css` lo aplica como clase reutilizable para cualquier
+     control (botón, opción de diálogo, icono con acción). */
+  --objetivo-tactil-min: 44px;
+  --radio: 0.75rem;
+  /* Redondeo grande, para los paneles que flotan sobre el mundo. Una
+     esquina marcada se lee como "formulario"; una redonda, como "algo del
+     juego". Es la misma forma que tienen las piezas del kit 3D. */
+  --radio-grande: 1.25rem;
+  /* Pastilla: los controles pequeños que flotan en una esquina. */
+  --radio-pastilla: 999px;
+
+  /* Sombra de los paneles que se apoyan sobre la escena. Separa el panel del
+     mundo sin necesidad de un borde grueso, que a estos tamaños ensucia. */
+  --sombra-flotante: 0 2px 10px rgba(29, 33, 37, 0.18);
+  --sombra-panel: 0 6px 24px rgba(29, 33, 37, 0.22);
+  --anillo-foco: 3px solid var(--color-acento);
+  --anillo-foco-separacion: 2px;
+}

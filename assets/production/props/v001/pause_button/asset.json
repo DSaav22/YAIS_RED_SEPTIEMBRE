@@ -1,0 +1,31 @@
+{
+  "id": "pause_button",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1044,
+  "bounds": {
+    "min": [
+      -0.3499999940395355,
+      -0.0820000022649765,
+      0.03999999165534973
+    ],
+    "max": [
+      0.3499999940395355,
+      0.04500001668930054,
+      0.7400000095367432
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 31400
+}

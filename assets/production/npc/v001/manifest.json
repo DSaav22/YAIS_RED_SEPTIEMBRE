@@ -1,0 +1,230 @@
+{
+  "version": "mixed-current-candidates",
+  "characters": [
+    {
+      "meshes": 121,
+      "triangles": 57600,
+      "bounds_z_up": {
+        "min": [
+          -0.2587738037109375,
+          -0.20253904163837433,
+          0.0
+        ],
+        "max": [
+          0.2587738037109375,
+          0.2590000033378601,
+          1.2134426832199097
+        ]
+      },
+      "height_m": 1.2134,
+      "id": "child_explorer",
+      "label": "Niño explorador",
+      "version": "v001",
+      "status": "static_review_candidate",
+      "rig": false,
+      "animations": [],
+      "units": "meters",
+      "front": "-Y",
+      "up": "Z",
+      "reference": "02-primary-child-npcs-turnaround.png",
+      "collision": {
+        "implemented": false,
+        "proposal": "capsule",
+        "bounds_z_up": {
+          "min": [
+            -0.2587738037109375,
+            -0.20253904163837433,
+            0.0
+          ],
+          "max": [
+            0.2587738037109375,
+            0.2590000033378601,
+            1.2134426832199097
+          ]
+        }
+      },
+      "limitations": [
+        "Static posed assembly, not a deformation-ready mesh",
+        "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+        "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+        "Multiple objects and materials: not yet mobile optimized"
+      ],
+      "glb_bytes": 1165484,
+      "views": [
+        "../v001/child_explorer/front.png",
+        "../v001/child_explorer/three-quarter.png",
+        "../v001/child_explorer/side.png",
+        "../v001/child_explorer/back.png"
+      ]
+    },
+    {
+      "meshes": 394,
+      "triangles": 149252,
+      "bounds_z_up": {
+        "min": [
+          -0.33555951714515686,
+          -0.4328250288963318,
+          -1.1224440266133229e-09
+        ],
+        "max": [
+          0.33555951714515686,
+          0.3139999806880951,
+          1.2639182806015015
+        ]
+      },
+      "height_m": 1.2639,
+      "id": "child_wheelchair",
+      "label": "Niña en silla de ruedas",
+      "version": "v002",
+      "status": "static_review_candidate",
+      "rig": false,
+      "animations": [],
+      "units": "meters",
+      "front": "-Y",
+      "up": "Z",
+      "reference": "02-primary-child-npcs-turnaround.png",
+      "collision": {
+        "implemented": false,
+        "proposal": "rounded_box",
+        "bounds_z_up": {
+          "min": [
+            -0.33555951714515686,
+            -0.4328250288963318,
+            -1.1224440266133229e-09
+          ],
+          "max": [
+            0.33555951714515686,
+            0.3139999806880951,
+            1.2639182806015015
+          ]
+        }
+      },
+      "limitations": [
+        "Static posed assembly, not a deformation-ready mesh",
+        "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+        "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+        "Multiple objects and materials: not yet mobile optimized"
+      ],
+      "glb_bytes": 3451292,
+      "views": [
+        "../v002/child_wheelchair/front.png",
+        "../v002/child_wheelchair/three-quarter.png",
+        "../v002/child_wheelchair/side.png",
+        "../v002/child_wheelchair/back.png"
+      ]
+    },
+    {
+      "meshes": 104,
+      "triangles": 74636,
+      "bounds_z_up": {
+        "min": [
+          -0.3035135865211487,
+          -0.22895000874996185,
+          0.0
+        ],
+        "max": [
+          0.3035135865211487,
+          0.21576347947120667,
+          1.6461399793624878
+        ]
+      },
+      "height_m": 1.6461,
+      "id": "educator",
+      "label": "Educadora",
+      "version": "v002",
+      "status": "static_review_candidate",
+      "rig": false,
+      "animations": [],
+      "units": "meters",
+      "front": "-Y",
+      "up": "Z",
+      "reference": "03-trusted-adults-turnaround.png",
+      "collision": {
+        "implemented": false,
+        "proposal": "capsule",
+        "bounds_z_up": {
+          "min": [
+            -0.3035135865211487,
+            -0.22895000874996185,
+            0.0
+          ],
+          "max": [
+            0.3035135865211487,
+            0.21576347947120667,
+            1.6461399793624878
+          ]
+        }
+      },
+      "limitations": [
+        "Static posed assembly, not a deformation-ready mesh",
+        "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+        "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+        "Multiple objects and materials: not yet mobile optimized"
+      ],
+      "glb_bytes": 1395200,
+      "views": [
+        "../v002/educator/front.png",
+        "../v002/educator/three-quarter.png",
+        "../v002/educator/side.png",
+        "../v002/educator/back.png"
+      ]
+    },
+    {
+      "meshes": 234,
+      "triangles": 117860,
+      "bounds_z_up": {
+        "min": [
+          -0.3449999988079071,
+          -0.2817935347557068,
+          0.0
+        ],
+        "max": [
+          0.3316960334777832,
+          0.19833633303642273,
+          1.6999999284744263
+        ]
+      },
+      "height_m": 1.7,
+      "id": "community_guide",
+      "label": "Guía comunitario",
+      "version": "v002",
+      "status": "static_review_candidate",
+      "rig": false,
+      "animations": [],
+      "units": "meters",
+      "front": "-Y",
+      "up": "Z",
+      "reference": "03-trusted-adults-turnaround.png",
+      "collision": {
+        "implemented": false,
+        "proposal": "capsule",
+        "bounds_z_up": {
+          "min": [
+            -0.3449999988079071,
+            -0.2817935347557068,
+            0.0
+          ],
+          "max": [
+            0.3316960334777832,
+            0.19833633303642273,
+            1.6999999284744263
+          ]
+        }
+      },
+      "limitations": [
+        "Static posed assembly, not a deformation-ready mesh",
+        "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+        "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+        "Multiple objects and materials: not yet mobile optimized"
+      ],
+      "glb_bytes": 2537604,
+      "views": [
+        "../v002/community_guide/front.png",
+        "../v002/community_guide/three-quarter.png",
+        "../v002/community_guide/side.png",
+        "../v002/community_guide/back.png"
+      ]
+    }
+  ],
+  "count": 4
+}

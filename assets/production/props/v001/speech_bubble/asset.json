@@ -1,0 +1,31 @@
+{
+  "id": "speech_bubble",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1372,
+  "bounds": {
+    "min": [
+      -0.41999998688697815,
+      -0.0690000057220459,
+      0.02531173825263977
+    ],
+    "max": [
+      0.41999998688697815,
+      0.04500000178813934,
+      0.6899999976158142
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 81268
+}

@@ -1,0 +1,62 @@
+{
+  "id": "compass",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 3376,
+  "bounds": {
+    "min": [
+      -0.3700000047683716,
+      -0.1420000046491623,
+      0.06999999284744263
+    ],
+    "max": [
+      0.3700000047683716,
+      0.060000013560056686,
+      0.9730000495910645
+    ]
+  },
+  "anchors": {
+    "grip": [
+      0,
+      0,
+      0.88
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 63928,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/compass/compass.glb",
+  "glb": "compass.glb",
+  "glb_bytes_v001": 104620,
+  "sha256": "aada4786b2ad43e6186cd7d31cd64089e6fdd768e4501b65754a7588d1d98eab",
+  "source_sha256": "18ee1fbc3ef9db3ea8655f94e600d743e191e5b8ee0e4577029fead56984b7aa",
+  "vertices": 2481,
+  "bounds_glb": {
+    "min": [
+      -0.37,
+      0.07,
+      -0.06
+    ],
+    "max": [
+      0.37,
+      0.973,
+      0.142
+    ]
+  },
+  "size_glb": [
+    0.74,
+    0.903,
+    0.2019
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

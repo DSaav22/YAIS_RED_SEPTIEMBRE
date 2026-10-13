@@ -1,0 +1,30 @@
+{
+  "name": "yais-game-hackbiz",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "La Isla de los Acuerdos — vertical slice web del Episodio 1.",
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "workspaces": [
+    "app"
+  ],
+  "scripts": {
+    "dev": "npm run sync:assets && npm run dev --workspace app",
+    "sync:assets": "node scripts/sync-runtime-assets.mjs",
+    "build": "npm run sync:assets && npm run build --workspace app",
+    "preview": "npm run preview --workspace app",
+    "typecheck": "npm run typecheck --workspace app",
+    "lint": "npm run lint --workspace app",
+    "test": "npm run test --workspace app",
+    "test:watch": "npm run test:watch --workspace app",
+    "check:safety": "node scripts/check-safety.mjs",
+    "verify": "npm run typecheck && npm run lint && npm run test && npm run check:safety && npm run build"
+  },
+  "devDependencies": {
+    "@gltf-transform/core": "4.5.0",
+    "@gltf-transform/extensions": "4.5.0",
+    "@gltf-transform/functions": "4.5.0"
+  }
+}

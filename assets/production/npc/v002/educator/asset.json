@@ -1,0 +1,50 @@
+{
+  "meshes": 104,
+  "triangles": 74636,
+  "bounds_z_up": {
+    "min": [
+      -0.3035135865211487,
+      -0.22895000874996185,
+      0.0
+    ],
+    "max": [
+      0.3035135865211487,
+      0.21576347947120667,
+      1.6461399793624878
+    ]
+  },
+  "height_m": 1.6461,
+  "id": "educator",
+  "label": "Educadora",
+  "version": "v002",
+  "status": "static_review_candidate",
+  "rig": false,
+  "animations": [],
+  "units": "meters",
+  "front": "-Y",
+  "up": "Z",
+  "reference": "03-trusted-adults-turnaround.png",
+  "collision": {
+    "implemented": false,
+    "proposal": "capsule",
+    "bounds_z_up": {
+      "min": [
+        -0.3035135865211487,
+        -0.22895000874996185,
+        0.0
+      ],
+      "max": [
+        0.3035135865211487,
+        0.21576347947120667,
+        1.6461399793624878
+      ]
+    }
+  },
+  "limitations": [
+    "Static posed assembly, not a deformation-ready mesh",
+    "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+    "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+    "Multiple objects and materials: not yet mobile optimized"
+  ],
+  "glb_bytes": 1395200
+}

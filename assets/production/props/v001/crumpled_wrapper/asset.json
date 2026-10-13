@@ -1,0 +1,31 @@
+{
+  "id": "crumpled_wrapper",
+  "family": "props",
+  "units": "meters",
+  "up": "Y",
+  "front": "+Z",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 48,
+  "bounds": {
+    "min": [
+      -0.07,
+      0,
+      -0.055
+    ],
+    "max": [
+      0.08,
+      0.045,
+      0.05
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Authored in glTF Y-up to match the existing props kit silhouette; not a Blender v001 rebuild.",
+    "Static closed model; no interiors or gameplay"
+  ],
+  "glb_bytes": 4856
+}

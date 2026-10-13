@@ -1,0 +1,37 @@
+{
+  "id": "gift_box",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2568,
+  "bounds": {
+    "min": [
+      -0.32499998807907104,
+      -0.28999999165534973,
+      0.0
+    ],
+    "max": [
+      0.32499998807907104,
+      0.28999999165534973,
+      0.9249714612960815
+    ]
+  },
+  "anchors": {
+    "lid": [
+      0,
+      0,
+      0.6
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 67924
+}

@@ -1,0 +1,70 @@
+{
+  "id": "fence_wood",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2568,
+  "bounds": {
+    "min": [
+      -0.9869999885559082,
+      -0.08700000494718552,
+      0
+    ],
+    "max": [
+      0.9869999885559082,
+      0.08700000494718552,
+      0.8625000715255737
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        0.4
+      ],
+      "size": [
+        1.96,
+        0.14,
+        0.8
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 43396,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/fence_wood/fence_wood.glb",
+  "glb": "fence_wood.glb",
+  "glb_bytes_v001": 69248,
+  "sha256": "dcc5abfb4deee44d2243b33bb67dc599f0cb6cb295070b35b1c39e223a5f3274",
+  "source_sha256": "f4350664279d32ecb911e219d4b889da3f82379615093fb0aac6a76eb2c14375",
+  "vertices": 1586,
+  "bounds_glb": {
+    "min": [
+      -0.987,
+      0,
+      -0.087
+    ],
+    "max": [
+      0.987,
+      0.8625,
+      0.087
+    ]
+  },
+  "size_glb": [
+    1.974,
+    0.8625,
+    0.174
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

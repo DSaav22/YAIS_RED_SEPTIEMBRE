@@ -1,0 +1,56 @@
+{
+  "id": "folded_map",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 3360,
+  "bounds": {
+    "min": [
+      -0.43896031379699707,
+      -0.07500001788139343,
+      0.015000015497207642
+    ],
+    "max": [
+      0.43896040320396423,
+      0.03760657459497452,
+      0.7050000429153442
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 55824,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/folded_map/folded_map.glb",
+  "glb": "folded_map.glb",
+  "glb_bytes_v001": 91868,
+  "sha256": "7abc9b7d21beeba843f7c7eeea1d18bc0e45235261e779d6f2a28a463d0a57f4",
+  "source_sha256": "bf62f7fd03ac6ba7a2411a339671e50eadad78f00999255c4e10cad211f0766f",
+  "vertices": 2195,
+  "bounds_glb": {
+    "min": [
+      -0.439,
+      0.015,
+      -0.0376
+    ],
+    "max": [
+      0.439,
+      0.705,
+      0.075
+    ]
+  },
+  "size_glb": [
+    0.8779,
+    0.69,
+    0.1126
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

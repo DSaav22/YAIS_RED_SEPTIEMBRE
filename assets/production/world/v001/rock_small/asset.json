@@ -1,0 +1,45 @@
+{
+  "id": "rock_small",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 80,
+  "bounds": {
+    "min": [
+      -0.22621791064739227,
+      -0.22754397988319397,
+      -0.03828808665275574
+    ],
+    "max": [
+      0.23656025528907776,
+      0.20559971034526825,
+      0.35084158182144165
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0.005171172320842743,
+        -0.01097213476896286,
+        0.15627674758434296
+      ],
+      "size": [
+        0.46277816593647003,
+        0.4331436902284622,
+        0.3891296684741974
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 11268
+}

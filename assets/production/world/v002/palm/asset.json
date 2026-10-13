@@ -1,0 +1,68 @@
+{
+  "id": "palm",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 31556,
+  "bounds": {
+    "min": [
+      -1.0287606716156006,
+      -1.1287606954574585,
+      0.002499997615814209
+    ],
+    "max": [
+      1.2287607192993164,
+      1.1287606954574585,
+      2.6783034801483154
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "capsule",
+      "center": [
+        0.05,
+        0,
+        1.1
+      ],
+      "radius": 0.13,
+      "height": 2.2,
+      "axis": "z"
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 524540,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/palm/palm.glb",
+  "glb": "palm.glb",
+  "glb_bytes_v001": 857144,
+  "sha256": "5f66dd75936eb2f09a1bbcba91e19ade30b4e1b135bc99e751553dceb46a2f47",
+  "source_sha256": "8612b6987c35be3f0eb082514078b79e48b61924769a65d0c6b723f944b79902",
+  "vertices": 20741,
+  "bounds_glb": {
+    "min": [
+      -1.0288,
+      0.0025,
+      -1.1288
+    ],
+    "max": [
+      1.2288,
+      2.6783,
+      1.1288
+    ]
+  },
+  "size_glb": [
+    2.2577,
+    2.6758,
+    2.2577
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

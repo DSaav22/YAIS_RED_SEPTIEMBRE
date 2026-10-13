@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YAIS · Visor 3D</title>
+<script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#102b32;color:#edf5ed;font:16px/1.55 system-ui}main{max-width:1100px;margin:auto;padding:24px}a{color:#ffd277}.top{display:flex;justify-content:space-between;gap:16px;align-items:center;flex-wrap:wrap}.viewer{height:min(72vh,720px);min-height:440px;margin-top:20px;background:radial-gradient(circle at 50% 35%,#dff1e7,#86b9b5 72%);border-radius:22px;overflow:hidden}model-viewer{width:100%;height:100%;--poster-color:transparent;--progress-bar-color:#f3bd43}.tools{display:flex;gap:10px;flex-wrap:wrap;margin:16px 0}.tools button{border:0;border-radius:999px;padding:11px 16px;background:#ffd277;color:#132b31;font-weight:700;cursor:pointer}.card{margin-top:18px;padding:16px 20px;border-left:3px solid #ffd277;background:#204149;border-radius:10px}.muted{color:#bfd6ce}.error{color:#ffbf9d}code{overflow-wrap:anywhere;color:#ffe19b}
+button,select,input{font:inherit;min-height:44px}a{display:inline-flex;align-items:center;min-height:44px}button,select{min-width:44px}select{max-width:100%;padding:8px;background:#204149;color:#edf5ed;border:1px solid #bfd6ce;border-radius:8px}:focus-visible{outline:3px solid #fff;outline-offset:4px}.animation{padding:18px;border:1px solid #678b8c;border-radius:14px}.animation .tools{align-items:end}.field{display:flex;flex-direction:column;gap:6px}.timeline{display:flex;gap:16px;align-items:center;flex-wrap:wrap}.timeline input{flex:1;min-width:140px;max-width:100%}button:disabled{opacity:.55;cursor:not-allowed}.fallback img{display:block;width:min(100%,400px);height:auto;border-radius:16px}.fallback[hidden],[hidden]{display:none!important}@media(max-width:600px){main{padding:16px}.viewer{height:55vh;min-height:300px}h1{font-size:1.6rem;overflow-wrap:anywhere}}@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+.workspace{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,360px);gap:18px;align-items:start}.workspace:has(#animation[hidden]){grid-template-columns:1fr}.workspace .viewer{height:min(62vh,620px);min-height:330px}.workspace .animation{margin-top:20px;min-width:0}.animation h2{font-size:1.3rem;margin-top:0}.animation p{font-size:.9rem}.animation .timeline{gap:8px}.animation .field{max-width:100%}@media(max-width:900px){.workspace{grid-template-columns:1fr}.workspace .viewer{height:45vh;min-height:280px}.workspace .animation{margin-top:0}}
+</style></head><body><main>
+<div class="top"><div><a href="index.html">← Catálogo YAIS</a><h1 id="title">Visor 3D</h1></div><a id="download" download>Descargar GLB</a></div>
+<div class="workspace"><div><div class="viewer"><model-viewer id="model" camera-controls touch-action="pan-y" shadow-intensity="1" exposure="1.05" camera-orbit="35deg 72deg auto" field-of-view="28deg" alt="Modelo 3D YAIS"></model-viewer></div>
+<div class="tools"><button id="front">Frente</button><button id="three">Tres cuartos</button><button id="side">Perfil</button><button id="back">Espalda</button><button id="reset">Restablecer</button></div>
+</div><section id="animation" class="animation" aria-label="Revisión de animaciones" hidden>
+<h2>Animaciones del personaje</h2>
+<p>Inician pausadas. Elige un movimiento y pulsa Reproducir, o mueve el control de tiempo para revisar una postura. La locomoción es en el sitio: aquí el personaje no avanza por una escena.</p>
+<div class="tools"><label class="field">Movimiento<select id="clip"></select></label><button id="play">Reproducir</button><button id="start">Volver al inicio</button><label class="field">Velocidad<select id="speed"><option value="0.5">0,5×</option><option value="1" selected>1×</option><option value="1.5">1,5×</option></select></label></div>
+<label for="time">Posición de la animación (segundos)</label><div class="timeline"><input id="time" type="range" min="0" max="1" step="0.01" value="0"><output id="time-label" for="time" aria-live="off">0,00 s</output></div>
+</section></div>
+<div class="card"><strong>Cómo revisar:</strong> arrastra para girar, pellizca o usa la rueda para acercar. En teléfono puedes girarlo y usar dos dedos. Si el modelo no aparece, comprueba que el servidor esté activo y que haya conexión para cargar el componente visor.</div>
+<p id="status" class="muted" role="status">Cargando modelo…</p>
+<section id="fallback" class="fallback" hidden><h2>Vista estática alternativa</h2><p>Esta imagen permite revisar la apariencia sin WebGL; no reproduce las animaciones.</p><img id="fallback-image" alt="Render estático del personaje"><a id="fallback-link">Abrir imagen sin visor 3D</a></section>
+<p class="muted">El archivo Blender se edita en Blender. El GLB puede revisarse aquí e integrarse en el motor web. Este visor es de producción, no el juego final. Solo carga el modelo elegido; requiere Internet para obtener el componente visor, no para enviar tus modelos.</p>
+<noscript><p>Activa JavaScript para el visor interactivo o vuelve al <a href="index.html">catálogo de imágenes estáticas</a>.</p></noscript>
+</main><script>
+const params=new URLSearchParams(location.search),model=document.querySelector('#model');
+const clean=(params.get('model')||'mascot/v005/mascot.glb').replaceAll('\\','/');
+const status=document.querySelector('#status'),panel=document.querySelector('#animation'),clip=document.querySelector('#clip'),play=document.querySelector('#play'),time=document.querySelector('#time'),timeLabel=document.querySelector('#time-label');
+const names={Idle:'Reposo',Walk:'Caminar',Roll:'Rodar en silla',Wave:'Saludo',Listen:'Escuchar',TalkGesture:'Gesto de conversación'};
+let frame=0,loaded=false;
+function updateTime(){const seconds=Number(model.currentTime)||0,duration=Number(model.duration)||0;time.max=String(duration||1);time.value=String(seconds);timeLabel.textContent=seconds.toFixed(2)+' / '+duration.toFixed(2)+' s';time.setAttribute('aria-valuetext',seconds.toFixed(2)+' de '+duration.toFixed(2)+' segundos')}
+function tick(){updateTime();if(!model.paused)frame=requestAnimationFrame(tick)}
+function pause(){if(typeof model.pause==='function')model.pause();cancelAnimationFrame(frame);play.textContent='Reproducir';updateTime()}
+function choose(){pause();model.animationName=clip.value;model.currentTime=0;requestAnimationFrame(updateTime)}
+clip.onchange=choose;play.onclick=()=>{if(model.paused){model.play();play.textContent='Pausar';cancelAnimationFrame(frame);tick()}else pause()};
+document.querySelector('#start').onclick=()=>{pause();model.currentTime=0;updateTime()};
+document.querySelector('#speed').onchange=e=>{model.timeScale=Number(e.target.value)};
+time.oninput=()=>{const seconds=Number(time.value);pause();model.currentTime=seconds;updateTime()};
+document.addEventListener('visibilitychange',()=>{if(document.hidden)pause()});
+matchMedia('(prefers-reduced-motion: reduce)').addEventListener('change',()=>pause());
+if(!/^(mascot|world|props|npc|animated)\/v[0-9]{3}(?:\/[A-Za-z0-9_-]+){1,2}\.glb$/.test(clean)){status.textContent='Ruta de modelo no válida.';status.className='error'}else{
+ const src='/assets/production/'+clean;const name=params.get('name')||clean.split('/').at(-1).replace('.glb','');document.querySelector('#title').textContent=name.replaceAll('_',' ');model.alt='Modelo 3D de '+name;const d=document.querySelector('#download');d.href=src;d.setAttribute('download',name+'.glb');
+ const id=clean.split('/').at(-1).replace('.glb','');
+ const sources={mascot:'mascot/v005',child_explorer:'npc/v001/child_explorer',child_wheelchair:'npc/v002/child_wheelchair',educator:'npc/v002/educator',community_guide:'npc/v002/community_guide'};
+ if(sources[id]){const poster='/assets/production/'+sources[id]+'/three-quarter.png';model.poster=poster;document.querySelector('#fallback').hidden=false;document.querySelector('#fallback-image').src=poster;document.querySelector('#fallback-link').href=poster}
+ model.animationCrossfadeDuration=0;
+ model.addEventListener('load',()=>{loaded=true;status.textContent='Modelo cargado. Puedes girarlo y acercarlo.';clip.replaceChildren();for(const name of model.availableAnimations){const option=document.createElement('option');option.value=name;option.textContent=(names[name]||name)+' · '+name;clip.append(option)}panel.hidden=clip.options.length===0;if(clip.options.length){clip.value=model.availableAnimations.includes('Idle')?'Idle':model.availableAnimations[0];choose();status.textContent='Rig cargado: '+clip.options.length+' animaciones. Reproducción pausada.'}});
+ model.addEventListener('error',()=>{loaded=false;pause();panel.hidden=true;status.textContent='No se pudo cargar el 3D. Usa la imagen estática o descarga el GLB; revisa la conexión y el servidor.';status.className='error'});
+ model.src=src;
+ setTimeout(()=>{if(!loaded){status.textContent='El visor está tardando o no está disponible. Puedes revisar la imagen estática y descargar el GLB.'}},20000);
+}
+function orbit(v){if(!loaded)return;model.cameraOrbit=v;model.jumpCameraToGoal()}document.querySelector('#front').onclick=()=>orbit('0deg 90deg auto');document.querySelector('#three').onclick=()=>orbit('35deg 72deg auto');document.querySelector('#side').onclick=()=>orbit('90deg 90deg auto');document.querySelector('#back').onclick=()=>orbit('180deg 90deg auto');document.querySelector('#reset').onclick=()=>{if(!loaded)return;pause();model.cameraOrbit='35deg 72deg auto';model.fieldOfView='28deg';model.resetTurntableRotation()};
+</script></body></html>

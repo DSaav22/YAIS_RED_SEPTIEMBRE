@@ -1,0 +1,50 @@
+{
+  "meshes": 234,
+  "triangles": 117860,
+  "bounds_z_up": {
+    "min": [
+      -0.3449999988079071,
+      -0.2817935347557068,
+      0.0
+    ],
+    "max": [
+      0.3316960334777832,
+      0.19833633303642273,
+      1.6999999284744263
+    ]
+  },
+  "height_m": 1.7,
+  "id": "community_guide",
+  "label": "Guía comunitario",
+  "version": "v002",
+  "status": "static_review_candidate",
+  "rig": false,
+  "animations": [],
+  "units": "meters",
+  "front": "-Y",
+  "up": "Z",
+  "reference": "03-trusted-adults-turnaround.png",
+  "collision": {
+    "implemented": false,
+    "proposal": "capsule",
+    "bounds_z_up": {
+      "min": [
+        -0.3449999988079071,
+        -0.2817935347557068,
+        0.0
+      ],
+      "max": [
+        0.3316960334777832,
+        0.19833633303642273,
+        1.6999999284744263
+      ]
+    }
+  },
+  "limitations": [
+    "Static posed assembly, not a deformation-ready mesh",
+    "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+    "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+    "Multiple objects and materials: not yet mobile optimized"
+  ],
+  "glb_bytes": 2537604
+}

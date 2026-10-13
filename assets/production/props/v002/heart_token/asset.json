@@ -1,0 +1,56 @@
+{
+  "id": "heart_token",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1084,
+  "bounds": {
+    "min": [
+      -0.4000000059604645,
+      -0.03750000149011612,
+      -0.06476777791976929
+    ],
+    "max": [
+      0.4000000059604645,
+      0.03750000149011612,
+      0.6577571630477905
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 40580,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/heart_token/heart_token.glb",
+  "glb": "heart_token.glb",
+  "glb_bytes_v001": 56856,
+  "sha256": "b4bc2456924b170f22adca2b495bee1f26ef56ba44690a3f865e51032597085f",
+  "source_sha256": "89cfad169261067de2e8c4c4eaacddf914c19fdb5998d6accc83bd74f3f5698a",
+  "vertices": 2052,
+  "bounds_glb": {
+    "min": [
+      -0.4,
+      -0.0648,
+      -0.0375
+    ],
+    "max": [
+      0.4,
+      0.6578,
+      0.0375
+    ]
+  },
+  "size_glb": [
+    0.8,
+    0.7226,
+    0.075
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

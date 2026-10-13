@@ -1,0 +1,76 @@
+{
+  "id": "lighthouse",
+  "family": "architecture",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 29072,
+  "bounds": {
+    "min": [
+      -1.0407745838165283,
+      -0.9360191822052002,
+      0
+    ],
+    "max": [
+      1.0478625297546387,
+      1.0839588642120361,
+      4.649999618530273
+    ]
+  },
+  "anchors": {
+    "door": [
+      0,
+      -0.82,
+      0.12
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        1.55
+      ],
+      "size": [
+        1.2,
+        1.2,
+        3.1
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 512492,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/lighthouse/lighthouse.glb",
+  "glb": "lighthouse.glb",
+  "glb_bytes_v001": 845640,
+  "sha256": "752ef76486f213f2157ec33da82fa0563c39b03b29e045f03bbe328e0fc1a91a",
+  "source_sha256": "4208be85133ca1f587bb2027c287c4fcc423a76259b82bedadb581d19d178a03",
+  "vertices": 20704,
+  "bounds_glb": {
+    "min": [
+      -1.0407,
+      0,
+      -1.0839
+    ],
+    "max": [
+      1.0478,
+      4.65,
+      0.9359
+    ]
+  },
+  "size_glb": [
+    2.0885,
+    4.65,
+    2.0198
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

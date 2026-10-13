@@ -1,0 +1,31 @@
+{
+  "id": "card_sun",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1880,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.06100000441074371,
+      0.005000025033950806
+    ],
+    "max": [
+      0.23499999940395355,
+      0.029999999329447746,
+      0.7150000333786011
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 52252
+}

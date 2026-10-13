@@ -1,0 +1,24 @@
+.DS_Store
+Thumbs.db
+*.log
+
+node_modules/
+app/node_modules/
+app/dist/
+coverage/
+
+.tools/
+__pycache__/
+*.pyc
+
+# Generado por scripts/sync-runtime-assets.mjs; las fuentes viven en /assets.
+app/public/assets/
+
+
+# Ajustes locales de Claude Code, por máquina.
+.claude/settings.local.json
+# Configuración del servidor de desarrollo: el puerto depende de la máquina.
+.claude/launch.json
+
+# Vinculación local con Vercel (IDs de proyecto y credenciales de la CLI).
+.vercel/

@@ -1,0 +1,31 @@
+{
+  "id": "water_bottle",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2080,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.2449999898672104,
+      0.054999977350234985
+    ],
+    "max": [
+      0.29548096656799316,
+      0.23499999940395355,
+      1.086543321609497
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 71128
+}

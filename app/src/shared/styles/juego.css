@@ -1,0 +1,1115 @@
+/* Estilos del juego (T-001-05). Consumen los tokens de `tokens.css` y la
+   base de `base.css`; aquí no se define ningún color ni medida nueva, solo
+   se componen (AGENTS.md).
+
+   Reglas que se sostienen en todo este archivo:
+   - Ningún texto rasterizado: todo es texto real, seleccionable y escalable.
+   - El color nunca es el único significado: forma, texto e icono acompañan.
+   - Todo control interactivo usa `.objetivo-tactil` (44x44 mínimo, AC-6).
+   - Ninguna animación ni transición: el 2D no las necesita y así AC-7 se
+     cumple por construcción, no por una excepción de `prefers-reduced-motion`.
+   - La retícula pasa a una sola columna en pantallas angostas (375 px es el
+     ancho de prueba de T-001-07). */
+
+/* Texto solo para lectores de pantalla (la región `aria-live` del diálogo).
+   No usa `display: none` ni `visibility: hidden`: eso lo sacaría del árbol
+   de accesibilidad y dejaría de anunciarse. */
+.visualmente-oculto {
+  position: absolute;
+  inline-size: 1px;
+  block-size: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* --- Botones ------------------------------------------------------------ */
+
+.boton {
+  border: 2px solid var(--color-acento);
+  border-radius: var(--radio);
+  font-family: inherit;
+  font-size: var(--fuente-tamano-opcion);
+  line-height: var(--fuente-interlineado);
+  cursor: pointer;
+}
+
+/* Contraste --color-acento-texto (blanco) sobre --color-acento: 7.80:1
+   (texto normal, min 4.5:1). */
+.boton--primario {
+  background-color: var(--color-acento);
+  color: var(--color-acento-texto);
+  font-weight: 700;
+}
+
+/* Contraste --color-acento sobre --color-superficie: 7.80:1. */
+.boton--secundario {
+  background-color: var(--color-superficie);
+  color: var(--color-acento);
+}
+
+/* Las opciones de decisión son tarjetas con el icono grande arriba y el texto
+   debajo, como en la lámina `isla-acuerdos-core-screens.png`, no filas de una
+   lista. El icono es SVG dibujado en código: las láminas son brief de arte y
+   no se recortan (assets/concepts/ASSET-INVENTORY.md).
+
+   El borde se queda en --color-acento también en reposo. La primera versión
+   usaba --color-borde y la revisión de a11y-perf-reviewer lo midió: tarjeta
+   blanca sobre panel blanco separadas por un borde de 1.50:1, por debajo del
+   mínimo de 3:1 que WCAG 1.4.11 pide para el límite de un control. Un niño de
+   seis años tiene que reconocer eso como algo que se pulsa sin que un adulto
+   se lo diga.
+     --color-texto  sobre --color-superficie (texto):     16.20:1
+     --color-acento sobre --color-superficie (borde):      7.80:1
+   El hover cambia el fondo y no el borde, y mantiene 14.50:1 con el texto. */
+.boton--opcion {
+  flex-direction: column;
+  gap: var(--espacio-1);
+  inline-size: 100%;
+  block-size: 100%;
+  padding: var(--espacio-1);
+  background-color: var(--color-superficie);
+  border-color: var(--color-acento);
+  color: var(--color-texto);
+  text-align: center;
+}
+
+.boton--opcion:hover {
+  background-color: var(--color-fondo);
+}
+
+/* Disco de color detrás del icono. Decorativo: el icono lo hereda por
+   `currentColor` y el color no aporta significado (ver tokens.css). */
+.boton--opcion .opcion__icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 2.5rem;
+  block-size: 2.5rem;
+  border-radius: 50%;
+  background-color: var(--color-tarjeta-sol);
+}
+
+.decisiones__lista > li:nth-child(4n + 2) .opcion__icono {
+  background-color: var(--color-tarjeta-coral);
+}
+
+.decisiones__lista > li:nth-child(4n + 3) .opcion__icono {
+  background-color: var(--color-tarjeta-turquesa);
+}
+
+.decisiones__lista > li:nth-child(4n + 4) .opcion__icono {
+  background-color: var(--color-tarjeta-hoja);
+}
+
+/* --- Pantalla de inicio ------------------------------------------------- */
+
+.inicio {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--espacio-2);
+  margin-top: var(--espacio-3);
+  padding: var(--espacio-3);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.inicio__titulo {
+  margin: 0;
+  font-size: var(--fuente-tamano-subtitulo);
+  line-height: var(--fuente-interlineado-titulo);
+}
+
+/* Contraste --color-texto-suave sobre --color-superficie: 8.59:1. */
+.inicio__prologo {
+  margin: 0;
+  color: var(--color-texto-suave);
+}
+
+.inicio__edades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  margin: 0;
+  padding: var(--espacio-2);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+.inicio__edad {
+  cursor: pointer;
+}
+
+/* --- Episodio en curso --------------------------------------------------- */
+
+/* El episodio se apoya en la parte baja de la ventana, por encima del mundo. */
+.episodio {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+  inline-size: min(100%, 52rem);
+  margin-inline: auto;
+}
+
+.episodio__contenido {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-3);
+  padding: var(--espacio-3);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+/* Barra de quien acompaña: pausa, grupo de edad y parar. Opaca, para que se
+   lea sobre cualquier parte del mundo. */
+.episodio__pie {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-1);
+  padding: var(--espacio-1) var(--espacio-2);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+/* Ajustes de quien acompaña: plegados, para que la barra permanente solo
+   tenga lo que se usa en cada línea. */
+.barra-adulto__ajustes {
+  position: relative;
+}
+
+.barra-adulto__resumen {
+  color: var(--color-acento);
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* Abierto, el panel se despliega hacia arriba y no empuja la barra: si la
+   empujara, el botón de parar se movería bajo el dedo. */
+.barra-adulto__ajustes[open] .barra-adulto__edades {
+  position: absolute;
+  inset-block-end: calc(100% + var(--espacio-1));
+  inset-inline-end: 0;
+  padding: var(--espacio-1) var(--espacio-2);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  white-space: nowrap;
+}
+
+/* Durante una decisión solo queda parar, alineado a la derecha y sin fondo:
+   deja de leerse como una barra y pasa a ser un botón suelto. */
+.barra-adulto--minima {
+  justify-content: flex-end;
+  padding: 0;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.barra-adulto__edades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+.barra-adulto__edad {
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.episodio__pausa-texto {
+  margin: 0;
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+}
+
+/* --- Modo inmersivo ------------------------------------------------------ */
+
+/* El mundo ocupa la ventana y todo lo demás flota encima. Los paneles siguen
+   siendo opacos: el texto conserva su contraste medido y no depende de lo que
+   haya detrás (Constitución VII). */
+.shell--juego {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--espacio-2);
+  /* El hueco de arriba es el del encabezado flotante: sin él, una decisión
+     de cinco opciones crece hasta meterse debajo del título y la pregunta
+     queda ilegible. */
+  padding-block-start: 4rem;
+  min-block-size: calc(100dvh - var(--espacio-3) * 2);
+}
+
+/* El encabezado no empuja el mundo hacia abajo: se apoya arriba a la
+   izquierda. El distintivo sigue siendo lo primero que se ve (AC-10). */
+/* Se escriben con `.shell--juego` delante a propósito: `index.css` importa
+   esta hoja y define `.shell__encabezado` y `.shell__titulo` después, así que
+   con una sola clase ganaban ellos por orden de cascada. */
+.shell--juego .shell__encabezado--flotante {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  /* En una sola tira, no apilados: el distintivo y el título son dos rótulos
+     pequeños, y apilados ocupaban 139 px de esquina que el mundo necesita. */
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  /* Por encima de todo, incluidas las herramientas de desarrollo: el
+     distintivo de borrador no puede quedar tapado por nada (AC-10). */
+  z-index: 3;
+  gap: var(--espacio-1);
+  pointer-events: none;
+}
+
+.shell--juego .shell__titulo--juego {
+  padding: var(--espacio-1) var(--espacio-2);
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  font-size: 1.125rem;
+}
+
+/* En modo inmersivo los paneles ocupan lo justo: el mundo es la pantalla y el
+   diálogo se apoya encima, no al revés. */
+.shell--juego .episodio__contenido {
+  padding: var(--espacio-2);
+}
+
+/* El retrato se encoge porque el personaje ya está ahí, en 3D, a tamaño
+   completo. Se queda —no desaparece— porque es lo que dice quién habla cuando
+   quien habla no tiene modelo, como Luna o Don Beto. */
+.shell--juego .personaje__retrato {
+  inline-size: 4.5rem;
+  block-size: 4.5rem;
+}
+
+/* Las herramientas de desarrollo se apartan a una esquina: no pueden comerse
+   la pantalla del juego ni siquiera mientras se desarrolla. */
+.shell--juego .herramientas-desarrollo {
+  position: fixed;
+  /* Arriba a la derecha: abajo taparía «Terminar por hoy», y parar tiene que
+     estar siempre a mano (Constitución V). */
+  inset-block-start: var(--espacio-1);
+  inset-inline-end: var(--espacio-1);
+  z-index: 2;
+  padding: var(--espacio-1);
+  font-size: 0.875rem;
+}
+
+/* --- Escena 3D ----------------------------------------------------------- */
+
+/* Decorado: el lienzo va `aria-hidden` y nunca recibe foco. Si no hay WebGL
+   —o si la escena falla y el límite de error la retira— este bloque no existe
+   y todo lo de abajo recupera su sitio sin dejar hueco (AC-8). Por eso el
+   solapamiento se escribe con el selector de hermano adyacente
+   `.escena + .episodio__contenido`: depende de que la escena esté de verdad
+   en la página, no de una clase que alguien pueda olvidar quitar.
+
+   La altura está acotada en `rem` además de en `vh` para que el diálogo, que
+   es lo que hay que leer, nunca quede empujado fuera de una pantalla de
+   laptop de 768 px de alto. */
+.escena {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  /* Cielo arriba, mar abajo, con el horizonte donde la cámara lo ve: el
+     lienzo es transparente, así que esto es lo que se ve entre las islas. */
+  background: linear-gradient(
+    to bottom,
+    var(--color-cielo) 0%,
+    var(--color-cielo) 46%,
+    var(--color-mar) 54%,
+    var(--color-mar) 100%
+  );
+  /* El mundo y el episodio son dos lienzos distintos (`EscenaLibre` y
+     `EscenaDelEpisodio` montan cada uno el suyo): entrar o salir de un
+     episodio desmonta uno y monta el otro, con personajes en sitios y con
+     una cámara en un ángulo distintos. Sin nada más, eso se ve como que el
+     mundo entero desaparece y vuelve a aparecer de golpe —justo lo que se
+     reportó—. Esto no lo arregla del todo (seguir siendo el mismo lienzo de
+     principio a fin sería el arreglo completo, y es un cambio más grande que
+     no se hizo aquí); funde la entrada para que la transición se lea como un
+     cambio de escena, no como un corte. AC-7: queda anulado por completo por
+     la regla de `prefers-reduced-motion` de arriba en este archivo. */
+  animation: escena-aparece 0.35s ease-out;
+}
+
+@keyframes escena-aparece {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Los paneles se posicionan explícitamente para quedar por encima del mundo.
+   Sin esto el lienzo, que es un elemento posicionado, se pinta sobre ellos
+   aunque estén después en el documento: el orden de pintado de CSS no es el
+   orden del HTML. */
+.episodio__contenido,
+.episodio__pie,
+.herramientas-desarrollo,
+.aviso-desarrollo {
+  position: relative;
+  z-index: 1;
+}
+
+/* --- Mundo abierto ------------------------------------------------------- */
+
+/* La exploración es casi toda mundo. Lo único que se dibuja encima es la
+   oferta de empezar un episodio —y solo cuando hay una— y la ruta 2D, que va
+   plegada abajo. Una pantalla vacía no es una pantalla sin terminar: es lo
+   que hace que explorar se sienta explorar. */
+.mundo {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--espacio-2);
+}
+
+/* El mundo ocupa la ventana entera y no comparte sitio con un panel de
+   diálogo, así que no necesita dejarle hueco abajo como hace `.escena`. */
+.escena--mundo {
+  position: fixed;
+  inset: 0;
+}
+
+/* Conversar ocupa el centro abajo, donde va el diálogo del episodio: es el
+   mismo gesto de lectura y no conviene que cambie de sitio según con quién
+   se hable. */
+/* Conversar ocupa una tarjeta estrecha abajo, no media pantalla. 34rem son
+   unos 60 caracteres por línea, que es lo que se lee cómodo; a 46rem el
+   renglón se hacía largo y además tapaba el mundo entero. */
+.mundo__conversacion {
+  position: relative;
+  z-index: 1;
+  inline-size: min(34rem, 100%);
+  margin-block-end: var(--espacio-1);
+  padding: var(--espacio-2) var(--espacio-3);
+  background-color: var(--color-superficie);
+  border: 0;
+  border-radius: var(--radio-grande);
+  box-shadow: var(--sombra-panel);
+}
+
+.conversacion__controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  margin-block-start: var(--espacio-2);
+}
+
+/* En una conversación el nombre es una etiqueta pequeña, no un encabezado:
+   lo que hay que leer es lo que dice, no quién lo dice. */
+.mundo__conversacion .dialogo__hablante {
+  display: inline-block;
+  margin-block-end: 0.375rem;
+  padding: 0.125rem 0.5rem;
+  border-radius: var(--radio-pastilla);
+  background-color: var(--color-fondo);
+  color: var(--color-texto-suave);
+  font-size: 0.75rem;
+}
+
+.mundo__conversacion .dialogo__texto {
+  font-size: 1.125rem;
+}
+
+.mundo__oferta,
+.mundo__conversacion {
+  position: relative;
+  z-index: 1;
+}
+
+.mundo__pie {
+  position: fixed;
+  /* Debajo del distintivo de borrador, que manda y no puede taparse (AC-10),
+     y alineado con su borde izquierdo: medido en el navegador, el distintivo
+     empieza en 24px y acaba en 69,6px. A 3,25rem se solapaban y quedaban
+     desalineados por 8px, que es lo que hacía que se vieran como dos cosas
+     tiradas ahí en vez de una columna. */
+  inset-block-start: 5rem;
+  inset-inline-start: var(--espacio-3);
+  z-index: 2;
+}
+
+/* La oferta de empezar un episodio es lo único que interrumpe el mundo, así
+   que se gana el sitio: centrada abajo, con sombra para despegarla del
+   fondo, y nada más alrededor. */
+.mundo__oferta {
+  display: flex;
+  justify-content: center;
+  margin-block-end: var(--espacio-1);
+}
+
+.mundo__oferta .boton--primario {
+  border-radius: var(--radio-pastilla);
+  padding-inline: var(--espacio-3);
+  box-shadow: var(--sombra-panel);
+  font-size: 1rem;
+}
+
+/* Bug reportado con una captura real de celular en vertical: el botón de
+   "Hablar con..." quedaba pegado en la misma fila que el joystick y los
+   botones de girar/saltar, con el texto cortado detrás del control
+   circular. Pasa porque `.mundo` es una columna flex con
+   `justify-content: flex-end`, así que `.mundo__oferta` cae exactamente al
+   borde inferior de la pantalla — el mismo sitio donde flota
+   `.controles-tactiles` (`position: fixed`, ver controles-tactiles.css). Se
+   corrige reservándole aire abajo, no moviendo ni encogiendo los controles.
+
+   Cubre las dos ofertas que existen ("Hablar con [nombre]" y "Empezar aquí:
+   [episodio]"): las dos usan esta misma clase (EscenaLibre.tsx), así que
+   arreglarla una vez cubre ambos casos, y cualquier otra que se agregue
+   después con la misma clase.
+
+   Medidas de despeje, leídas de controles-tactiles.css:
+     ancho >= 30rem: inset-block-end 1rem   + joystick 7rem = 8rem
+     ancho <  30rem: inset-block-end 0.5rem + joystick 6rem = 6.5rem
+   (el joystick es el elemento más alto del grupo; el botón de saltar mide
+   4.25rem, menos que el joystick en ambos anchos). A eso se le suma un
+   margen de aire para que el botón no quede pegado al borde del control.
+
+   Dos mecanismos, a propósito:
+   1. `.mundo--con-controles-tactiles` es la clase que pone React
+      (EscenaLibre.tsx) exactamente cuando `useControlesEnPantalla()` decide
+      mostrar los controles: es la MISMA condición que usa el componente que
+      los dibuja, así que no puede divergir de si los controles están de
+      verdad en pantalla.
+   2. El `@media` de abajo es una red de seguridad para el instante antes de
+      que React monte ese estado, o para cualquier caso que se escape de la
+      clase. Usa el mismo umbral que `entrada-tactil.ts` (`ANCHO_DE_MANO`,
+      900px) para decidir en JS si se muestran los controles táctiles:
+      `pointer: coarse` (dedo, no ratón) o un ancho menor a 900px (para
+      cubrir una ventana angosta o una tablet con teclado, donde el puntero
+      deja de ser «coarse»). No es idéntico al cálculo de React —ese también
+      mira `innerWidth`, que cambia con el teclado en pantalla o el zoom,
+      cosas que un `@media` no ve—, así que puede sobrar espacio en algún
+      caso raro. Mejor reservar de más que de menos (Constitución VII).
+      Nunca compite con la regla 1: dos clases son más específicas que una,
+      así que en cuanto React monta la clase exacta, esa gana. */
+.mundo--con-controles-tactiles .mundo__oferta {
+  margin-block-end: calc(8rem + var(--espacio-2));
+}
+
+@media (max-width: 30rem) {
+  .mundo--con-controles-tactiles .mundo__oferta {
+    margin-block-end: calc(6.5rem + var(--espacio-1));
+  }
+}
+
+@media (pointer: coarse), (max-width: 900px) {
+  .mundo__oferta {
+    margin-block-end: calc(8rem + var(--espacio-2));
+  }
+}
+
+/* No se anida dentro del `@media` de arriba a propósito: anidar `@media`
+   dentro de otro `@media` es sintaxis del módulo de CSS Nesting, de soporte
+   reciente, y este proyecto apunta a hardware de aula viejo. Un bloque
+   plano y posterior en la hoja de estilos logra lo mismo por cascada: todo
+   ancho <= 30rem ya cumple `max-width: 900px` de la regla anterior, así que
+   las dos coinciden ahí y gana esta por venir después en el documento con
+   la misma especificidad (una sola clase). */
+@media (max-width: 30rem) {
+  .mundo__oferta {
+    margin-block-end: calc(6.5rem + var(--espacio-1));
+  }
+}
+
+/* Arriba a la izquierda, bajo el distintivo, y no en el centro de abajo.
+   Estaba en medio de la pantalla y tapaba justo lo que hay que mirar: el
+   mundo. Sigue estando siempre —es la ruta 2D que exige AC-8, y quien no
+   pueda caminar tiene que poder llegar a una isla igual— pero pequeña y
+   apartada.
+
+   Cerrada es una pastilla del mismo alto y la misma forma que el distintivo
+   de borrador, para que las dos se lean como una sola columna de controles y
+   no como dos cosas sueltas mal alineadas. */
+.mundo__destinos {
+  inline-size: fit-content;
+  background-color: var(--color-superficie);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio-pastilla);
+  box-shadow: var(--sombra-flotante);
+}
+
+/* Abierta deja de ser pastilla: se convierte en una tarjeta, porque una
+   lista dentro de una forma redonda se ve apretada contra los bordes. */
+.mundo__destinos[open] {
+  border-radius: var(--radio-grande);
+  padding-block-end: var(--espacio-1);
+}
+
+.mundo__resumen {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.375rem var(--espacio-2);
+  border-radius: inherit;
+  cursor: pointer;
+  color: var(--color-acento);
+  font-size: 0.8125rem;
+  font-weight: 700;
+  /* El triángulo que el navegador pone por defecto es gris, diminuto y de
+     otro sistema visual. Se quita y el estado abierto/cerrado lo dice la
+     flecha de `::after`, que además gira. */
+  list-style: none;
+}
+
+.mundo__resumen::-webkit-details-marker {
+  display: none;
+}
+
+.mundo__resumen::after {
+  content: "";
+  inline-size: 0.4rem;
+  block-size: 0.4rem;
+  border-inline-end: 2px solid currentColor;
+  border-block-end: 2px solid currentColor;
+  rotate: 45deg;
+  translate: 0 -0.1rem;
+  transition: rotate 120ms ease-out;
+}
+
+.mundo__destinos[open] .mundo__resumen::after {
+  rotate: -135deg;
+  translate: 0 0.1rem;
+}
+
+/* Quien pide menos movimiento no quiere que una flecha gire sola. */
+@media (prefers-reduced-motion: reduce) {
+  .mundo__resumen::after {
+    transition: none;
+  }
+}
+
+/* La lista abierta se despliega en columna y acotada: abierta en horizontal
+   volvía a cruzar la pantalla de lado a lado. */
+.mundo__destinos[open] .mundo__lista {
+  flex-direction: column;
+  max-inline-size: 13rem;
+  padding-inline: var(--espacio-1);
+}
+
+/* Dentro de la lista, cada isla es una fila de texto, no un botón con marco:
+   tres marcos anidados —pastilla, tarjeta, botón— era el "diseño muy básico"
+   del que se quejaron. */
+.mundo__destinos .mundo__lista .boton--opcion {
+  display: flex;
+  justify-content: flex-start;
+  min-block-size: 2.5rem;
+  padding: var(--espacio-1) 0.625rem;
+  border: 0;
+  border-radius: 0.625rem;
+  background-color: transparent;
+  color: var(--color-texto);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-align: start;
+}
+
+.mundo__lista .boton--opcion:hover {
+  background-color: var(--color-fondo);
+}
+
+.mundo__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  margin-block-start: var(--espacio-1);
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Diálogo ------------------------------------------------------------- */
+
+.dialogo {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: var(--espacio-1) var(--espacio-3);
+  align-items: start;
+}
+
+/* Sin retrato —quien habla ya está en la escena 3D— el texto ocupa todo el
+   ancho en vez de dejar una columna vacía. */
+.dialogo--sin-retrato {
+  grid-template-columns: 1fr;
+}
+
+.dialogo--sin-retrato .dialogo__globo,
+.dialogo--sin-retrato .dialogo__controles {
+  grid-column: 1;
+}
+
+.dialogo__globo {
+  grid-column: 2;
+}
+
+.dialogo__hablante {
+  margin: 0 0 var(--espacio-1);
+  color: var(--color-texto-suave);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.dialogo__texto {
+  margin: 0;
+  font-size: var(--fuente-tamano-subtitulo);
+  line-height: var(--fuente-interlineado);
+}
+
+.dialogo__controles {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-1);
+  grid-column: 2;
+}
+
+/* --- Personaje ----------------------------------------------------------- */
+
+.personaje {
+  grid-row: span 2;
+  margin: 0;
+}
+
+.personaje__retrato {
+  inline-size: 8rem;
+  block-size: 8rem;
+  object-fit: contain;
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+}
+
+/* Sin arte sincronizado: inicial grande, nunca una imagen rota. */
+.personaje__retrato--sin-arte {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-texto-suave);
+  font-size: var(--fuente-tamano-titulo);
+  font-weight: 700;
+}
+
+.personaje__nombre {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+/* --- Decisiones ---------------------------------------------------------- */
+
+/* La pregunta del guion se queda en pantalla mientras se elige: mismo
+   tamaño que en el globo de diálogo, para que se lea como la misma voz y no
+   como un rótulo de interfaz. */
+.decisiones__pregunta {
+  margin: 0 0 var(--espacio-2);
+}
+
+/* Retícula de tarjetas. El ancho mínimo y el tope de la lista dan tres
+   columnas como mucho: con cuatro, cinco opciones quedaban 4+1 y la huérfana
+   se leía como un error. En pantalla angosta cae sola a una columna, sin
+   media query. */
+.decisiones__lista {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+  max-inline-size: 44rem;
+  margin-inline: auto;
+  gap: var(--espacio-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* --- Minijuegos ---------------------------------------------------------- */
+
+/* Los minijuegos reutilizan el panel del diálogo y la retícula de tarjetas:
+   son la misma pantalla en otro momento, no una sección aparte del juego. */
+.minijuego {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-2);
+}
+
+.minijuego__respuesta,
+.minijuego__controles {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-1);
+}
+
+.minijuego__respuesta {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Una tabla ya colocada: se lee, no se vuelve a pulsar. Se distingue por el
+   icono de marca y por el tono apagado, nunca solo por el color.
+   Contraste --color-texto-suave sobre --color-fondo: 7.68:1. */
+.boton--opcion[aria-disabled="true"] {
+  background-color: var(--color-fondo);
+  border-color: var(--color-borde);
+  color: var(--color-texto-suave);
+  cursor: default;
+}
+
+/* --- Cierre -------------------------------------------------------------- */
+
+.cierre__titulo {
+  margin: 0 0 var(--espacio-2);
+  font-size: var(--fuente-tamano-titulo);
+  line-height: var(--fuente-interlineado-titulo);
+}
+
+.cierre__mensaje {
+  margin: 0 0 var(--espacio-3);
+  font-size: var(--fuente-tamano-subtitulo);
+}
+
+/* El material del debrief es para la persona adulta que acompaña: se
+   distingue del cierre del niño por borde, fondo y encabezado propio, no
+   solo por color. */
+.cierre__adulto {
+  margin-bottom: var(--espacio-3);
+  padding: var(--espacio-2);
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-borde);
+  border-radius: var(--radio);
+  color: var(--color-texto-suave);
+}
+
+.cierre__adulto-titulo {
+  margin: 0 0 var(--espacio-1);
+  font-size: var(--fuente-tamano-opcion);
+}
+
+.cierre__subtitulo {
+  margin: var(--espacio-2) 0 var(--espacio-1);
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+}
+
+/* --- Avisos y herramientas de desarrollo --------------------------------- */
+
+/* Mismo lenguaje visual que el distintivo de borrador: si aparece en una
+   demo, se reconoce de inmediato como andamiaje.
+   Contraste --color-borrador-texto sobre --color-borrador-fondo: 10.77:1. */
+.aviso-desarrollo,
+.herramientas-desarrollo {
+  padding: var(--espacio-2);
+  background-color: var(--color-borrador-fondo);
+  border: 2px dashed var(--color-borrador-borde);
+  border-radius: var(--radio);
+  color: var(--color-borrador-texto);
+}
+
+.aviso-desarrollo__etiqueta,
+.herramientas-desarrollo__etiqueta {
+  margin: 0 0 var(--espacio-1);
+  font-size: 0.875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.aviso-desarrollo__titulo {
+  margin: 0 0 var(--espacio-1);
+  font-size: var(--fuente-tamano-opcion);
+  line-height: var(--fuente-interlineado-titulo);
+}
+
+.aviso-desarrollo__lista {
+  margin: 0 0 var(--espacio-2);
+  padding-inline-start: var(--espacio-3);
+  font-size: 1rem;
+}
+
+.herramientas-desarrollo__campo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-1);
+}
+
+.herramientas-desarrollo__campo select {
+  min-block-size: var(--objetivo-tactil-min);
+  padding: var(--espacio-1);
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+/* --- Pantallas angostas (proyector vertical, tablet, 375 px) -------------- */
+
+@media (max-width: 30rem) {
+  .dialogo {
+    grid-template-columns: 1fr;
+  }
+
+  .dialogo__globo,
+  .dialogo__controles {
+    grid-column: 1;
+  }
+
+  .personaje {
+    grid-row: auto;
+    flex-direction: row;
+  }
+
+  .personaje__retrato {
+    inline-size: 5rem;
+    block-size: 5rem;
+  }
+
+  /* En pantalla angosta el título cede su sitio: basta el distintivo. */
+  .shell--juego .shell__titulo--juego {
+    font-size: 1rem;
+  }
+
+  /* El diálogo no se apila: con el retrato encima del texto, el panel crece
+     tanto que tapa el mundo entero. Se queda en dos columnas con el retrato
+     pequeño. */
+  .shell--juego .dialogo {
+    grid-template-columns: auto 1fr;
+  }
+
+  .shell--juego .personaje {
+    grid-row: span 2;
+    flex-direction: column;
+  }
+
+  .shell--juego .personaje__retrato {
+    inline-size: 3rem;
+    block-size: 3rem;
+  }
+
+  .shell--juego .personaje__nombre {
+    font-size: 0.75rem;
+  }
+
+  /* Las herramientas de desarrollo vuelven al flujo: fijas taparían el
+     distintivo de borrador, que no puede ocultarse (AC-10). */
+  .shell--juego .herramientas-desarrollo {
+    position: static;
+  }
+
+  /* Las tarjetas se leen en fila —icono a la izquierda, texto a la derecha—
+     porque apiladas, cinco opciones ocupaban el 86 % de la pantalla y el
+     mundo desaparecía. El icono, el texto y el orden siguen diciendo lo
+     mismo; lo único que cambia es cómo se reparten. */
+  .boton--opcion {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--espacio-2);
+    text-align: start;
+  }
+
+  .boton--opcion .opcion__icono {
+    flex: 0 0 auto;
+    inline-size: 2.25rem;
+    block-size: 2.25rem;
+  }
+
+  .boton {
+    inline-size: 100%;
+  }
+}
+
+/* --- Pantallas de poca altura (celular en horizontal) --------------------
+
+   Bug reportado jugando en un celular real girado a horizontal: un iPhone
+   en landscape mide unos 812x375px lógicos. 375px de alto es MENOS que los
+   480px (30rem) que ya usa el punto de quiebre de arriba, pero su ANCHO
+   (~54rem) está muy por encima de los 30rem que ese punto de quiebre mira,
+   así que NINGUNA de esas reglas se aplicaba. `.shell--juego` reserva
+   `min-block-size: calc(100dvh - ...)` con `justify-content: flex-end`, así
+   que el panel se apila contra el borde inferior con su tamaño "de
+   escritorio": retrato de 4.5rem, el padding y el gap de siempre, texto en
+   `--fuente-tamano-subtitulo` (que crece con `vw` pero nunca se achica con
+   poca altura) y un hueco fijo de 4rem arriba para el encabezado. El
+   resultado: un panel demasiado alto para los ~350px disponibles, que tapa
+   al personaje 3D que está detrás.
+
+   Se usa `max-height` y no `orientation: landscape`: el problema real es
+   cuánta altura hay disponible, no la orientación del dispositivo. Una
+   tablet en horizontal con multitarea, o una ventana de escritorio baja y
+   ancha, tienen el mismo problema sin ser "un teléfono en horizontal" en
+   sentido estricto. 30rem (480px) cubre con margen los altos lógicos
+   típicos de un celular en horizontal (~360-430px en los tamaños más
+   comunes) sin afectar una laptop o un proyector, que casi nunca bajan de
+   600px de alto.
+
+   A esta altura SÍ conviene mantener el retrato al lado del texto —la
+   retícula de dos columnas que `.dialogo` ya usa por defecto—, en vez de
+   apilarlo como hace el punto de quiebre de ancho angosto de arriba: aquí
+   sobra ancho (la pantalla sigue midiendo ~54rem) y lo que falta es alto,
+   así que apilar sería justo lo contrario de lo que hace falta. Por eso
+   este bloque no toca `grid-template-columns` de `.dialogo`: se queda en
+   las dos columnas de siempre y solo se encoge lo que hay dentro. */
+@media (max-height: 30rem) {
+  .shell--juego {
+    /* El hueco reservado para el encabezado flotante (el distintivo de
+       borrador —hoy apagado, ver `DistintivoBorrador.tsx`— y un título que
+       ya viaja `visualmente-oculto`) puede seguir siendo bastante más chico
+       que 4rem: la pastilla del distintivo, cuando se enciende, mide menos
+       que eso. Se deja 2.5rem, con aire de sobra, para que AC-10 —el
+       distintivo nunca queda tapado— se siga cumpliendo si se reactiva. */
+    padding-block-start: 2.5rem;
+  }
+
+  .shell--juego .episodio__contenido {
+    gap: var(--espacio-1);
+    padding: var(--espacio-1);
+  }
+
+  /* Antes: 4.5rem, el tamaño "de escritorio" que ya usa `.shell--juego` por
+     defecto (ni siquiera el de por defecto sin inmersión, 8rem). Ahora:
+     2.75rem, para que el panel entero —retrato, nombre y texto— quepa en
+     dos o tres líneas de alto en vez de ocho. El personaje ya está en la
+     escena 3D a tamaño completo detrás; este retrato solo hace falta como
+     referencia de quién habla cuando el personaje no tiene modelo. */
+  .shell--juego .personaje__retrato {
+    inline-size: 2.75rem;
+    block-size: 2.75rem;
+  }
+
+  /* Sin arte sincronizado (Luna, Don Beto...) el retrato es una inicial
+     dentro de la caja: a este tamaño de caja, `--fuente-tamano-titulo`
+     (clamp hasta 2.75rem) desborda. Un tamaño fijo y chico cabe con aire. */
+  .shell--juego .personaje__retrato--sin-arte {
+    font-size: 1.25rem;
+  }
+
+  /* `--fuente-tamano-subtitulo` crece con el ancho del viewport (`vw`) pero
+     nunca se achica con poca altura: en un celular en horizontal el ancho
+     sobra (~54rem) y el alto falta, así que este texto puede seguir siendo
+     tan grande como en escritorio y aun así comerse la pantalla entera. Se
+     fija un tamaño menor solo aquí, sin tocar el token compartido por el
+     resto de la app (cubre tanto la línea de diálogo como la pregunta de
+     una decisión: las dos comparten la clase `.dialogo__texto`). */
+  .shell--juego .dialogo__texto {
+    font-size: 1.125rem;
+  }
+
+  .shell--juego .decisiones__pregunta {
+    margin-block-end: var(--espacio-1);
+  }
+
+  /* Con hasta cinco opciones, la retícula de `.decisiones__lista` puede
+     necesitar más de una fila incluso con el ancho de sobra que da el modo
+     horizontal. Se le pone un tope de altura y un scroll propio en vez de
+     dejarla crecer sin límite: quien elige puede desplazarse dentro del
+     panel sin que el panel entero se coma la pantalla. No cambia el foco ni
+     el orden de tabulación de las tarjetas, solo las recorta visualmente
+     hasta que se hace scroll hacia ellas. */
+  .shell--juego .decisiones__lista {
+    max-block-size: 30dvh;
+    overflow-y: auto;
+  }
+}
+
+/* --- Minijuegos en poca altura (celular en horizontal) -------------------
+
+   El único punto de quiebre de arriba solo mira el ancho (`max-width: 30rem`).
+   Un celular en horizontal —por ejemplo 812x375 px lógicos— tiene ~54rem de
+   ancho, muy por encima de 30rem, así que ninguna de esas reglas se aplica
+   aunque el alto disponible (375 px ≈ 23.4rem, y menos todavía tras
+   descontar la barra del navegador) sea el que realmente aprieta.
+
+   Los minijuegos son donde más se nota: a diferencia de una línea de diálogo
+   simple, suelen tener una tarjeta con la pregunta, varias tarjetas de
+   respuesta o una lista de zonas, y los controles de continuar/parar. Ese
+   panel, apoyado al fondo de `.shell--juego` (que no se toca desde aquí),
+   puede crecer más alto que la pantalla y tapar el mundo o el personaje 3D
+   que hay detrás.
+
+   Se usa `max-height` sin exigir `orientation: landscape` a propósito: lo
+   que aprieta es el alto disponible, no el nombre que el navegador le dé a
+   la orientación. Una ventana de escritorio angosta y baja, o una vista
+   dividida en una tablet, tienen el mismo problema y merecen el mismo
+   ajuste; exigir además `orientation: landscape` los habría dejado fuera sin
+   ninguna ganancia real. 30rem (480px) deja margen por encima de los
+   ~23-24rem lógicos de un iPhone en horizontal y de los ~21rem que quedan en
+   Android tras la barra del sistema, así que el ajuste entra antes de que el
+   aprieto real empiece. */
+@media (max-height: 30rem) {
+  .minijuego {
+    gap: var(--espacio-1);
+  }
+
+  /* Mismo valor que usa el bloque de arriba para `.shell--juego .dialogo__texto`
+     a esta misma altura: la tarjeta —pregunta o ficha— es el mismo tipo de
+     texto que una línea de diálogo o la pregunta de una decisión, así que se
+     achica al mismo tamaño en vez de a uno distinto por casualidad de
+     especificidad de selector. `--fuente-tamano-subtitulo` crece con el
+     ancho del viewport (`vw`) pero nunca con la altura, así que a esta
+     altura seguiría pidiendo hasta 1.75rem aunque sobren solo 23-24rem de
+     alto en total. */
+  .minijuego .dialogo__texto {
+    font-size: 1.125rem;
+    line-height: var(--fuente-interlineado);
+  }
+
+  .minijuego .dialogo__hablante {
+    margin-block-end: 0;
+    font-size: 0.875rem;
+  }
+
+  .minijuego__respuesta,
+  .minijuego__controles {
+    gap: var(--espacio-1);
+  }
+
+  /* La lista de tarjetas —fichas, respuestas, tablas del puente, sitios del
+     círculo— es la que más crece: con varias filas puede pedir más alto que
+     toda la pantalla. Se acota su alto y se deja un scroll interno acotado
+     dentro del panel en vez de dejar que empuje `.minijuego` entero fuera de
+     la vista. El control de continuar/parar vive fuera de esta lista (es un
+     hermano, no un hijo, en los seis minijuegos), así que se queda siempre
+     visible debajo y nunca hace falta desplazar la página para alcanzarlo. */
+  .minijuego .decisiones__lista {
+    gap: var(--espacio-1);
+    max-block-size: 40dvh;
+    overflow-y: auto;
+  }
+
+  /* Mismo motivo que el punto de quiebre de ancho de arriba: icono a la
+     izquierda, texto a la derecha, en vez de apiladas. Apiladas, cada
+     tarjeta pide más alto del que sobra cuando el alto entero de la pantalla
+     son 23-24rem. */
+  .minijuego .boton--opcion {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: var(--espacio-1);
+    padding: var(--espacio-1);
+    text-align: start;
+  }
+
+  .minijuego .boton--opcion .opcion__icono {
+    flex: 0 0 auto;
+    inline-size: 2rem;
+    block-size: 2rem;
+  }
+}

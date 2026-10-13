@@ -1,0 +1,56 @@
+{
+  "id": "circle_of_three",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2436,
+  "bounds": {
+    "min": [
+      -0.38999998569488525,
+      -0.1850000023841858,
+      -0.004999995231628418
+    ],
+    "max": [
+      0.38999998569488525,
+      0.2199999988079071,
+      0.5649999976158142
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 42252,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/circle_of_three/circle_of_three.glb",
+  "glb": "circle_of_three.glb",
+  "glb_bytes_v001": 67740,
+  "sha256": "12b5cf76d0ddd297cbefa4c654bbbfa86adc67e83b3695d9a1b92f1a8ce75eb9",
+  "source_sha256": "cae272289f287cc9afbbfcbd5d91ce95a59a294b56b211a19891c74414f7a54f",
+  "vertices": 1563,
+  "bounds_glb": {
+    "min": [
+      -0.39,
+      -0.005,
+      -0.22
+    ],
+    "max": [
+      0.39,
+      0.565,
+      0.185
+    ]
+  },
+  "size_glb": [
+    0.78,
+    0.57,
+    0.405
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "sound_button",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 7096,
+  "bounds": {
+    "min": [
+      -0.3499999940395355,
+      -0.09000000357627869,
+      0.03999999165534973
+    ],
+    "max": [
+      0.3499999940395355,
+      0.04500001668930054,
+      0.7400000095367432
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 117340,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/sound_button/sound_button.glb",
+  "glb": "sound_button.glb",
+  "glb_bytes_v001": 189964,
+  "sha256": "afff86e2f2e702868f377db15f2e5446b512974b5ca2d454585563f84a39a526",
+  "source_sha256": "97384c023dc3ad8abb41ddf69786d44b8bd4ce0a8f313596747398e57dc5c8dd",
+  "vertices": 4509,
+  "bounds_glb": {
+    "min": [
+      -0.35,
+      0.04,
+      -0.045
+    ],
+    "max": [
+      0.35,
+      0.74,
+      0.09
+    ]
+  },
+  "size_glb": [
+    0.7,
+    0.7,
+    0.135
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

@@ -1,0 +1,33 @@
+{
+  "id": "disposable_cup",
+  "family": "props",
+  "units": "meters",
+  "up": "Y",
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/disposable_cup/disposable_cup.glb",
+  "glb": "disposable_cup.glb",
+  "glb_bytes": 3684,
+  "glb_bytes_v001": 5188,
+  "sha256": "4b20e4a21aadd278181c89b59b58b077f76331f484d1e56834085bd43485cdfb",
+  "source_sha256": "aa9af773478721efa97cae2906f0a258ebd3e987c500522cb0870b405dc08875",
+  "triangles": 56,
+  "vertices": 96,
+  "bounds_glb": {
+    "min": [
+      -0.05,
+      -0.002,
+      -0.118
+    ],
+    "max": [
+      0.05,
+      0.098,
+      0
+    ]
+  },
+  "size_glb": [
+    0.1,
+    0.1,
+    0.118
+  ],
+  "note": "Variante optimizada de v001 con KHR_mesh_quantization. Sin Draco ni meshopt."
+}

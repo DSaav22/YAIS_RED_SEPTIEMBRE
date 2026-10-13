@@ -1,0 +1,118 @@
+{
+  "id": "island_large",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 43324,
+  "bounds": {
+    "min": [
+      -3.1260762214660645,
+      -3.1424803733825684,
+      -1.5407148599624634
+    ],
+    "max": [
+      3.1455135345458984,
+      3.154935836791992,
+      0.24539995193481445
+    ]
+  },
+  "anchors": {
+    "edge_0": [
+      3.0,
+      0.0,
+      0
+    ],
+    "edge_1": [
+      1.8369701987210297e-16,
+      3.0,
+      0
+    ],
+    "edge_2": [
+      -3.0,
+      3.6739403974420594e-16,
+      0
+    ],
+    "edge_3": [
+      -5.51091059616309e-16,
+      -3.0,
+      0
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.2
+      ],
+      "size": [
+        4.26,
+        4.26,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        2.37,
+        0.0,
+        -0.2
+      ],
+      "size": [
+        1.1400000000000001,
+        3.4799999999999995,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        1.4512064569896134e-16,
+        2.37,
+        -0.2
+      ],
+      "size": [
+        3.4799999999999995,
+        1.1400000000000001,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -2.37,
+        2.902412913979227e-16,
+        -0.2
+      ],
+      "size": [
+        1.1400000000000001,
+        3.4799999999999995,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -4.3536193709688407e-16,
+        -2.37,
+        -0.2
+      ],
+      "size": [
+        3.4799999999999995,
+        1.1400000000000001,
+        0.4
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 1448024
+}

@@ -1,0 +1,396 @@
+{
+  "schemaVersion": 1,
+  "defaultLocale": "es-BO",
+  "locales": [
+    "es-BO"
+  ],
+  "reviewPolicy": {
+    "blockProductionIfPending": true
+  },
+  "encuentros": [
+    {
+      "id": "enc-tomi-faro",
+      "castId": "tomi",
+      "isla": "isla-faro",
+      "anclaje": [
+        8.4,
+        0.6
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_FARO_L001",
+          "anim": "wave",
+          "reviewNote": "Borrador escrito por el equipo, no por Arianna. Comprobar que pedir permiso se enseñe sin que suene a norma que se obedece."
+        },
+        {
+          "id": "l002",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_FARO_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo."
+        },
+        {
+          "id": "l003",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_FARO_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador del equipo."
+        }
+      ]
+    },
+    {
+      "id": "enc-luna-palmeras",
+      "castId": "luna",
+      "isla": "isla-palmeras",
+      "anclaje": [
+        -8.0,
+        0.5
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_PALMERAS_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo. CRÍTICO: representación de discapacidad. Necesita, además de psicología, revisión de alguien con experiencia vivida de discapacidad; el vault declara que ese revisor todavía no existe."
+        },
+        {
+          "id": "l002",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_PALMERAS_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo. Mismo revisor pendiente que la línea anterior."
+        },
+        {
+          "id": "l003",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_PALMERAS_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador del equipo. Mismo revisor pendiente que la línea anterior."
+        }
+      ]
+    },
+    {
+      "id": "enc-clara-mirador",
+      "castId": "clara",
+      "isla": "isla-mirador",
+      "anclaje": [
+        0.6,
+        -7.8
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_MIRADOR_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo. Una adulta dice que no sabe algo: comprobar que eso tranquilice en vez de desconcertar."
+        },
+        {
+          "id": "l002",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_MIRADOR_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo."
+        }
+      ]
+    },
+    {
+      "id": "enc-beto-caleta",
+      "castId": "beto",
+      "isla": "isla-caleta",
+      "anclaje": [
+        7.6,
+        5.6
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "beto",
+          "locId": "ENC_BETO_CALETA_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo. Un adulto conocido enseñando que un acuerdo se puede cambiar. Comprobar que no se lea como que las reglas de casa no valen."
+        },
+        {
+          "id": "l002",
+          "speaker": "beto",
+          "locId": "ENC_BETO_CALETA_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo."
+        },
+        {
+          "id": "l003",
+          "speaker": "beto",
+          "locId": "ENC_BETO_CALETA_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador del equipo."
+        }
+      ]
+    },
+    {
+      "id": "enc-tomi-arenal",
+      "castId": "tomi",
+      "isla": "isla-arenal",
+      "anclaje": [
+        -6.6,
+        6.6
+      ],
+      "ageModes": [
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_ARENAL_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo. Solo 9-12: habla de cambiar de opinión a mitad de algo, que en 6-8 puede confundirse con incumplir."
+        },
+        {
+          "id": "l002",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_ARENAL_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador del equipo."
+        },
+        {
+          "id": "l003",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_ARENAL_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador del equipo."
+        }
+      ]
+    },
+    {
+      "id": "enc-clara-partida",
+      "castId": "clara",
+      "isla": "isla-partida",
+      "anclaje": [
+        -1.8,
+        0.6
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_PARTIDA_L001",
+          "anim": "wave",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        },
+        {
+          "id": "l002",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_PARTIDA_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. Una adulta admite que se equivoca: comprobar que no reste autoridad de cuidado."
+        },
+        {
+          "id": "l003",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_PARTIDA_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        }
+      ]
+    },
+    {
+      "id": "enc-beto-faro",
+      "castId": "beto",
+      "isla": "isla-faro",
+      "anclaje": [
+        8.4,
+        -2.0
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "beto",
+          "locId": "ENC_BETO_FARO_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        },
+        {
+          "id": "l002",
+          "speaker": "beto",
+          "locId": "ENC_BETO_FARO_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. CRÍTICA: un adulto describiendo que se aparta cuando un niño dice que no. Es el contrapunto de la escena de Don Beto que el vault declara sin revisión clínica; revisar junto con ella."
+        },
+        {
+          "id": "l003",
+          "speaker": "beto",
+          "locId": "ENC_BETO_FARO_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        }
+      ]
+    },
+    {
+      "id": "enc-luna-mirador",
+      "castId": "luna",
+      "isla": "isla-mirador",
+      "anclaje": [
+        -1.3,
+        -9.6
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_MIRADOR_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. CRÍTICA: representación de discapacidad. Necesita revisión de alguien con experiencia vivida; el vault dice que ese revisor no existe todavía."
+        },
+        {
+          "id": "l002",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_MIRADOR_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. Mismo revisor pendiente."
+        },
+        {
+          "id": "l003",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_MIRADOR_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. Mismo revisor pendiente."
+        }
+      ]
+    },
+    {
+      "id": "enc-tomi-caleta",
+      "castId": "tomi",
+      "isla": "isla-caleta",
+      "anclaje": [
+        8.4,
+        7.0
+      ],
+      "ageModes": [
+        "6-8",
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_CALETA_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        },
+        {
+          "id": "l002",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_CALETA_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. Decir que no a un amigo sin perder la amistad."
+        },
+        {
+          "id": "l003",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_CALETA_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido."
+        }
+      ]
+    },
+    {
+      "id": "enc-clara-arenal",
+      "castId": "clara",
+      "isla": "isla-arenal",
+      "anclaje": [
+        -7.9,
+        5.6
+      ],
+      "ageModes": [
+        "9-12"
+      ],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_ARENAL_L001",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. CRÍTICA: habla de secretos que incomodan, que es material de prevención. Solo 9-12. Requiere psicología clínica infantil, no solo literatura de prevención."
+        },
+        {
+          "id": "l002",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_ARENAL_L002",
+          "anim": "idle",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. CRÍTICA: misma revisión que la anterior."
+        },
+        {
+          "id": "l003",
+          "speaker": "clara",
+          "locId": "ENC_CLARA_ARENAL_L003",
+          "anim": "nod",
+          "reviewNote": "Borrador escrito por el equipo, no por quien aprueba contenido. CRÍTICA: misma revisión que la anterior."
+        }
+      ]
+    }
+  ],
+  "localization": {
+    "es-BO": {
+      "ENC_TOMI_FARO_L001": "¡Hola! Estoy mirando el mar desde aquí arriba.",
+      "ENC_TOMI_FARO_L002": "Antes traía mi catalejo, pero era de mi hermana. Ahora le pregunto primero.",
+      "ENC_TOMI_FARO_L003": "Preguntar no es pedir permiso para todo. Es saber si al otro le parece bien.",
+      "ENC_LUNA_PALMERAS_L001": "Hola. Estoy tomando sombra un rato.",
+      "ENC_LUNA_PALMERAS_L002": "Mi silla es parte de mí. Cuando alguien la empuja sin avisar, me asusto.",
+      "ENC_LUNA_PALMERAS_L003": "Si quieres ayudarme, pregúntame antes. A veces digo que sí y a veces digo que no, y las dos están bien.",
+      "ENC_CLARA_MIRADOR_L001": "Hola. Desde aquí se ven todas las islas.",
+      "ENC_CLARA_MIRADOR_L002": "A veces me preguntan cosas que no sé. Digo «no sé» y lo busco. No sé no es una puerta cerrada.",
+      "ENC_BETO_CALETA_L001": "Buen día. Estoy arreglando esta banca.",
+      "ENC_BETO_CALETA_L002": "Aquí hicimos un acuerdo: quien llega primero elige la música. Después vimos que no le gustaba a todos y lo cambiamos.",
+      "ENC_BETO_CALETA_L003": "Un acuerdo se puede volver a hablar. Eso no es romperlo.",
+      "ENC_TOMI_ARENAL_L001": "Estaba jugando a las escondidas con unos amigos.",
+      "ENC_TOMI_ARENAL_L002": "A mitad del juego ya no quería seguir. Me dio cosa decirlo, porque ya había dicho que sí.",
+      "ENC_TOMI_ARENAL_L003": "Igual lo dije. Cambiar de opinión a mitad también se vale.",
+      "ENC_CLARA_PARTIDA_L001": "Hola. Estoy revisando que los puentes estén firmes.",
+      "ENC_CLARA_PARTIDA_L002": "Ayer me equivoqué en uno y tuve que volver a empezar. Me pasa seguido.",
+      "ENC_CLARA_PARTIDA_L003": "Preguntar cuando algo no te cuadra no molesta. A mí también me toca preguntar.",
+      "ENC_BETO_FARO_L001": "Buen día. Vine a prender la luz del faro.",
+      "ENC_BETO_FARO_L002": "El otro día quise darle la mano a Tomi y él me dijo que hoy no. Guardé la mano y seguimos conversando.",
+      "ENC_BETO_FARO_L003": "Cuando alguien dice que no, yo me hago para atrás. Así de simple.",
+      "ENC_LUNA_MIRADOR_L001": "Hola. Subí hasta acá para mirar las islas.",
+      "ENC_LUNA_MIRADOR_L002": "Tardé un rato. A veces la gente se pone nerviosa porque tardo.",
+      "ENC_LUNA_MIRADOR_L003": "Yo llego igual. Esperar sin apurarme también es acompañar.",
+      "ENC_TOMI_CALETA_L001": "Estoy juntando conchitas para mi colección.",
+      "ENC_TOMI_CALETA_L002": "Un amigo me pidió una y le dije que esa no. Pensé que se iba a enojar.",
+      "ENC_TOMI_CALETA_L003": "No se enojó. Seguimos juntando juntos.",
+      "ENC_CLARA_ARENAL_L001": "Te cuento algo que le digo a todos los grupos.",
+      "ENC_CLARA_ARENAL_L002": "Hay secretos que son lindos, como un regalo que todavía no se abre. Y hay otros que dejan un nudo en la panza.",
+      "ENC_CLARA_ARENAL_L003": "Los del nudo se cuentan. A quien vos elijas de tu círculo. Y si esa persona no te escucha, se lo contás a otra."
+    }
+  }
+}

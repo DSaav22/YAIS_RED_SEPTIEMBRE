@@ -1,0 +1,310 @@
+{
+  "version": "v001",
+  "stage": "first_deformation_rig",
+  "date": "2026-09-17",
+  "engine_neutral": true,
+  "root_motion": false,
+  "mobile_optimized": false,
+  "characters": [
+    {
+      "id": "mascot",
+      "label": "Capibara",
+      "glb": "mascot/mascot.glb",
+      "blend": "mascot/mascot.blend",
+      "source": "mascot/v005/mascot.blend",
+      "source_sha256": "3dd487fea8f9ec9c6ccfbb3c5e7a07c7c273bc21a11404ac1053273d7d06d1bb",
+      "sha256": "b12dfde793f53481b1a30689a9474209af60e90148cdd5077a74c0de2fcbcced",
+      "bytes": 16412600,
+      "bones": 17,
+      "triangles": 226374,
+      "vertices": 218815,
+      "material_primitives": 12,
+      "colored_primitives": 12,
+      "clips": [
+        {
+          "name": "Idle",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Walk",
+          "duration_seconds": 1.6333333253860474,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Wave",
+          "duration_seconds": 2.433333396911621,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Listen",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "TalkGesture",
+          "duration_seconds": 2.8333332538604736,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        }
+      ],
+      "locomotion": {
+        "clip": "Walk",
+        "meters_per_cycle": 0.12666666666666668,
+        "duration_seconds": 1.6,
+        "runtime_duration_seconds": 1.6333333253860474
+      },
+      "checks": "binary, skin indices, normalized weights, finite geometry, clip channels, Blender reimport"
+    },
+    {
+      "id": "child_explorer",
+      "label": "Niño explorador",
+      "glb": "child_explorer/child_explorer.glb",
+      "blend": "child_explorer/child_explorer.blend",
+      "source": "npc/v001/child_explorer/child_explorer.blend",
+      "source_sha256": "0c8afe3380384ceeaf6341dba1d33f5f75eb85be036ed67855ae4894296f221c",
+      "sha256": "92af921f1c3671130ec168fbb080af5e662eae451a41d5bd5613f28fd4c4a530",
+      "bytes": 2049840,
+      "bones": 17,
+      "triangles": 57600,
+      "vertices": 31314,
+      "material_primitives": 15,
+      "colored_primitives": 0,
+      "clips": [
+        {
+          "name": "Idle",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Walk",
+          "duration_seconds": 1.6333333253860474,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Wave",
+          "duration_seconds": 2.433333396911621,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Listen",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "TalkGesture",
+          "duration_seconds": 2.8333332538604736,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        }
+      ],
+      "locomotion": {
+        "clip": "Walk",
+        "meters_per_cycle": 0.18333333333333335,
+        "duration_seconds": 1.6,
+        "runtime_duration_seconds": 1.6333333253860474
+      },
+      "checks": "binary, skin indices, normalized weights, finite geometry, clip channels, Blender reimport"
+    },
+    {
+      "id": "child_wheelchair",
+      "label": "Niña en silla de ruedas",
+      "glb": "child_wheelchair/child_wheelchair.glb",
+      "blend": "child_wheelchair/child_wheelchair.blend",
+      "source": "npc/v002/child_wheelchair/child_wheelchair.blend",
+      "source_sha256": "c2aaf94948ac3c8d01615875da052016148d59d0d2556df40d72012e633539cd",
+      "sha256": "123e20b0d4e6eb6642c6e4b448cc4c74932031de62e3821c9400bfcdd018c764",
+      "bytes": 5737816,
+      "bones": 22,
+      "triangles": 149252,
+      "vertices": 90945,
+      "material_primitives": 20,
+      "colored_primitives": 0,
+      "clips": [
+        {
+          "name": "Idle",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Roll",
+          "duration_seconds": 6.0333333015441895,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Wave",
+          "duration_seconds": 2.433333396911621,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Listen",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "TalkGesture",
+          "duration_seconds": 2.8333332538604736,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        }
+      ],
+      "locomotion": {
+        "clip": "Roll",
+        "meters_per_cycle": 1.7027432182456679,
+        "duration_seconds": 6,
+        "rear_effective_radius_m": 0.271,
+        "caster_effective_radius_m": 0.06775,
+        "pushes_per_cycle": 6,
+        "runtime_duration_seconds": 6.0333333015441895
+      },
+      "checks": "binary, skin indices, normalized weights, finite geometry, clip channels, Blender reimport"
+    },
+    {
+      "id": "educator",
+      "label": "Educadora",
+      "glb": "educator/educator.glb",
+      "blend": "educator/educator.blend",
+      "source": "npc/v002/educator/educator.blend",
+      "source_sha256": "8205a577c23e1de2b4a9da049f4991b5322d981c0d3c6029a3c2147dfb8659f6",
+      "sha256": "0377f373e05c40b5d8bf0e5f6a882e76cbae1411dc1f3e40ab9ce0f393b3e153",
+      "bytes": 2607540,
+      "bones": 17,
+      "triangles": 74636,
+      "vertices": 39996,
+      "material_primitives": 19,
+      "colored_primitives": 0,
+      "clips": [
+        {
+          "name": "Idle",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Walk",
+          "duration_seconds": 1.6333333253860474,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Wave",
+          "duration_seconds": 2.433333396911621,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Listen",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "TalkGesture",
+          "duration_seconds": 2.8333332538604736,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        }
+      ],
+      "locomotion": {
+        "clip": "Walk",
+        "meters_per_cycle": 0.33333333333333337,
+        "duration_seconds": 1.6,
+        "runtime_duration_seconds": 1.6333333253860474
+      },
+      "checks": "binary, skin indices, normalized weights, finite geometry, clip channels, Blender reimport"
+    },
+    {
+      "id": "community_guide",
+      "label": "Guía comunitario",
+      "glb": "community_guide/community_guide.glb",
+      "blend": "community_guide/community_guide.blend",
+      "source": "npc/v002/community_guide/community_guide.blend",
+      "source_sha256": "ec5e19de6fc2d7ef249e10014ce24a237043bf79214494e28a434fa94b0ac326",
+      "sha256": "01175538f6e9bd36dc88dedf95472ec6f10c9596ee9642e04107375fede4ada3",
+      "bytes": 4326248,
+      "bones": 17,
+      "triangles": 117860,
+      "vertices": 68131,
+      "material_primitives": 16,
+      "colored_primitives": 0,
+      "clips": [
+        {
+          "name": "Idle",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Walk",
+          "duration_seconds": 1.6333333253860474,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Wave",
+          "duration_seconds": 2.433333396911621,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "Listen",
+          "duration_seconds": 3.2333333492279053,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        },
+        {
+          "name": "TalkGesture",
+          "duration_seconds": 2.8333332538604736,
+          "first_key_seconds": 0.03333333507180214,
+          "loop": true,
+          "in_place": true
+        }
+      ],
+      "locomotion": {
+        "clip": "Walk",
+        "meters_per_cycle": 0.33333333333333337,
+        "duration_seconds": 1.6,
+        "runtime_duration_seconds": 1.6333333253860474
+      },
+      "checks": "binary, skin indices, normalized weights, finite geometry, clip channels, Blender reimport"
+    }
+  ],
+  "total_clips": 25,
+  "total_glb_bytes": 31134044
+}

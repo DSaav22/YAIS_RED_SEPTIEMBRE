@@ -1,0 +1,50 @@
+/* Punto de entrada de estilos del shell.
+   Importa los tokens y la base compartida (T-001-05, `shared/styles/`) y
+   conserva solo las reglas propias del shell de `App.tsx`, para no
+   duplicar el reset, los tokens ni los estados globales que ya viven en
+   esos dos archivos. */
+
+@import "./shared/styles/tokens.css";
+@import "./shared/styles/base.css";
+@import "./shared/styles/juego.css";
+
+.shell {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.shell__encabezado {
+  display: flex;
+  flex-direction: column;
+  gap: var(--espacio-1);
+  align-items: flex-start;
+}
+
+.shell__titulo {
+  margin: 0;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  line-height: 1.2;
+}
+
+/* Distintivo obligatorio mientras el contenido no esté aprobado (AC-10).
+   Contraste --color-borrador-texto sobre --color-borrador-fondo:
+   10.77:1 (texto normal, min 4.5:1).
+
+   Va `sticky`: AC-10 dice "en pantalla", y con la escena 3D la página llega a
+   desplazarse en una laptop de 768 px de alto. Si el distintivo se fuera con
+   el scroll, habría tramos de demo sin él (revisión de content-guardian). */
+.distintivo-borrador {
+  position: sticky;
+  inset-block-start: var(--espacio-1);
+  z-index: 2;
+  align-self: flex-start;
+  margin: 0;
+  padding: var(--espacio-1) var(--espacio-2);
+  background-color: var(--color-borrador-fondo);
+  border: 2px solid var(--color-borrador-borde);
+  border-radius: var(--radio);
+  color: var(--color-borrador-texto);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}

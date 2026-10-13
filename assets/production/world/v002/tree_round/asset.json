@@ -1,0 +1,68 @@
+{
+  "id": "tree_round",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 23772,
+  "bounds": {
+    "min": [
+      -1.0700002908706665,
+      -0.9000000953674316,
+      -0.004999995231628418
+    ],
+    "max": [
+      1.0800000429153442,
+      0.8578242659568787,
+      2.91695499420166
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "capsule",
+      "center": [
+        0,
+        0,
+        0.73
+      ],
+      "radius": 0.2,
+      "height": 1.46,
+      "axis": "z"
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 402120,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/tree_round/tree_round.glb",
+  "glb": "tree_round.glb",
+  "glb_bytes_v001": 658944,
+  "sha256": "6744259ca79183e3caa9ffae75fe8947ce2f1494c17dc58f63cde8c7fdd7b1f4",
+  "source_sha256": "69bf1d77cdaa0ce04f42ef2dccd691a757f7e4107dc8079a2abeb793acfc4843",
+  "vertices": 16007,
+  "bounds_glb": {
+    "min": [
+      -1.07,
+      -0.005,
+      -0.8579
+    ],
+    "max": [
+      1.08,
+      2.917,
+      0.9001
+    ]
+  },
+  "size_glb": [
+    2.15,
+    2.922,
+    1.758
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

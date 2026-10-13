@@ -1,0 +1,45 @@
+{
+  "id": "fence_wood",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2568,
+  "bounds": {
+    "min": [
+      -0.9869999885559082,
+      -0.08700000494718552,
+      0.0
+    ],
+    "max": [
+      0.9869999885559082,
+      0.08700000494718552,
+      0.8625000715255737
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        0.4
+      ],
+      "size": [
+        1.96,
+        0.14,
+        0.8
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 69248
+}

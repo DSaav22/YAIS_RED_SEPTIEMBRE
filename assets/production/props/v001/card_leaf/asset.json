@@ -1,0 +1,31 @@
+{
+  "id": "card_leaf",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 740,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.15000000596046448,
+      0.005000025033950806
+    ],
+    "max": [
+      0.23499999940395355,
+      0.04400000348687172,
+      0.7150000333786011
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 21172
+}

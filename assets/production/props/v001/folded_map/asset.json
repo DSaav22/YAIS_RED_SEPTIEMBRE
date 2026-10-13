@@ -1,0 +1,31 @@
+{
+  "id": "folded_map",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 3360,
+  "bounds": {
+    "min": [
+      -0.43896031379699707,
+      -0.07500001788139343,
+      0.015000015497207642
+    ],
+    "max": [
+      0.43896040320396423,
+      0.03760657459497452,
+      0.7050000429153442
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 91868
+}

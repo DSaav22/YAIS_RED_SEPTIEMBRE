@@ -1,0 +1,56 @@
+{
+  "id": "pause_button",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1044,
+  "bounds": {
+    "min": [
+      -0.3499999940395355,
+      -0.0820000022649765,
+      0.03999999165534973
+    ],
+    "max": [
+      0.3499999940395355,
+      0.04500001668930054,
+      0.7400000095367432
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 19900,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/pause_button/pause_button.glb",
+  "glb": "pause_button.glb",
+  "glb_bytes_v001": 31400,
+  "sha256": "c6486bdbca1c68b4453d0d33896bd9fbe3cf6f737ac1e0be67108f0a944ad606",
+  "source_sha256": "68b8e5d025bf740c2da1ff2e34bc32071a67b21bec54047891cc76afb051f307",
+  "vertices": 689,
+  "bounds_glb": {
+    "min": [
+      -0.35,
+      0.04,
+      -0.045
+    ],
+    "max": [
+      0.35,
+      0.74,
+      0.082
+    ]
+  },
+  "size_glb": [
+    0.7,
+    0.7,
+    0.127
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

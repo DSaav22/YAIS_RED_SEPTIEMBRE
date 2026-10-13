@@ -1,0 +1,56 @@
+{
+  "id": "backpack",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 12584,
+  "bounds": {
+    "min": [
+      -0.37399527430534363,
+      -0.2826554775238037,
+      0
+    ],
+    "max": [
+      0.37399527430534363,
+      0.5850000381469727,
+      0.7708542943000793
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 206352,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/backpack/backpack.glb",
+  "glb": "backpack.glb",
+  "glb_bytes_v001": 335000,
+  "sha256": "2b37cc7b432c1859b126eb62da25d4ee7c664821e950285672563fd86dfe3000",
+  "source_sha256": "689e328a8af2f8dd45a568d35b4ce1c00573885b2e29a846eaa073161f5739ae",
+  "vertices": 8011,
+  "bounds_glb": {
+    "min": [
+      -0.374,
+      0,
+      -0.585
+    ],
+    "max": [
+      0.374,
+      0.7709,
+      0.2827
+    ]
+  },
+  "size_glb": [
+    0.748,
+    0.7708,
+    0.8677
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

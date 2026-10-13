@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>YAIS · Catálogo de producción 3D</title>
+<style>
+:root{color-scheme:dark}body{margin:0;background:#102b32;color:#edf5ed;font:17px/1.65 system-ui}
+main{max-width:1280px;margin:auto;padding:32px}h1{font-size:clamp(30px,5vw,52px);line-height:1.1}h2{margin-top:48px}
+a{color:#ffd277}nav{display:flex;gap:22px;flex-wrap:wrap}.tag{letter-spacing:.09em;color:#9ed9bd}
+figure{margin:20px 0;background:#20414a;border-radius:18px;overflow:hidden}img{width:100%;display:block}figcaption{padding:16px}
+.hero{display:grid;grid-template-columns:minmax(250px,480px) 1fr;gap:30px;align-items:center}
+.downloads{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:10px}
+.downloads li{padding:14px 18px;border:1px solid #35575b;border-radius:12px}.downloads span{display:block;font-size:14px}
+.notice{background:#244247;border-left:3px solid #ffd277;padding:16px 22px}small{color:#bfceca}
+.npcgrid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}.npcgrid figure{margin:0}.npcgrid figcaption{font-size:15px}.npcgrid strong{display:block;font-size:18px}.npcgrid a{display:inline-block;margin-right:8px}@media(max-width:900px){.npcgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.hero{grid-template-columns:1fr}main{padding:20px}}
+</style><main>
+<span class="tag">LA ISLA DE LOS ACUERDOS · PRODUCCIÓN POR ETAPAS</span>
+<h1>Modelos reales, listos para revisar.</h1>
+<p>Mascota + 40 piezas de mundo/objetos + 4 NPC nuevos. Todos los renders proceden de modelos exportados; las referencias artísticas se enlazan aparte. Fecha: 2026-09-17.</p>
+<nav><a href="#npc">Nuevos NPC</a><a href="#mascota">Mascota</a><a href="#entorno">Escenario</a><a href="#arquitectura">Arquitectura</a><a href="#objetos">Objetos</a><a href="viewer.html?model=mascot/v005/mascot.glb&amp;name=Capibara%20v005">Abrir visor 3D</a><a href="../../PRODUCCION-3D.md">Reanudar producción</a></nav>
+<p class="notice"><strong>Nuevo: primera pasada de rigs y animaciones.</strong> <a href="animated/v001/index.html">Revisar 5 personajes y 25 clips →</a> Los modelos estáticos de abajo se conservan como referencia. Los rigs ya se pueden reproducir; todavía faltan pulido de articulaciones, cara/dedos, optimización móvil, interacciones y pruebas en el motor. Las colisiones siguen siendo propuestas no integradas.</p>
+<section id="npc"><h2>Nuevo · Cuatro personajes NPC</h2>
+<p>Personajes de las dos hojas técnicas. Abre «Cuatro vistas» para inspeccionar los renders o «Ver 3D» para girar el GLB real. Las imágenes también se pueden consultar sin conexión.</p>
+<div class="npcgrid">
+<figure><a href="npc/v001/child_explorer/preview.html"><img src="npc/v001/child_explorer/three-quarter.png" alt="Niño explorador, render real del GLB"></a><figcaption><strong>Niño explorador</strong><a href="npc/v001/child_explorer/preview.html">Cuatro vistas</a><a href="viewer.html?model=npc/v001/child_explorer/child_explorer.glb&amp;name=Ni%C3%B1o%20explorador">Ver 3D</a></figcaption></figure>
+<figure><a href="npc/v002/child_wheelchair/preview.html"><img src="npc/v002/child_wheelchair/three-quarter.png" alt="Niña en silla de ruedas, render real del GLB"></a><figcaption><strong>Niña en silla de ruedas</strong><a href="npc/v002/child_wheelchair/preview.html">Cuatro vistas</a><a href="viewer.html?model=npc/v002/child_wheelchair/child_wheelchair.glb&amp;name=Ni%C3%B1a%20en%20silla%20de%20ruedas">Ver 3D</a></figcaption></figure>
+<figure><a href="npc/v002/educator/preview.html"><img src="npc/v002/educator/three-quarter.png" alt="Educadora, render real del GLB"></a><figcaption><strong>Educadora</strong><a href="npc/v002/educator/preview.html">Cuatro vistas</a><a href="viewer.html?model=npc/v002/educator/educator.glb&amp;name=Educadora">Ver 3D</a></figcaption></figure>
+<figure><a href="npc/v002/community_guide/preview.html"><img src="npc/v002/community_guide/three-quarter.png" alt="Guía comunitario, render real del GLB"></a><figcaption><strong>Guía comunitario</strong><a href="npc/v002/community_guide/preview.html">Cuatro vistas</a><a href="viewer.html?model=npc/v002/community_guide/community_guide.glb&amp;name=Gu%C3%ADa%20comunitario">Ver 3D</a></figcaption></figure>
+</div><p><small>Cada galería incluye BLEND, GLB, ficha y verificación. Ropa, pelo y accesorios separados; todavía sin esqueleto, pesos ni expresiones animadas. Las alturas de montaje son aproximadas y no constituyen una medición de las ilustraciones.</small></p>
+<details><summary>Ver el elenco completo a escala relativa</summary><figure><img src="npc/v001/lineup.png" alt="Los cuatro NPC juntos, render real a escala relativa" loading="lazy"><figcaption>Comparación de los cuatro modelos con sus alturas de montaje; no se han normalizado individualmente.</figcaption></figure></details></section>
+<section id="mascota"><h2>01 · Capibara v005</h2><div class="hero">
+<figure><img src="mascot/v005/three-quarter.png" alt="Capibara v005, render real"><figcaption>Abdomen, dedos, cara y correas afinados.</figcaption></figure>
+<div><p>Hocico integrado con la cabeza, ojos adaptados a la superficie, manos con dedos modelados y abdomen más redondeado.</p>
+<p><a href="mascot/v005/preview.html">Ver las cuatro vistas y comparar con v004</a></p>
+<p><a href="viewer.html?model=mascot/v005/mascot.glb&amp;name=Capibara%20v005">Ver capibara en 3D</a> · <a href="mascot/v005/mascot.glb">Descargar GLB</a> · <a href="mascot/v005/mascot.blend">Descargar Blender</a></p>
+<p><small>226.374 triángulos · 9,66 MB. Fidelidad artística aprobada el 2026-09-17. Todavía requiere simplificación y rig.</small></p></div></div></section>
+<section id="entorno"><h2>02 · Kit de isla — 18 piezas</h2>
+<p><a href="../references-3d/technical/04-modular-island-kit-orthographic.png">Referencia aprobada del kit</a>. Las piezas están escaladas individualmente en esta lámina para inspección: no representa sus tamaños relativos dentro del juego.</p>
+<figure><img src="world/v001/environment.png" alt="Dieciocho piezas de entorno renderizadas"><figcaption>Terreno, caminos, vegetación, puentes, agua y mobiliario. Geometría estática; agua y nubes aún no tienen animación.</figcaption></figure>
+<ul class="downloads"><li><strong>Isla grande</strong><span><a href="world/v001/island_large/island_large.glb">GLB</a> · <a href="world/v001/island_large/island_large.blend">Blender</a> · <a href="world/v001/island_large/asset.json">Ficha</a></span></li>
+<li><strong>Isla pequeña</strong><span><a href="world/v001/island_small/island_small.glb">GLB</a> · <a href="world/v001/island_small/island_small.blend">Blender</a> · <a href="world/v001/island_small/asset.json">Ficha</a></span></li>
+<li><strong>Loseta de césped</strong><span><a href="world/v001/grass_tile/grass_tile.glb">GLB</a> · <a href="world/v001/grass_tile/grass_tile.blend">Blender</a> · <a href="world/v001/grass_tile/asset.json">Ficha</a></span></li>
+<li><strong>Camino recto</strong><span><a href="world/v001/path_straight/path_straight.glb">GLB</a> · <a href="world/v001/path_straight/path_straight.blend">Blender</a> · <a href="world/v001/path_straight/asset.json">Ficha</a></span></li>
+<li><strong>Camino en curva</strong><span><a href="world/v001/path_corner/path_corner.glb">GLB</a> · <a href="world/v001/path_corner/path_corner.blend">Blender</a> · <a href="world/v001/path_corner/asset.json">Ficha</a></span></li>
+<li><strong>Loseta de agua</strong><span><a href="world/v001/water_tile/water_tile.glb">GLB</a> · <a href="world/v001/water_tile/water_tile.blend">Blender</a> · <a href="world/v001/water_tile/asset.json">Ficha</a></span></li>
+<li><strong>Puente recto</strong><span><a href="world/v001/bridge_straight/bridge_straight.glb">GLB</a> · <a href="world/v001/bridge_straight/bridge_straight.blend">Blender</a> · <a href="world/v001/bridge_straight/asset.json">Ficha</a></span></li>
+<li><strong>Puente curvo</strong><span><a href="world/v001/bridge_curved/bridge_curved.glb">GLB</a> · <a href="world/v001/bridge_curved/bridge_curved.blend">Blender</a> · <a href="world/v001/bridge_curved/asset.json">Ficha</a></span></li>
+<li><strong>Baranda de cuerda</strong><span><a href="world/v001/fence_rope/fence_rope.glb">GLB</a> · <a href="world/v001/fence_rope/fence_rope.blend">Blender</a> · <a href="world/v001/fence_rope/asset.json">Ficha</a></span></li>
+<li><strong>Valla de madera</strong><span><a href="world/v001/fence_wood/fence_wood.glb">GLB</a> · <a href="world/v001/fence_wood/fence_wood.blend">Blender</a> · <a href="world/v001/fence_wood/asset.json">Ficha</a></span></li>
+<li><strong>Escalera</strong><span><a href="world/v001/stairs_three/stairs_three.glb">GLB</a> · <a href="world/v001/stairs_three/stairs_three.blend">Blender</a> · <a href="world/v001/stairs_three/asset.json">Ficha</a></span></li>
+<li><strong>Árbol</strong><span><a href="world/v001/tree_round/tree_round.glb">GLB</a> · <a href="world/v001/tree_round/tree_round.blend">Blender</a> · <a href="world/v001/tree_round/asset.json">Ficha</a></span></li>
+<li><strong>Palmera</strong><span><a href="world/v001/palm/palm.glb">GLB</a> · <a href="world/v001/palm/palm.blend">Blender</a> · <a href="world/v001/palm/asset.json">Ficha</a></span></li>
+<li><strong>Roca grande</strong><span><a href="world/v001/rock_large/rock_large.glb">GLB</a> · <a href="world/v001/rock_large/rock_large.blend">Blender</a> · <a href="world/v001/rock_large/asset.json">Ficha</a></span></li>
+<li><strong>Roca pequeña</strong><span><a href="world/v001/rock_small/rock_small.glb">GLB</a> · <a href="world/v001/rock_small/rock_small.blend">Blender</a> · <a href="world/v001/rock_small/asset.json">Ficha</a></span></li>
+<li><strong>Arbusto con flores</strong><span><a href="world/v001/flower_bush/flower_bush.glb">GLB</a> · <a href="world/v001/flower_bush/flower_bush.blend">Blender</a> · <a href="world/v001/flower_bush/asset.json">Ficha</a></span></li>
+<li><strong>Banco</strong><span><a href="world/v001/bench/bench.glb">GLB</a> · <a href="world/v001/bench/bench.blend">Blender</a> · <a href="world/v001/bench/asset.json">Ficha</a></span></li>
+<li><strong>Nube</strong><span><a href="world/v001/cloud/cloud.glb">GLB</a> · <a href="world/v001/cloud/cloud.blend">Blender</a> · <a href="world/v001/cloud/asset.json">Ficha</a></span></li></ul></section>
+<section id="arquitectura"><h2>03 · Faro y casa</h2>
+<p><a href="../references-3d/technical/05-landmarks-architecture-exploded.png">Referencia aprobada de arquitectura</a>. Fachadas estáticas, sin interiores ni puertas animadas.</p>
+<figure><img src="world/v001/architecture.png" alt="Faro y casa renderizados"><figcaption>Versiones iniciales exportables. No son réplicas exactas de las ilustraciones.</figcaption></figure>
+<ul class="downloads"><li><strong>Faro</strong><span><a href="world/v001/lighthouse/lighthouse.glb">GLB</a> · <a href="world/v001/lighthouse/lighthouse.blend">Blender</a> · <a href="world/v001/lighthouse/asset.json">Ficha</a></span></li>
+<li><strong>Casa</strong><span><a href="world/v001/house/house.glb">GLB</a> · <a href="world/v001/house/house.blend">Blender</a> · <a href="world/v001/house/asset.json">Ficha</a></span></li></ul></section>
+<section id="objetos"><h2>04 · Objetos interactivos — 20 piezas</h2>
+<p><a href="../references-3d/technical/06-interactive-props-orthographic.png">Referencia aprobada de objetos</a>. Son las piezas visuales: recogida, apertura, decisiones, feedback y accesibilidad se implementan después.</p>
+<figure><img src="props/v001/props.png" alt="Veinte objetos de aprendizaje renderizados"><figcaption>Inspección normalizada por objeto; no escala de juego. Los símbolos 3D de pausa/sonido no sustituyen botones HTML accesibles.</figcaption></figure>
+<ul class="downloads"><li><strong>Mochila</strong><span><a href="props/v001/backpack/backpack.glb">GLB</a> · <a href="props/v001/backpack/backpack.blend">Blender</a> · <a href="props/v001/backpack/asset.json">Ficha</a></span></li>
+<li><strong>Brújula</strong><span><a href="props/v001/compass/compass.glb">GLB</a> · <a href="props/v001/compass/compass.blend">Blender</a> · <a href="props/v001/compass/asset.json">Ficha</a></span></li>
+<li><strong>Mapa plegado</strong><span><a href="props/v001/folded_map/folded_map.glb">GLB</a> · <a href="props/v001/folded_map/folded_map.blend">Blender</a> · <a href="props/v001/folded_map/asset.json">Ficha</a></span></li>
+<li><strong>Burbuja de diálogo</strong><span><a href="props/v001/speech_bubble/speech_bubble.glb">GLB</a> · <a href="props/v001/speech_bubble/speech_bubble.blend">Blender</a> · <a href="props/v001/speech_bubble/asset.json">Ficha</a></span></li>
+<li><strong>Círculo de tres</strong><span><a href="props/v001/circle_of_three/circle_of_three.glb">GLB</a> · <a href="props/v001/circle_of_three/circle_of_three.blend">Blender</a> · <a href="props/v001/circle_of_three/asset.json">Ficha</a></span></li>
+<li><strong>Regalo</strong><span><a href="props/v001/gift_box/gift_box.glb">GLB</a> · <a href="props/v001/gift_box/gift_box.blend">Blender</a> · <a href="props/v001/gift_box/asset.json">Ficha</a></span></li>
+<li><strong>Sobre sellado</strong><span><a href="props/v001/sealed_envelope/sealed_envelope.glb">GLB</a> · <a href="props/v001/sealed_envelope/sealed_envelope.blend">Blender</a> · <a href="props/v001/sealed_envelope/asset.json">Ficha</a></span></li>
+<li><strong>Corazón</strong><span><a href="props/v001/heart_token/heart_token.glb">GLB</a> · <a href="props/v001/heart_token/heart_token.blend">Blender</a> · <a href="props/v001/heart_token/asset.json">Ficha</a></span></li>
+<li><strong>Tarjeta hoja</strong><span><a href="props/v001/card_leaf/card_leaf.glb">GLB</a> · <a href="props/v001/card_leaf/card_leaf.blend">Blender</a> · <a href="props/v001/card_leaf/asset.json">Ficha</a></span></li>
+<li><strong>Tarjeta sol</strong><span><a href="props/v001/card_sun/card_sun.glb">GLB</a> · <a href="props/v001/card_sun/card_sun.blend">Blender</a> · <a href="props/v001/card_sun/asset.json">Ficha</a></span></li>
+<li><strong>Tarjeta nube</strong><span><a href="props/v001/card_cloud/card_cloud.glb">GLB</a> · <a href="props/v001/card_cloud/card_cloud.blend">Blender</a> · <a href="props/v001/card_cloud/asset.json">Ficha</a></span></li>
+<li><strong>Gota de agua</strong><span><a href="props/v001/water_drop/water_drop.glb">GLB</a> · <a href="props/v001/water_drop/water_drop.blend">Blender</a> · <a href="props/v001/water_drop/asset.json">Ficha</a></span></li>
+<li><strong>Botella</strong><span><a href="props/v001/water_bottle/water_bottle.glb">GLB</a> · <a href="props/v001/water_bottle/water_bottle.blend">Blender</a> · <a href="props/v001/water_bottle/asset.json">Ficha</a></span></li>
+<li><strong>Contenedor de reciclaje</strong><span><a href="props/v001/recycling_bin/recycling_bin.glb">GLB</a> · <a href="props/v001/recycling_bin/recycling_bin.blend">Blender</a> · <a href="props/v001/recycling_bin/asset.json">Ficha</a></span></li>
+<li><strong>Brote</strong><span><a href="props/v001/seedling/seedling.glb">GLB</a> · <a href="props/v001/seedling/seedling.blend">Blender</a> · <a href="props/v001/seedling/asset.json">Ficha</a></span></li>
+<li><strong>Pieza azul</strong><span><a href="props/v001/puzzle_blue/puzzle_blue.glb">GLB</a> · <a href="props/v001/puzzle_blue/puzzle_blue.blend">Blender</a> · <a href="props/v001/puzzle_blue/asset.json">Ficha</a></span></li>
+<li><strong>Pieza roja</strong><span><a href="props/v001/puzzle_red/puzzle_red.glb">GLB</a> · <a href="props/v001/puzzle_red/puzzle_red.blend">Blender</a> · <a href="props/v001/puzzle_red/asset.json">Ficha</a></span></li>
+<li><strong>Pieza amarilla</strong><span><a href="props/v001/puzzle_yellow/puzzle_yellow.glb">GLB</a> · <a href="props/v001/puzzle_yellow/puzzle_yellow.blend">Blender</a> · <a href="props/v001/puzzle_yellow/asset.json">Ficha</a></span></li>
+<li><strong>Símbolo de pausa</strong><span><a href="props/v001/pause_button/pause_button.glb">GLB</a> · <a href="props/v001/pause_button/pause_button.blend">Blender</a> · <a href="props/v001/pause_button/asset.json">Ficha</a></span></li>
+<li><strong>Símbolo de sonido</strong><span><a href="props/v001/sound_button/sound_button.glb">GLB</a> · <a href="props/v001/sound_button/sound_button.blend">Blender</a> · <a href="props/v001/sound_button/asset.json">Ficha</a></span></li></ul></section>
+<h2>Siguiente punto de trabajo</h2>
+<p>Revisar los cuatro NPC nuevos; después preparar topología, rig y animaciones. La aprobación de la entrega anterior queda registrada. Integrar solo tras verificar el rendimiento en el teléfono objetivo.</p>
+<p><a href="../../PRODUCCION-3D.md">Plan completo y comandos de reanudación</a></p>
+</main><script>
+for(const link of document.querySelectorAll('a[href$=".glb"]')){
+  const view=document.createElement('a');view.href='viewer.html?model='+encodeURIComponent(link.getAttribute('href'))+'&name='+encodeURIComponent(link.closest('li')?.querySelector('strong')?.textContent||'Modelo 3D');view.textContent='Ver 3D';view.style.marginRight='8px';link.parentNode.insertBefore(view,link);link.textContent='Descargar GLB';
+}
+</script></html>

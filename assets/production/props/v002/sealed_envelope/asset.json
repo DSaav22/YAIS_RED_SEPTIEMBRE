@@ -1,0 +1,56 @@
+{
+  "id": "sealed_envelope",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2196,
+  "bounds": {
+    "min": [
+      -0.36000001430511475,
+      -0.10500000417232513,
+      0.009999990463256836
+    ],
+    "max": [
+      0.36000001430511475,
+      0.03999999910593033,
+      0.5099999904632568
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 60272,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/sealed_envelope/sealed_envelope.glb",
+  "glb": "sealed_envelope.glb",
+  "glb_bytes_v001": 105224,
+  "sha256": "106236bbc9e36717d8eec37c587502e790c9690183a8c58c1fa29125b75e9151",
+  "source_sha256": "1a5ffa122557100c06e3abbab98451224ae61821c14503c65a32c3e8d29a5702",
+  "vertices": 2779,
+  "bounds_glb": {
+    "min": [
+      -0.36,
+      0.01,
+      -0.04
+    ],
+    "max": [
+      0.36,
+      0.51,
+      0.105
+    ]
+  },
+  "size_glb": [
+    0.72,
+    0.5,
+    0.145
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

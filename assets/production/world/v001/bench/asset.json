@@ -1,0 +1,45 @@
+{
+  "id": "bench",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2068,
+  "bounds": {
+    "min": [
+      -0.8100000023841858,
+      -0.2900000214576721,
+      0.0
+    ],
+    "max": [
+      0.8100000023841858,
+      0.35055601596832275,
+      1.1349999904632568
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        0.52
+      ],
+      "size": [
+        1.7,
+        0.66,
+        1.06
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 55044
+}

@@ -1,0 +1,74 @@
+{
+  "id": "child_wheelchair",
+  "label": "Niña en silla de ruedas",
+  "version": "v001",
+  "source": "npc/v002/child_wheelchair/child_wheelchair.blend",
+  "stage": "first_deformation_rig",
+  "rig": true,
+  "bones": 22,
+  "max_influences": 2,
+  "source_meshes": 394,
+  "export_meshes": 1,
+  "triangles": 149252,
+  "clips": [
+    {
+      "name": "Idle",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Roll",
+      "seconds": 6,
+      "frames": 181,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Wave",
+      "seconds": 2.4,
+      "frames": 73,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Listen",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "TalkGesture",
+      "seconds": 2.8,
+      "frames": 85,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    }
+  ],
+  "in_place": true,
+  "root_motion": false,
+  "blender_axes": "Z-up / front -Y",
+  "gltf_axes": "Y-up / front +Z",
+  "limitations": [
+    "First deformation pass, not final retopology",
+    "No individual fingers or facial/lip-sync rig",
+    "Original dense fur/geometry retained; no mobile FPS claim",
+    "Runtime collision and navigation not included"
+  ],
+  "locomotion": {
+    "clip": "Roll",
+    "meters_per_cycle": 1.7027432182456679,
+    "duration_seconds": 6,
+    "rear_effective_radius_m": 0.271,
+    "caster_effective_radius_m": 0.06775,
+    "pushes_per_cycle": 6
+  },
+  "glb_bytes": 5737816
+}

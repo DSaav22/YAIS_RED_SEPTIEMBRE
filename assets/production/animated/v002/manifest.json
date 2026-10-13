@@ -1,0 +1,122 @@
+{
+  "version": "v002",
+  "derived_from": "assets/production/animated/v001/manifest.json",
+  "stage": "quantized_for_runtime",
+  "lossless": false,
+  "compression": "none",
+  "requires_extensions": [
+    "KHR_mesh_quantization"
+  ],
+  "pipeline": [
+    "dedup",
+    "weld(tolerance=0)",
+    "prune(keepAttributes=false)",
+    "join",
+    "resample",
+    "quantize(pos=14,normal=10,color=8,weight=8)"
+  ],
+  "note": "Variante optimizada de v001, generada por optimize.mjs. Mismo recuento de triángulos que v001: solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization, soportado de serie por three.js). Sin Draco ni meshopt: el runtime no empaqueta decodificador. v001 queda intacto como fuente y es la referencia de arte.",
+  "characters": [
+    {
+      "id": "mascot",
+      "glb": "mascot/mascot.glb",
+      "sha256": "6e1791c3bc7cb460b8372b00297f7da047c03e6bacc3359c13d6bbeefdba37a9",
+      "source_sha256": "b12dfde793f53481b1a30689a9474209af60e90148cdd5077a74c0de2fcbcced",
+      "source_glb": "assets/production/animated/v001/mascot/mascot.glb",
+      "bytes": 8523400,
+      "bytes_v001": 16412600,
+      "triangles": 226374,
+      "vertices": 218813,
+      "material_primitives": 12,
+      "materials": 11,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Wave",
+        "Listen",
+        "TalkGesture"
+      ]
+    },
+    {
+      "id": "child_explorer",
+      "glb": "child_explorer/child_explorer.glb",
+      "sha256": "af40d71045e96b3b63111174cb46c0d85571592c7dc2dcf687c53a37b616534a",
+      "source_sha256": "92af921f1c3671130ec168fbb080af5e662eae451a41d5bd5613f28fd4c4a530",
+      "source_glb": "assets/production/animated/v001/child_explorer/child_explorer.glb",
+      "bytes": 1154572,
+      "bytes_v001": 2049840,
+      "triangles": 57600,
+      "vertices": 31314,
+      "material_primitives": 15,
+      "materials": 15,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Wave",
+        "Listen",
+        "TalkGesture"
+      ]
+    },
+    {
+      "id": "child_wheelchair",
+      "glb": "child_wheelchair/child_wheelchair.glb",
+      "sha256": "f4b8d28f10d244963c60c83a2301fa56dfea1b72240f9a9e83ddb481054f2f52",
+      "source_sha256": "123e20b0d4e6eb6642c6e4b448cc4c74932031de62e3821c9400bfcdd018c764",
+      "source_glb": "assets/production/animated/v001/child_wheelchair/child_wheelchair.glb",
+      "bytes": 3159812,
+      "bytes_v001": 5737816,
+      "triangles": 149252,
+      "vertices": 90945,
+      "material_primitives": 20,
+      "materials": 20,
+      "clips": [
+        "Idle",
+        "Roll",
+        "Wave",
+        "Listen",
+        "TalkGesture"
+      ]
+    },
+    {
+      "id": "educator",
+      "glb": "educator/educator.glb",
+      "sha256": "9be4f47a42e642580d8bcb72916a863b0ae4aba0d21a9a5127f3734019bccc49",
+      "source_sha256": "0377f373e05c40b5d8bf0e5f6a882e76cbae1411dc1f3e40ab9ce0f393b3e153",
+      "source_glb": "assets/production/animated/v001/educator/educator.glb",
+      "bytes": 1465556,
+      "bytes_v001": 2607540,
+      "triangles": 74636,
+      "vertices": 39996,
+      "material_primitives": 19,
+      "materials": 19,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Wave",
+        "Listen",
+        "TalkGesture"
+      ]
+    },
+    {
+      "id": "community_guide",
+      "glb": "community_guide/community_guide.glb",
+      "sha256": "3637873ac85b8ca310f964e08269bee1e84404cf35cbead70e7d8c017003652e",
+      "source_sha256": "01175538f6e9bd36dc88dedf95472ec6f10c9596ee9642e04107375fede4ada3",
+      "source_glb": "assets/production/animated/v001/community_guide/community_guide.glb",
+      "bytes": 2400224,
+      "bytes_v001": 4326248,
+      "triangles": 117860,
+      "vertices": 68131,
+      "material_primitives": 16,
+      "materials": 16,
+      "clips": [
+        "Idle",
+        "Walk",
+        "Wave",
+        "Listen",
+        "TalkGesture"
+      ]
+    }
+  ],
+  "total_glb_bytes": 16703564
+}

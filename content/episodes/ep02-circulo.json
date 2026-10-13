@@ -1,0 +1,947 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentVersion": "0.1.0-draft",
+  "episodeId": "ep02",
+  "slug": "mi-circulo-de-3",
+  "titleLocId": "EP02_TITLE",
+  "status": "draft-not-validated",
+  "updated": "2026-09-17",
+  "source": "YAIS-RED/wiki/narrative/isla-de-los-acuerdos-guiones.md §2",
+  "reviewPolicy": {
+    "requiredReviewers": [
+      "psicologia",
+      "proteccion-infantil",
+      "docentes-santa-cruz"
+    ],
+    "blockProductionIfPending": true,
+    "note": "Todo nodo con review=VALIDAR debe aprobarse antes de grabar audio o publicar."
+  },
+  "defaultLocale": "es-BO",
+  "locales": [
+    "es-BO"
+  ],
+  "ageModes": [
+    "6-8",
+    "9-12"
+  ],
+  "estimatedPlayMinutes": {
+    "6-8": 13,
+    "9-12": 16
+  },
+  "privacy": {
+    "persistChoices": false,
+    "persistFlagsOnly": true,
+    "freeTextInput": false,
+    "telemetry": "none",
+    "note": "Nunca se guarda quién es el círculo ni cuántas personas pensó el niño."
+  },
+  "cast": {
+    "capi": {
+      "model": "mascot/v001",
+      "displayNameLocId": "NAME_CAPI"
+    },
+    "tomi": {
+      "model": "child_explorer/v001",
+      "displayNameLocId": "NAME_TOMI"
+    },
+    "luna": {
+      "model": "child_wheelchair/v001",
+      "displayNameLocId": "NAME_LUNA"
+    },
+    "clara": {
+      "model": "educator/v001",
+      "displayNameLocId": "NAME_CLARA"
+    },
+    "beto": {
+      "model": "community_guide/v001",
+      "displayNameLocId": "NAME_BETO"
+    },
+    "all": {
+      "model": null,
+      "displayNameLocId": "NAME_ALL"
+    }
+  },
+  "props": [
+    "map",
+    "three_cards",
+    "compass",
+    "speech_bubble",
+    "pause_sound"
+  ],
+  "environment": [
+    "path_stones",
+    "garden",
+    "circle_plaza",
+    "small_bridge",
+    "fence",
+    "house"
+  ],
+  "globalUi": {
+    "pause": {
+      "alwaysVisible": true,
+      "promptLocId": "UI_PAUSE_PROMPT",
+      "options": [
+        {
+          "id": "resume",
+          "locId": "UI_PAUSE_RESUME"
+        },
+        {
+          "id": "map",
+          "locId": "UI_PAUSE_MAP"
+        },
+        {
+          "id": "quit",
+          "locId": "UI_PAUSE_QUIT"
+        }
+      ]
+    },
+    "replayLineButton": true,
+    "bodyCompassHud": {
+      "unlockedBy": "s01_mapa",
+      "states": [
+        "calm",
+        "unsure",
+        "uhoh"
+      ]
+    }
+  },
+  "progressFlags": [
+    {
+      "id": "ep02.started",
+      "persist": true
+    },
+    {
+      "id": "ep02.completed",
+      "persist": true
+    },
+    {
+      "id": "island.path_stones",
+      "persist": true
+    },
+    {
+      "id": "island.garden",
+      "persist": true
+    },
+    {
+      "id": "island.circle_plaza",
+      "persist": true
+    },
+    {
+      "id": "ep03.unlocked",
+      "persist": true
+    }
+  ],
+  "sessionVars": [
+    {
+      "id": "helperTomi",
+      "persist": false
+    }
+  ],
+  "entryScene": "s01_mapa",
+  "scenes": [
+    {
+      "id": "s01_mapa",
+      "environment": {
+        "path_stones": "scattered",
+        "small_bridge": "ok"
+      },
+      "camera": "wide",
+      "cast": [
+        "capi",
+        "tomi",
+        "luna"
+      ],
+      "onEnter": {
+        "setFlags": [
+          "ep02.started"
+        ],
+        "setProgress": {
+          "ep02.lastScene": "s01_mapa"
+        }
+      },
+      "entryNode": "s01_n001",
+      "nodes": [
+        {
+          "id": "s01_n001",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S01_L001",
+          "anim": "jump",
+          "emotion": "happy",
+          "next": "s01_n002"
+        },
+        {
+          "id": "s01_n002",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S01_L002",
+          "anim": "wave",
+          "emotion": "warm",
+          "next": "s01_n003"
+        },
+        {
+          "id": "s01_n003",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S01_L003",
+          "anim": "look_around",
+          "emotion": "worried_soft",
+          "next": "s01_n004"
+        },
+        {
+          "id": "s01_n004",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S01_L004",
+          "anim": "crouch_eye_level",
+          "emotion": "calm",
+          "next": "s01_n005"
+        },
+        {
+          "id": "s01_n005",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S01_L005",
+          "anim": "compass_pulse",
+          "emotion": "unsure",
+          "next": "s01_n006",
+          "uiEvent": {
+            "compassPoint": "unsure"
+          }
+        },
+        {
+          "id": "s01_n006",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S01_L006",
+          "anim": "hand_on_shoulder",
+          "emotion": "warm",
+          "next": "s01_n007"
+        },
+        {
+          "id": "s01_n007",
+          "type": "line",
+          "speaker": "luna",
+          "locId": "EP02_S01_L007",
+          "anim": "wave_turn_chair",
+          "emotion": "decided",
+          "next": "s01_n008"
+        },
+        {
+          "id": "s01_n008",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S01_L008",
+          "anim": "touch_backpack",
+          "emotion": "warm",
+          "next": "s01_end"
+        },
+        {
+          "id": "s01_end",
+          "type": "sceneChange",
+          "scene": "s02_fichas"
+        }
+      ]
+    },
+    {
+      "id": "s02_fichas",
+      "environment": {
+        "path_stones": "scattered"
+      },
+      "camera": "close",
+      "cast": [
+        "capi",
+        "tomi",
+        "luna"
+      ],
+      "onEnter": {
+        "setProgress": {
+          "ep02.lastScene": "s02_fichas"
+        }
+      },
+      "entryNode": "s02_n001",
+      "nodes": [
+        {
+          "id": "s02_n001",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S02_L001",
+          "anim": "explain",
+          "emotion": "warm",
+          "next": "s02_m001"
+        },
+        {
+          "id": "s02_m001",
+          "type": "minigame",
+          "minigameId": "trust_cards",
+          "config": {
+            "anyOrderValid": true,
+            "storeAnswers": false,
+            "zones": [
+              {
+                "id": "care",
+                "locId": "EP02_S02_Z001",
+                "icon": "icon_heart"
+              },
+              {
+                "id": "not_care",
+                "locId": "EP02_S02_Z002",
+                "icon": "icon_cloud"
+              },
+              {
+                "id": "ask",
+                "locId": "EP02_S02_Z003",
+                "icon": "icon_speech_question",
+                "ageModes": [
+                  "9-12"
+                ]
+              }
+            ],
+            "cards": [
+              {
+                "id": "listens",
+                "locId": "EP02_S02_T001",
+                "expectedZone": "care"
+              },
+              {
+                "id": "respects_no",
+                "locId": "EP02_S02_T002",
+                "expectedZone": "care"
+              },
+              {
+                "id": "helps",
+                "locId": "EP02_S02_T003",
+                "expectedZone": "care"
+              },
+              {
+                "id": "no_mockery",
+                "locId": "EP02_S02_T004",
+                "expectedZone": "care"
+              },
+              {
+                "id": "bad_secret",
+                "locId": "EP02_S02_T005",
+                "expectedZone": "not_care"
+              },
+              {
+                "id": "angry_no_hug",
+                "locId": "EP02_S02_T006",
+                "expectedZone": "not_care"
+              },
+              {
+                "id": "believes_you",
+                "locId": "EP02_S02_T007",
+                "expectedZone": "care",
+                "ageModes": [
+                  "9-12"
+                ]
+              },
+              {
+                "id": "gifts_silence",
+                "locId": "EP02_S02_T008",
+                "expectedZone": "not_care",
+                "ageModes": [
+                  "9-12"
+                ]
+              },
+              {
+                "id": "is_adult",
+                "locId": "EP02_S02_T009",
+                "expectedZone": "ask",
+                "ageModes": [
+                  "9-12"
+                ],
+                "anyZoneValid": true
+              }
+            ],
+            "feedbackByZone": {
+              "care": {
+                "speaker": "capi",
+                "locId": "EP02_S02_F001",
+                "anim": "nod"
+              },
+              "not_care": {
+                "speaker": "capi",
+                "locId": "EP02_S02_F002",
+                "anim": "calm_firm"
+              }
+            },
+            "feedbackUnexpected": {
+              "speaker": "capi",
+              "locId": "EP02_S02_F003",
+              "anim": "head_tilt"
+            },
+            "feedbackHint": {
+              "speaker": "capi",
+              "locId": "EP02_S02_F004",
+              "anim": "explain",
+              "reviewNote": "Aparece al segundo desvío con la misma ficha; al tercero Capi la coloca y lo explica."
+            },
+            "feedbackAnyZone": {
+              "speaker": "capi",
+              "locId": "EP02_S02_F005",
+              "anim": "explain"
+            }
+          },
+          "next": "s02_n002"
+        },
+        {
+          "id": "s02_n002",
+          "type": "line",
+          "speaker": "luna",
+          "locId": "EP02_S02_L002",
+          "anim": "smile_roll_forward",
+          "emotion": "happy",
+          "next": "s02_end",
+          "worldEvent": {
+            "restore": [
+              "path_stones"
+            ]
+          }
+        },
+        {
+          "id": "s02_end",
+          "type": "sceneChange",
+          "scene": "s03_quien"
+        }
+      ]
+    },
+    {
+      "id": "s03_quien",
+      "environment": {
+        "fence": "ok",
+        "house": "far"
+      },
+      "camera": "wide",
+      "cast": [
+        "capi",
+        "tomi",
+        "luna",
+        "clara",
+        "beto"
+      ],
+      "onEnter": {
+        "setProgress": {
+          "ep02.lastScene": "s03_quien"
+        }
+      },
+      "entryNode": "s03_n001",
+      "nodes": [
+        {
+          "id": "s03_n001",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S03_L001",
+          "anim": "ask",
+          "emotion": "curious",
+          "next": "s03_c001"
+        },
+        {
+          "id": "s03_c001",
+          "type": "choice",
+          "layout": "grid",
+          "retryPolicy": {
+            "unlimited": true,
+            "showAttemptCount": false
+          },
+          "options": [
+            {
+              "id": "luna",
+              "locId": "EP02_S03_O001",
+              "icon": "icon_greet_high_five",
+              "next": "s03_r001",
+              "setSession": {
+                "helperTomi": "luna"
+              }
+            },
+            {
+              "id": "capi",
+              "locId": "EP02_S03_O002",
+              "icon": "icon_star",
+              "next": "s03_r002",
+              "setSession": {
+                "helperTomi": "capi"
+              }
+            },
+            {
+              "id": "clara",
+              "locId": "EP02_S03_O003",
+              "icon": "icon_call_adult",
+              "next": "s03_r004",
+              "setSession": {
+                "helperTomi": "clara"
+              }
+            },
+            {
+              "id": "beto",
+              "locId": "EP02_S03_O004",
+              "icon": "icon_call_adult",
+              "next": "s03_r005",
+              "setSession": {
+                "helperTomi": "beto"
+              }
+            },
+            {
+              "id": "alone",
+              "locId": "EP02_S03_O005",
+              "icon": "icon_walk_away",
+              "next": "s03_r003",
+              "setSession": {
+                "helperTomi": "alone"
+              }
+            }
+          ]
+        },
+        {
+          "id": "s03_r001",
+          "type": "line",
+          "speaker": "luna",
+          "locId": "EP02_S03_R001",
+          "anim": "nod",
+          "emotion": "decided",
+          "next": "s03_f001"
+        },
+        {
+          "id": "s03_f001",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S03_F001",
+          "anim": "nod",
+          "emotion": "warm",
+          "next": "s03_c001"
+        },
+        {
+          "id": "s03_r002",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S03_R002",
+          "anim": "point_self",
+          "emotion": "playful",
+          "next": "s03_c001"
+        },
+        {
+          "id": "s03_r003",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S03_R003",
+          "anim": "walk_with_player",
+          "emotion": "brave",
+          "next": "s03_f002"
+        },
+        {
+          "id": "s03_f002",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S03_F002",
+          "anim": "smile",
+          "emotion": "warm",
+          "next": "s03_c001"
+        },
+        {
+          "id": "s03_r004",
+          "type": "line",
+          "speaker": "clara",
+          "locId": "EP02_S03_R004",
+          "anim": "crouch_eye_level",
+          "emotion": "kind",
+          "next": "s03_n002"
+        },
+        {
+          "id": "s03_r005",
+          "type": "line",
+          "speaker": "beto",
+          "locId": "EP02_S03_R005",
+          "anim": "crouch_eye_level",
+          "emotion": "kind",
+          "next": "s03_n002"
+        },
+        {
+          "id": "s03_n002",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S03_L002",
+          "anim": "nod",
+          "emotion": "calmer",
+          "next": "s03_b001"
+        },
+        {
+          "id": "s03_b001",
+          "type": "branch",
+          "conditions": [
+            {
+              "if": {
+                "var": "helperTomi",
+                "eq": "beto"
+              },
+              "next": "s03_n003b"
+            }
+          ],
+          "else": "s03_n003a"
+        },
+        {
+          "id": "s03_n003a",
+          "type": "line",
+          "speaker": "clara",
+          "locId": "EP02_S03_L003",
+          "anim": "give_map",
+          "emotion": "kind",
+          "next": "s03_n004"
+        },
+        {
+          "id": "s03_n003b",
+          "type": "line",
+          "speaker": "beto",
+          "locId": "EP02_S03_L003",
+          "anim": "give_map",
+          "emotion": "kind",
+          "next": "s03_n004"
+        },
+        {
+          "id": "s03_n004",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S03_L004",
+          "anim": "explain",
+          "emotion": "warm",
+          "next": "s03_end"
+        },
+        {
+          "id": "s03_end",
+          "type": "sceneChange",
+          "scene": "s04_circulo"
+        }
+      ]
+    },
+    {
+      "id": "s04_circulo",
+      "environment": {
+        "circle_plaza": "dim",
+        "garden": "sprouting"
+      },
+      "camera": "close",
+      "cast": [
+        "capi",
+        "tomi"
+      ],
+      "onEnter": {
+        "setProgress": {
+          "ep02.lastScene": "s04_circulo"
+        }
+      },
+      "entryNode": "s04_n001",
+      "nodes": [
+        {
+          "id": "s04_n001",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L001",
+          "anim": "invite",
+          "emotion": "warm",
+          "next": "s04_n002"
+        },
+        {
+          "id": "s04_n002",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L002",
+          "anim": "explain",
+          "emotion": "warm",
+          "next": "s04_n003"
+        },
+        {
+          "id": "s04_n003",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L003",
+          "anim": "explain",
+          "emotion": "calm",
+          "next": "s04_n004"
+        },
+        {
+          "id": "s04_n004",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L004",
+          "anim": "explain",
+          "emotion": "warm",
+          "next": "s04_n005",
+          "reviewNote": "Crítica: reforzada por aporte profesional; no todos los niños tienen un adulto seguro en casa.",
+          "reviewPriority": "alta"
+        },
+        {
+          "id": "s04_n005",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L005",
+          "anim": "wink",
+          "emotion": "playful",
+          "next": "s04_m001",
+          "reviewNote": "¿El chiste confunde antes del Ep3? Alternativa: «Solo piensa en ellas.»"
+        },
+        {
+          "id": "s04_m001",
+          "type": "minigame",
+          "minigameId": "circle_of_three",
+          "config": {
+            "storeAnswers": false,
+            "slots": [
+              {
+                "id": "home",
+                "locId": "EP02_S04_P001",
+                "icon": "icon_house"
+              },
+              {
+                "id": "school",
+                "locId": "EP02_S04_P002",
+                "icon": "icon_school"
+              },
+              {
+                "id": "community",
+                "locId": "EP02_S04_P003",
+                "icon": "icon_community"
+              }
+            ],
+            "confirmLocId": "EP02_S04_A001",
+            "stillThinkingLocId": "EP02_S04_A002",
+            "feedbackComplete": {
+              "speaker": "capi",
+              "locId": "EP02_S04_F001",
+              "anim": "celebrate"
+            },
+            "feedbackStillThinking": {
+              "speaker": "capi",
+              "locId": "EP02_S04_F002",
+              "anim": "smile",
+              "reviewNote": "Crítica: no todos los niños tienen un adulto seguro en casa."
+            }
+          },
+          "next": "s04_n006"
+        },
+        {
+          "id": "s04_n006",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S04_L006",
+          "anim": "point_self",
+          "emotion": "warm",
+          "next": "s04_end"
+        },
+        {
+          "id": "s04_end",
+          "type": "sceneChange",
+          "scene": "s05_reconstruccion"
+        }
+      ]
+    },
+    {
+      "id": "s05_reconstruccion",
+      "environment": {
+        "path_stones": "restored",
+        "garden": "restored",
+        "circle_plaza": "lit"
+      },
+      "camera": "wide",
+      "cast": [
+        "capi",
+        "tomi",
+        "luna",
+        "clara",
+        "beto"
+      ],
+      "onEnter": {
+        "setProgress": {
+          "ep02.lastScene": "s05_reconstruccion"
+        }
+      },
+      "entryNode": "s05_n001",
+      "nodes": [
+        {
+          "id": "s05_n001",
+          "type": "line",
+          "speaker": "luna",
+          "locId": "EP02_S05_L001",
+          "anim": "invite",
+          "emotion": "happy",
+          "next": "s05_n002",
+          "worldEvent": {
+            "restore": [
+              "garden"
+            ]
+          }
+        },
+        {
+          "id": "s05_n002",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S05_L002",
+          "anim": "celebrate",
+          "emotion": "proud_calm",
+          "next": "s05_n003"
+        },
+        {
+          "id": "s05_n003",
+          "type": "line",
+          "speaker": "tomi",
+          "locId": "EP02_S05_L003",
+          "anim": "greet_high_five",
+          "emotion": "happy",
+          "next": "s05_rw001"
+        },
+        {
+          "id": "s05_rw001",
+          "type": "reward",
+          "restore": [
+            "path_stones",
+            "garden",
+            "circle_plaza"
+          ],
+          "cosmetic": [
+            "island.circle_plaza"
+          ],
+          "celebration": {
+            "cast": [
+              "capi",
+              "tomi",
+              "luna"
+            ],
+            "anim": "cross_bridge_celebrate"
+          },
+          "setFlags": [
+            "island.path_stones",
+            "island.garden",
+            "island.circle_plaza"
+          ],
+          "conditionalOnPerformance": false,
+          "next": "s05_n004"
+        },
+        {
+          "id": "s05_n004",
+          "type": "line",
+          "speaker": "capi",
+          "locId": "EP02_S05_L004",
+          "anim": "wave",
+          "emotion": "warm",
+          "next": "s05_end"
+        },
+        {
+          "id": "s05_end",
+          "type": "end",
+          "setFlags": [
+            "ep02.completed",
+            "ep03.unlocked"
+          ],
+          "clearSessionVars": true,
+          "debriefScreen": {
+            "titleLocId": "EP02_DEBRIEF_TITLE",
+            "childLocId": "EP02_S05_L004",
+            "adultQuestionsLocIds": [
+              "EP02_DB_Q001",
+              "EP02_DB_Q002",
+              "EP02_DB_Q003",
+              "EP02_DB_Q004",
+              "EP02_DB_Q005"
+            ],
+            "adultQuestionsAgeModes": {
+              "EP02_DB_Q005": [
+                "9-12"
+              ]
+            },
+            "activityLocId": "EP02_DB_ACT001",
+            "familyLocIds": [
+              "EP02_DB_FAM001",
+              "EP02_DB_FAM002"
+            ],
+            "adultOnly": true
+          }
+        }
+      ]
+    }
+  ],
+  "localization": {
+    "es-BO": {
+      "EP02_TITLE": "Mi círculo de 3",
+      "NAME_CAPI": "Capi",
+      "NAME_TOMI": "Tomi",
+      "NAME_LUNA": "Luna",
+      "NAME_CLARA": "Profe Clara",
+      "NAME_BETO": "Don Beto",
+      "NAME_ALL": "Todos",
+      "UI_PAUSE_PROMPT": "Podemos parar cuando quieras.",
+      "UI_PAUSE_RESUME": "Seguir",
+      "UI_PAUSE_MAP": "Volver al mapa",
+      "UI_PAUSE_QUIT": "Terminar por hoy",
+      "UI_COMPASS_CALM": "Todo tranquilo",
+      "UI_COMPASS_UNSURE": "Hmm, no sé",
+      "UI_COMPASS_UHOH": "¡Uh-oh!",
+      "EP02_S01_L001": "¡Volviste! El puente quedó precioso.",
+      "EP02_S01_L002": "¿Te acuerdas? Tú eliges tu saludo.",
+      "EP02_S01_L003": "Capi… perdí mi mapa. No sé cómo llegar a la casa.",
+      "EP02_S01_L004": "¿Qué marca tu brújula, Tomi?",
+      "EP02_S01_L005": "Nube. Hmm… un poco de uh-oh.",
+      "EP02_S01_L006": "Gracias por decirlo. Cuando no sabemos qué hacer, pedimos ayuda.",
+      "EP02_S01_L007": "¡Yo te acompaño! Pero el camino está todo desordenado.",
+      "EP02_S01_L008": "Lo arreglamos con fichas de confianza. Cada ficha dice algo que hace una persona que nos cuida.",
+      "EP02_S02_Z001": "Eso es cuidar",
+      "EP02_S02_Z002": "Eso no es cuidar",
+      "EP02_S02_Z003": "No sé, lo pregunto",
+      "EP02_S02_T001": "Te escucha cuando hablas.",
+      "EP02_S02_T002": "Respeta cuando dices «no».",
+      "EP02_S02_T003": "Te ayuda cuando tienes un problema.",
+      "EP02_S02_T004": "No se burla de lo que sientes.",
+      "EP02_S02_T005": "Te pide guardar un secreto que te hace sentir mal.",
+      "EP02_S02_T006": "Se enoja si dices que no quieres un abrazo.",
+      "EP02_S02_T007": "Te cree cuando le cuentas algo importante.",
+      "EP02_S02_T008": "Te da regalos para que no cuentes algo.",
+      "EP02_S02_T009": "Es una persona grande.",
+      "EP02_S02_F001": "¡Sí! Eso hace una persona que cuida.",
+      "EP02_S02_F002": "Tienes razón. Eso no es cuidar, aunque venga de alguien que conoces.",
+      "EP02_S02_F003": "Hmm, mira otra vez. ¿Cómo se sentiría tu brújula con eso?",
+      "EP02_S02_F004": "Pista: una persona que cuida (o: que no cuida) haría eso… ¿Dónde la pondrías?",
+      "EP02_S02_F005": "Ser grande no basta. Lo que importa es cómo te trata.",
+      "EP02_S02_L001": "Toca una ficha. ¿Eso es cuidar?",
+      "EP02_S02_L002": "¡El camino ya está listo!",
+      "EP02_S03_O001": "Luna",
+      "EP02_S03_O002": "Capi",
+      "EP02_S03_O003": "Profe Clara",
+      "EP02_S03_O004": "Don Beto",
+      "EP02_S03_O005": "Lo resuelvo solo",
+      "EP02_S03_L001": "¿A quién le pido ayuda para llegar a la casa?",
+      "EP02_S03_R001": "Yo te acompaño con gusto. Pero tampoco conozco el camino. ¡Busquemos a una persona grande juntos!",
+      "EP02_S03_F001": "Los amigos acompañan. Las personas grandes pueden ayudar a resolver.",
+      "EP02_S03_R002": "¡Yo te acompaño siempre! Pero soy una capibara: no puedo llamar a tu familia. Busquemos a una persona grande.",
+      "EP02_S03_R003": "Voy a intentarlo solo…",
+      "EP02_S03_F002": "Intentarlo está bien. Y pedir ayuda también es de valientes.",
+      "EP02_S03_R004": "¡Hola, Tomi! Te escucho. ¿Qué necesitas?",
+      "EP02_S03_R005": "¡Tomi! Espera que dejo el martillo. Te escucho.",
+      "EP02_S03_L002": "Perdí mi mapa. No sé llegar a la casa.",
+      "EP02_S03_L003": "Gracias por avisarme. Vamos juntos. Y hacemos un mapa nuevo.",
+      "EP02_S03_L004": "¿Viste lo que hizo? Dejó lo que hacía, escuchó y ayudó.",
+      "EP02_S04_P001": "Casa",
+      "EP02_S04_P002": "Escuela",
+      "EP02_S04_P003": "Comunidad",
+      "EP02_S04_A001": "Ya pensé en alguien",
+      "EP02_S04_A002": "Todavía estoy pensando",
+      "EP02_S04_F001": "¡Tu círculo brilla!",
+      "EP02_S04_F002": "Está bien. A veces cuesta pensar. Tu profe o tu familia te pueden ayudar a encontrar más personas.",
+      "EP02_S04_L001": "Tomi encontró ayuda. Tú también puedes tener tu círculo de 3.",
+      "EP02_S04_L002": "Son tres personas grandes que te cuidan: te escuchan, te creen y te ayudan.",
+      "EP02_S04_L003": "¿Por qué tres? Si una no está, o no te escucha, tienes otras.",
+      "EP02_S04_L004": "Pueden ser de tu casa, de tu escuela o de tu comunidad.",
+      "EP02_S04_L005": "No escribas sus nombres aquí. Solo piensa en ellas. Es tu secreto… ¡no! Es tu círculo.",
+      "EP02_S04_L006": "Yo soy tu guía en la isla. Pero los secretos que pesan no me los cuentas a mí: se los cuentas a tu círculo.",
+      "EP02_DEBRIEF_TITLE": "¡A conversar!",
+      "EP02_DB_Q001": "¿Qué hicieron Profe Clara o Don Beto cuando Tomi pidió ayuda?",
+      "EP02_DB_Q002": "¿Cómo sabemos que una persona nos cuida? (Por lo que hace.)",
+      "EP02_DB_Q003": "¿Por qué Capi dice que conviene tener tres personas y no solo una?",
+      "EP02_DB_Q004": "Luna quería ayudar a Tomi. ¿Qué pueden hacer los amigos cuando alguien necesita ayuda? (Acompañar a buscar a una persona grande.)",
+      "EP02_DB_Q005": "¿Alguien que es grande o que conocemos siempre cuida? ¿Qué miramos?",
+      "EP02_DB_ACT001": "«Mi mano de confianza» o «Mi círculo de 3» en papel: cada niño dibuja un círculo con tres espacios o la silueta de su mano, y dibuja o escribe si quiere a tres personas grandes (casa, escuela, comunidad). El facilitador no recoge ni lee las hojas salvo que el niño las muestre; se llevan a casa o se guardan en la carpeta personal.",
+      "EP02_DB_FAM001": "¿Quiénes son las personas grandes a las que puedes pedir ayuda? Pensemos una de casa, una de la escuela y una de la comunidad.",
+      "EP02_DB_FAM002": "Yo quiero estar en tu círculo. Puedes contarme cualquier cosa, aunque sea difícil.",
+      "EP02_S05_L001": "¡Miren el huerto!",
+      "EP02_S05_L002": "Acuerdo de hoy: tengo personas que me cuidan, y las reconozco por cómo me tratan.",
+      "EP02_S05_L003": "¡Gracias por ayudarme a pedir ayuda!",
+      "EP02_S05_L004": "Ahora a conversar con tu profe o tu familia. ¡Lleven papel y colores!"
+    }
+  }
+}

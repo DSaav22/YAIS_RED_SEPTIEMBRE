@@ -1,0 +1,602 @@
+{
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/manifest.json",
+  "stage": "quantized_for_runtime",
+  "lossless": false,
+  "compression": "none",
+  "requires_extensions": [
+    "KHR_mesh_quantization"
+  ],
+  "pipeline": [
+    "dedup",
+    "weld(tolerance=0)",
+    "prune(keepAttributes=false)",
+    "join",
+    "quantize(pos=14,normal=10,color=8,texcoord=12)"
+  ],
+  "note": "Variante optimizada de v001, generada por optimize.mjs. Mismo recuento de triángulos que v001: solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization, soportado de serie por three.js). Sin Draco ni meshopt: el runtime no empaqueta decodificador. v001 queda intacto como fuente y es la referencia de arte. `size_glb` es la caja real medida en el espacio del GLB (Y arriba): [ancho X, alto Y, largo Z] en metros.",
+  "assets": [
+    {
+      "id": "bench",
+      "glb": "bench/bench.glb",
+      "sha256": "b736df74454f3784a93fb2b33fd1247542a126d2df7955960ea223b9b3d839be",
+      "source_sha256": "a46eb88ab94eee3f3a73dbaba4cdf6440e7214456f3666fe661916e7edfe11d7",
+      "source_glb": "assets/production/world/v001/bench/bench.glb",
+      "bytes": 34604,
+      "bytes_v001": 55044,
+      "triangles": 2068,
+      "vertices": 1265,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.81,
+          0,
+          -0.3506
+        ],
+        "max": [
+          0.81,
+          1.135,
+          0.29
+        ]
+      },
+      "size_glb": [
+        1.62,
+        1.135,
+        0.6406
+      ]
+    },
+    {
+      "id": "bridge_curved",
+      "glb": "bridge_curved/bridge_curved.glb",
+      "sha256": "af3840b469e617c70ebee2515f20bb50d246c31787bb5043b0edbc16c4f9e786",
+      "source_sha256": "940ea2b34b409d7bbe91edb83d6dff6aa49f20bc1f43ae7221f92b776eaa5a11",
+      "source_glb": "assets/production/world/v001/bridge_curved/bridge_curved.glb",
+      "bytes": 197460,
+      "bytes_v001": 317136,
+      "triangles": 12596,
+      "vertices": 7451,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.8075,
+          -0.0248,
+          -1.986
+        ],
+        "max": [
+          1.0269,
+          0.8823,
+          1.986
+        ]
+      },
+      "size_glb": [
+        1.8344,
+        0.9072,
+        3.9719
+      ]
+    },
+    {
+      "id": "bridge_straight",
+      "glb": "bridge_straight/bridge_straight.glb",
+      "sha256": "03a4644af28f866a09e3168c19c632f27e54d36b075f500d9d09bd3c985addc0",
+      "source_sha256": "e8f43cab761335b0821ae05b918c9b16364475366197bad8c1c547ac5178b316",
+      "source_glb": "assets/production/world/v001/bridge_straight/bridge_straight.glb",
+      "bytes": 110868,
+      "bytes_v001": 178496,
+      "triangles": 6844,
+      "vertices": 4197,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.817,
+          -0.025,
+          -1.067
+        ],
+        "max": [
+          0.817,
+          0.8825,
+          1.067
+        ]
+      },
+      "size_glb": [
+        1.6341,
+        0.9074,
+        2.134
+      ]
+    },
+    {
+      "id": "cloud",
+      "glb": "cloud/cloud.glb",
+      "sha256": "aae1fab9638d854cbc86509298bf27d5803a171d39e32e12c7e43937c498a0e4",
+      "source_sha256": "c4a3d02993b8306375f2fe1a87f75dd2f51df6330ea9e934ff093bc7442777be",
+      "source_glb": "assets/production/world/v001/cloud/cloud.glb",
+      "bytes": 33792,
+      "bytes_v001": 53788,
+      "triangles": 2080,
+      "vertices": 1252,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.8,
+          -0.03,
+          -0.4
+        ],
+        "max": [
+          0.82,
+          0.89,
+          0.4
+        ]
+      },
+      "size_glb": [
+        1.62,
+        0.9201,
+        0.8
+      ]
+    },
+    {
+      "id": "fence_rope",
+      "glb": "fence_rope/fence_rope.glb",
+      "sha256": "67d74a03e634b91d711c158759497559e20ac14424e9b2f1cda99cba520e23ab",
+      "source_sha256": "f0255a9e4a95423f8f4d4d0d3156749719a0b03cce6b59f4cea598909051a7d7",
+      "source_glb": "assets/production/world/v001/fence_rope/fence_rope.glb",
+      "bytes": 42848,
+      "bytes_v001": 68568,
+      "triangles": 2576,
+      "vertices": 1581,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.987,
+          0,
+          -0.087
+        ],
+        "max": [
+          0.987,
+          0.8625,
+          0.087
+        ]
+      },
+      "size_glb": [
+        1.974,
+        0.8625,
+        0.174
+      ]
+    },
+    {
+      "id": "fence_wood",
+      "glb": "fence_wood/fence_wood.glb",
+      "sha256": "dcc5abfb4deee44d2243b33bb67dc599f0cb6cb295070b35b1c39e223a5f3274",
+      "source_sha256": "f4350664279d32ecb911e219d4b889da3f82379615093fb0aac6a76eb2c14375",
+      "source_glb": "assets/production/world/v001/fence_wood/fence_wood.glb",
+      "bytes": 43396,
+      "bytes_v001": 69248,
+      "triangles": 2568,
+      "vertices": 1586,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.987,
+          0,
+          -0.087
+        ],
+        "max": [
+          0.987,
+          0.8625,
+          0.087
+        ]
+      },
+      "size_glb": [
+        1.974,
+        0.8625,
+        0.174
+      ]
+    },
+    {
+      "id": "flower_bush",
+      "glb": "flower_bush/flower_bush.glb",
+      "sha256": "c5494ebfbe4c79efdbb33cf19b8fb941cd828a707359f3b63dddb4f10f629483",
+      "source_sha256": "bdb6dcf295b9a4b60a29cef3e3839870127856576c0f60aad450da4fbde6851f",
+      "source_glb": "assets/production/world/v001/flower_bush/flower_bush.glb",
+      "bytes": 88756,
+      "bytes_v001": 144700,
+      "triangles": 5040,
+      "vertices": 3450,
+      "material_primitives": 4,
+      "bounds_glb": {
+        "min": [
+          -0.3224,
+          0.0506,
+          -0.3224
+        ],
+        "max": [
+          0.3224,
+          0.288,
+          0.3224
+        ]
+      },
+      "size_glb": [
+        0.6448,
+        0.2374,
+        0.6448
+      ]
+    },
+    {
+      "id": "grass_tile",
+      "glb": "grass_tile/grass_tile.glb",
+      "sha256": "d8067c4286ff2d8db0b0a54e5e4c73a1574beeec7d44ecf3cafc7186b4701914",
+      "source_sha256": "cb2963a7d432006415f5aa230fde4ad3f2a2e5bacec69f10eb3cdb7a2aade8ff",
+      "source_glb": "assets/production/world/v001/grass_tile/grass_tile.glb",
+      "bytes": 180212,
+      "bytes_v001": 296688,
+      "triangles": 10456,
+      "vertices": 7130,
+      "material_primitives": 6,
+      "bounds_glb": {
+        "min": [
+          -1,
+          -0.24,
+          -1
+        ],
+        "max": [
+          1,
+          0.1928,
+          1
+        ]
+      },
+      "size_glb": [
+        2,
+        0.4329,
+        2
+      ]
+    },
+    {
+      "id": "house",
+      "glb": "house/house.glb",
+      "sha256": "9c052cd6eebc000ec4b336c6f2840b187e88adff1576377cb887b97e8770acee",
+      "source_sha256": "a51da041226eec7b8b5cc93b2b4bc2c16137e9d903164dabf994735e45032a81",
+      "source_glb": "assets/production/world/v001/house/house.glb",
+      "bytes": 465572,
+      "bytes_v001": 758208,
+      "triangles": 27868,
+      "vertices": 18137,
+      "material_primitives": 11,
+      "bounds_glb": {
+        "min": [
+          -1.2324,
+          0,
+          -1.025
+        ],
+        "max": [
+          1.2324,
+          3.079,
+          1.545
+        ]
+      },
+      "size_glb": [
+        2.4648,
+        3.079,
+        2.5701
+      ]
+    },
+    {
+      "id": "island_large",
+      "glb": "island_large/island_large.glb",
+      "sha256": "1099565c815b5a2fbcfbac062efe229769ead03256b990e774e68e775ea2ce38",
+      "source_sha256": "306748608ff30c4958ac567e1c7e159443de95dcd1755bcd3ca732736c245724",
+      "source_glb": "assets/production/world/v001/island_large/island_large.glb",
+      "bytes": 856036,
+      "bytes_v001": 1448024,
+      "triangles": 43324,
+      "vertices": 36861,
+      "material_primitives": 10,
+      "bounds_glb": {
+        "min": [
+          -3.1259,
+          -1.5407,
+          -3.1549
+        ],
+        "max": [
+          3.1454,
+          0.2453,
+          3.1425
+        ]
+      },
+      "size_glb": [
+        6.2713,
+        1.786,
+        6.2974
+      ]
+    },
+    {
+      "id": "island_small",
+      "glb": "island_small/island_small.glb",
+      "sha256": "ca915248a529394ed943af0cdfeb65ac315d964fcd75e2d00b061afedb9276fc",
+      "source_sha256": "01ae5795b6eb473d76820b8c6b5cd165aa13c7f4bec210b15bd5be34bb996c14",
+      "source_glb": "assets/production/world/v001/island_small/island_small.glb",
+      "bytes": 754224,
+      "bytes_v001": 1264660,
+      "triangles": 39940,
+      "vertices": 31766,
+      "material_primitives": 10,
+      "bounds_glb": {
+        "min": [
+          -1.8104,
+          -1.5325,
+          -1.8099
+        ],
+        "max": [
+          1.8212,
+          0.2453,
+          1.8018
+        ]
+      },
+      "size_glb": [
+        3.6316,
+        1.7779,
+        3.6117
+      ]
+    },
+    {
+      "id": "lighthouse",
+      "glb": "lighthouse/lighthouse.glb",
+      "sha256": "752ef76486f213f2157ec33da82fa0563c39b03b29e045f03bbe328e0fc1a91a",
+      "source_sha256": "4208be85133ca1f587bb2027c287c4fcc423a76259b82bedadb581d19d178a03",
+      "source_glb": "assets/production/world/v001/lighthouse/lighthouse.glb",
+      "bytes": 512492,
+      "bytes_v001": 845640,
+      "triangles": 29072,
+      "vertices": 20704,
+      "material_primitives": 9,
+      "bounds_glb": {
+        "min": [
+          -1.0407,
+          0,
+          -1.0839
+        ],
+        "max": [
+          1.0478,
+          4.65,
+          0.9359
+        ]
+      },
+      "size_glb": [
+        2.0885,
+        4.65,
+        2.0198
+      ]
+    },
+    {
+      "id": "palm",
+      "glb": "palm/palm.glb",
+      "sha256": "5f66dd75936eb2f09a1bbcba91e19ade30b4e1b135bc99e751553dceb46a2f47",
+      "source_sha256": "8612b6987c35be3f0eb082514078b79e48b61924769a65d0c6b723f944b79902",
+      "source_glb": "assets/production/world/v001/palm/palm.glb",
+      "bytes": 524540,
+      "bytes_v001": 857144,
+      "triangles": 31556,
+      "vertices": 20741,
+      "material_primitives": 4,
+      "bounds_glb": {
+        "min": [
+          -1.0288,
+          0.0025,
+          -1.1288
+        ],
+        "max": [
+          1.2288,
+          2.6783,
+          1.1288
+        ]
+      },
+      "size_glb": [
+        2.2577,
+        2.6758,
+        2.2577
+      ]
+    },
+    {
+      "id": "path_corner",
+      "glb": "path_corner/path_corner.glb",
+      "sha256": "be2653734d163f0c98ea8c8323242df3f0a2530264539c48c826429dedb2b94c",
+      "source_sha256": "b2b98509dcdd53b36e5a3bb0cf4d323ce71f956d38b4a11c4ceb6933366c0c7c",
+      "source_glb": "assets/production/world/v001/path_corner/path_corner.glb",
+      "bytes": 181980,
+      "bytes_v001": 299472,
+      "triangles": 10504,
+      "vertices": 7180,
+      "material_primitives": 7,
+      "bounds_glb": {
+        "min": [
+          -1,
+          -0.24,
+          -1
+        ],
+        "max": [
+          1,
+          0.1928,
+          1
+        ]
+      },
+      "size_glb": [
+        2,
+        0.4329,
+        2
+      ]
+    },
+    {
+      "id": "path_straight",
+      "glb": "path_straight/path_straight.glb",
+      "sha256": "83df990dc7a1b5fa1a4c087588d9cd8b65963eef388d07a341a9d8ae0bf0dd04",
+      "source_sha256": "95f649e64ba3e1f4179740c60983be6aba65125200602ce81185457605de64ec",
+      "source_glb": "assets/production/world/v001/path_straight/path_straight.glb",
+      "bytes": 183884,
+      "bytes_v001": 302432,
+      "triangles": 10644,
+      "vertices": 7246,
+      "material_primitives": 7,
+      "bounds_glb": {
+        "min": [
+          -1,
+          -0.24,
+          -1
+        ],
+        "max": [
+          1,
+          0.1928,
+          1
+        ]
+      },
+      "size_glb": [
+        2,
+        0.4329,
+        2
+      ]
+    },
+    {
+      "id": "rock_large",
+      "glb": "rock_large/rock_large.glb",
+      "sha256": "de612b796b58eb215a5274c7ef4c717a38fb6504838c834441937430569db3b7",
+      "source_sha256": "7b26414a58d207305ee121e9a7ac1946c2566ca81390032709c09a731c874007",
+      "source_glb": "assets/production/world/v001/rock_large/rock_large.glb",
+      "bytes": 6984,
+      "bytes_v001": 11260,
+      "triangles": 80,
+      "vertices": 240,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.4828,
+          -0.0974,
+          -0.3941
+        ],
+        "max": [
+          0.4806,
+          0.779,
+          0.3902
+        ]
+      },
+      "size_glb": [
+        0.9633,
+        0.8764,
+        0.7843
+      ]
+    },
+    {
+      "id": "rock_small",
+      "glb": "rock_small/rock_small.glb",
+      "sha256": "ff11b89baa5addd3f44c05f91d0ba7638ba676dcf385b84c625f08f569ab4c87",
+      "source_sha256": "02115295062386498b2877bfc16cee9f76f9c55f5561c423d38d06d726cb157a",
+      "source_glb": "assets/production/world/v001/rock_small/rock_small.glb",
+      "bytes": 6980,
+      "bytes_v001": 11268,
+      "triangles": 80,
+      "vertices": 240,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.2262,
+          -0.0383,
+          -0.2056
+        ],
+        "max": [
+          0.2366,
+          0.3508,
+          0.2275
+        ]
+      },
+      "size_glb": [
+        0.4628,
+        0.3891,
+        0.4331
+      ]
+    },
+    {
+      "id": "stairs_three",
+      "glb": "stairs_three/stairs_three.glb",
+      "sha256": "380507609afc9923aec820315d40798fdb19f39352d1726762ae3a0434ace005",
+      "source_sha256": "eb6b34c5ddcec6a5a168f97c974a8dd074d7f33c428770f9493d88e25b533eb7",
+      "source_glb": "assets/production/world/v001/stairs_three/stairs_three.glb",
+      "bytes": 10156,
+      "bytes_v001": 15652,
+      "triangles": 564,
+      "vertices": 345,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.62,
+          0,
+          -0.635
+        ],
+        "max": [
+          0.62,
+          0.6,
+          0.635
+        ]
+      },
+      "size_glb": [
+        1.2401,
+        0.6,
+        1.27
+      ]
+    },
+    {
+      "id": "tree_round",
+      "glb": "tree_round/tree_round.glb",
+      "sha256": "6744259ca79183e3caa9ffae75fe8947ce2f1494c17dc58f63cde8c7fdd7b1f4",
+      "source_sha256": "69bf1d77cdaa0ce04f42ef2dccd691a757f7e4107dc8079a2abeb793acfc4843",
+      "source_glb": "assets/production/world/v001/tree_round/tree_round.glb",
+      "bytes": 402120,
+      "bytes_v001": 658944,
+      "triangles": 23772,
+      "vertices": 16007,
+      "material_primitives": 4,
+      "bounds_glb": {
+        "min": [
+          -1.07,
+          -0.005,
+          -0.8579
+        ],
+        "max": [
+          1.08,
+          2.917,
+          0.9001
+        ]
+      },
+      "size_glb": [
+        2.15,
+        2.922,
+        1.758
+      ]
+    },
+    {
+      "id": "water_tile",
+      "glb": "water_tile/water_tile.glb",
+      "sha256": "adab60ef8f2edec6c8cc3172d66fa44a19469a1ac2d9df7344188afcc63a3835",
+      "source_sha256": "c1eb8ee9d35a640f000dd0e41829f6c15331c2a3ae9b63b5b234ab6d3edc843c",
+      "source_glb": "assets/production/world/v001/water_tile/water_tile.glb",
+      "bytes": 189716,
+      "bytes_v001": 302948,
+      "triangles": 12476,
+      "vertices": 7063,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -1,
+          -0.17,
+          -1
+        ],
+        "max": [
+          1,
+          0.019,
+          1
+        ]
+      },
+      "size_glb": [
+        2,
+        0.189,
+        2
+      ]
+    }
+  ],
+  "total_glb_bytes": 4826620,
+  "total_glb_bytes_v001": 7959320
+}

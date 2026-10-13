@@ -1,0 +1,26 @@
+{
+  "stage": "02a",
+  "version": "v005",
+  "status": "refinements_completed_visual_review",
+  "rig": false,
+  "animations": [],
+  "collisions": false,
+  "units": "meters",
+  "source": "v004/mascot.blend",
+  "objects": 48,
+  "triangles": 226374,
+  "materials": 12,
+  "glb_bytes": 9659300,
+  "changes": [
+    "Fuller pear-shaped belly",
+    "Volumetric curled fingers and thumbs",
+    "Single head-and-snout mesh with painted muzzle",
+    "Surface-conforming eyes, nostrils, mouth and brows",
+    "Flat padded straps; attached backpack border"
+  ],
+  "limitations": [
+    "Static sculpt, not rigged",
+    "Dense coat needs mobile optimization",
+    "Artistic interpretation, not a pixel-identical reconstruction"
+  ]
+}

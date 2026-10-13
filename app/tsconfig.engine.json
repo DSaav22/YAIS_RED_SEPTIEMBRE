@@ -1,0 +1,29 @@
+{
+  // Compuerta de arquitectura (AGENTS.md): `src/engine` es TypeScript puro.
+  // Sin `DOM` en `lib`, cualquier uso de window, document o localStorage
+  // dentro del motor falla en typecheck, no en revisión manual.
+  "compilerOptions": {
+    "target": "ES2022",
+    "lib": ["ES2022"],
+    "module": "ESNext",
+    "moduleResolution": "bundler",
+    "moduleDetection": "force",
+    "types": [],
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "erasableSyntaxOnly": true,
+    "noEmit": true,
+    "skipLibCheck": true,
+
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true
+  },
+  "include": ["src/engine/**/*.ts"],
+  "exclude": ["src/engine/**/*.test.ts"]
+}

@@ -1,0 +1,740 @@
+{
+  "version": "v001",
+  "assets": [
+    {
+      "id": "backpack",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 12584,
+      "bounds": {
+        "min": [
+          -0.37399527430534363,
+          -0.2826554775238037,
+          0
+        ],
+        "max": [
+          0.37399527430534363,
+          0.5850000381469727,
+          0.7708542943000793
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 335000
+    },
+    {
+      "id": "compass",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 3376,
+      "bounds": {
+        "min": [
+          -0.3700000047683716,
+          -0.1420000046491623,
+          0.06999999284744263
+        ],
+        "max": [
+          0.3700000047683716,
+          0.060000013560056686,
+          0.9730000495910645
+        ]
+      },
+      "anchors": {
+        "grip": [
+          0,
+          0,
+          0.88
+        ]
+      },
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 104620
+    },
+    {
+      "id": "folded_map",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 3360,
+      "bounds": {
+        "min": [
+          -0.43896031379699707,
+          -0.07500001788139343,
+          0.015000015497207642
+        ],
+        "max": [
+          0.43896040320396423,
+          0.03760657459497452,
+          0.7050000429153442
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 91868
+    },
+    {
+      "id": "speech_bubble",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1372,
+      "bounds": {
+        "min": [
+          -0.41999998688697815,
+          -0.0690000057220459,
+          0.02531173825263977
+        ],
+        "max": [
+          0.41999998688697815,
+          0.04500000178813934,
+          0.6899999976158142
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 81268
+    },
+    {
+      "id": "circle_of_three",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2436,
+      "bounds": {
+        "min": [
+          -0.38999998569488525,
+          -0.1850000023841858,
+          -0.004999995231628418
+        ],
+        "max": [
+          0.38999998569488525,
+          0.2199999988079071,
+          0.5649999976158142
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 67740
+    },
+    {
+      "id": "gift_box",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2568,
+      "bounds": {
+        "min": [
+          -0.32499998807907104,
+          -0.28999999165534973,
+          0
+        ],
+        "max": [
+          0.32499998807907104,
+          0.28999999165534973,
+          0.9249714612960815
+        ]
+      },
+      "anchors": {
+        "lid": [
+          0,
+          0,
+          0.6
+        ]
+      },
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 67924
+    },
+    {
+      "id": "sealed_envelope",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2196,
+      "bounds": {
+        "min": [
+          -0.36000001430511475,
+          -0.10500000417232513,
+          0.009999990463256836
+        ],
+        "max": [
+          0.36000001430511475,
+          0.03999999910593033,
+          0.5099999904632568
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 105224
+    },
+    {
+      "id": "heart_token",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1084,
+      "bounds": {
+        "min": [
+          -0.4000000059604645,
+          -0.03750000149011612,
+          -0.06476777791976929
+        ],
+        "max": [
+          0.4000000059604645,
+          0.03750000149011612,
+          0.6577571630477905
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 56856
+    },
+    {
+      "id": "card_leaf",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 740,
+      "bounds": {
+        "min": [
+          -0.23499999940395355,
+          -0.15000000596046448,
+          0.005000025033950806
+        ],
+        "max": [
+          0.23499999940395355,
+          0.04400000348687172,
+          0.7150000333786011
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 21172
+    },
+    {
+      "id": "card_sun",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1880,
+      "bounds": {
+        "min": [
+          -0.23499999940395355,
+          -0.06100000441074371,
+          0.005000025033950806
+        ],
+        "max": [
+          0.23499999940395355,
+          0.029999999329447746,
+          0.7150000333786011
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 52252
+    },
+    {
+      "id": "card_cloud",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1240,
+      "bounds": {
+        "min": [
+          -0.23499999940395355,
+          -0.0729999989271164,
+          0.005000025033950806
+        ],
+        "max": [
+          0.23499999940395355,
+          0.029999999329447746,
+          0.7150000333786011
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 34732
+    },
+    {
+      "id": "water_drop",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1792,
+      "bounds": {
+        "min": [
+          -0.23515084385871887,
+          -0.23515084385871887,
+          0
+        ],
+        "max": [
+          0.23515084385871887,
+          0.23515084385871887,
+          0.9600000977516174
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 34864
+    },
+    {
+      "id": "water_bottle",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2080,
+      "bounds": {
+        "min": [
+          -0.23499999940395355,
+          -0.2449999898672104,
+          0.054999977350234985
+        ],
+        "max": [
+          0.29548096656799316,
+          0.23499999940395355,
+          1.086543321609497
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 71128
+    },
+    {
+      "id": "recycling_bin",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2688,
+      "bounds": {
+        "min": [
+          -0.33000001311302185,
+          -0.2849999964237213,
+          0
+        ],
+        "max": [
+          0.33000001311302185,
+          0.2849999964237213,
+          0.7900000214576721
+        ]
+      },
+      "anchors": {
+        "opening": [
+          0,
+          0,
+          0.78
+        ]
+      },
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 116864
+    },
+    {
+      "id": "seedling",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1248,
+      "bounds": {
+        "min": [
+          -0.3328000009059906,
+          -0.25,
+          -0.02499999850988388
+        ],
+        "max": [
+          0.35300004482269287,
+          0.25,
+          0.671999990940094
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 56928
+    },
+    {
+      "id": "puzzle_blue",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 500,
+      "bounds": {
+        "min": [
+          -0.23000000417232513,
+          -0.042500004172325134,
+          0.07000000774860382
+        ],
+        "max": [
+          0.37599998712539673,
+          0.042500004172325134,
+          0.6759999990463257
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 18296
+    },
+    {
+      "id": "puzzle_red",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 500,
+      "bounds": {
+        "min": [
+          -0.23000000417232513,
+          -0.042500004172325134,
+          0.07000000774860382
+        ],
+        "max": [
+          0.37599998712539673,
+          0.042500004172325134,
+          0.6759999990463257
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 18292
+    },
+    {
+      "id": "puzzle_yellow",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 500,
+      "bounds": {
+        "min": [
+          -0.23000000417232513,
+          -0.042500004172325134,
+          0.07000000774860382
+        ],
+        "max": [
+          0.37599998712539673,
+          0.042500004172325134,
+          0.6759999990463257
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 18280
+    },
+    {
+      "id": "pause_button",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 1044,
+      "bounds": {
+        "min": [
+          -0.3499999940395355,
+          -0.0820000022649765,
+          0.03999999165534973
+        ],
+        "max": [
+          0.3499999940395355,
+          0.04500001668930054,
+          0.7400000095367432
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 31400
+    },
+    {
+      "id": "sound_button",
+      "family": "props",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 7096,
+      "bounds": {
+        "min": [
+          -0.3499999940395355,
+          -0.09000000357627869,
+          0.03999999165534973
+        ],
+        "max": [
+          0.3499999940395355,
+          0.04500001668930054,
+          0.7400000095367432
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 189964
+    },
+    {
+      "id": "banana_peel",
+      "family": "props",
+      "units": "meters",
+      "up": "Y",
+      "front": "+Z",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 84,
+      "bounds": {
+        "min": [
+          -0.16,
+          0,
+          -0.09
+        ],
+        "max": [
+          0.19,
+          0.022,
+          0.09
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Authored in glTF Y-up to match the existing props kit silhouette; not a Blender v001 rebuild.",
+        "Static closed model; no interiors or gameplay"
+      ],
+      "glb_bytes": 6792
+    },
+    {
+      "id": "disposable_cup",
+      "family": "props",
+      "units": "meters",
+      "up": "Y",
+      "front": "+Z",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 56,
+      "bounds": {
+        "min": [
+          -0.05,
+          -0.002,
+          -0.118
+        ],
+        "max": [
+          0.05,
+          0.098,
+          0
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Authored in glTF Y-up to match the existing props kit silhouette; not a Blender v001 rebuild.",
+        "Static closed model; no interiors or gameplay"
+      ],
+      "glb_bytes": 5188
+    },
+    {
+      "id": "crumpled_wrapper",
+      "family": "props",
+      "units": "meters",
+      "up": "Y",
+      "front": "+Z",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 48,
+      "bounds": {
+        "min": [
+          -0.07,
+          0,
+          -0.055
+        ],
+        "max": [
+          0.08,
+          0.045,
+          0.05
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Authored in glTF Y-up to match the existing props kit silhouette; not a Blender v001 rebuild.",
+        "Static closed model; no interiors or gameplay"
+      ],
+      "glb_bytes": 4856
+    }
+  ],
+  "reference_sheets": [
+    "06-interactive-props-orthographic.png"
+  ],
+  "status": "generated_pending_visual_review"
+}

@@ -1,0 +1,31 @@
+{
+  "id": "circle_of_three",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2436,
+  "bounds": {
+    "min": [
+      -0.38999998569488525,
+      -0.1850000023841858,
+      -0.004999995231628418
+    ],
+    "max": [
+      0.38999998569488525,
+      0.2199999988079071,
+      0.5649999976158142
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 67740
+}

@@ -1,0 +1,62 @@
+{
+  "id": "recycling_bin",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2688,
+  "bounds": {
+    "min": [
+      -0.33000001311302185,
+      -0.2849999964237213,
+      0
+    ],
+    "max": [
+      0.33000001311302185,
+      0.2849999964237213,
+      0.7900000214576721
+    ]
+  },
+  "anchors": {
+    "opening": [
+      0,
+      0,
+      0.78
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 67576,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/recycling_bin/recycling_bin.glb",
+  "glb": "recycling_bin.glb",
+  "glb_bytes_v001": 116864,
+  "sha256": "f96bf8760f7eec2cba03d0644efb77228da6ca165a0896ee171a1462a1d843a8",
+  "source_sha256": "0be4d32b87ec2f963a59105aab46f26f87a7170576b010a0429d718e47ce9c4d",
+  "vertices": 3051,
+  "bounds_glb": {
+    "min": [
+      -0.33,
+      0,
+      -0.285
+    ],
+    "max": [
+      0.33,
+      0.79,
+      0.285
+    ]
+  },
+  "size_glb": [
+    0.66,
+    0.79,
+    0.57
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

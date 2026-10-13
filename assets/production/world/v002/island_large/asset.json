@@ -1,0 +1,143 @@
+{
+  "id": "island_large",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 43324,
+  "bounds": {
+    "min": [
+      -3.1260762214660645,
+      -3.1424803733825684,
+      -1.5407148599624634
+    ],
+    "max": [
+      3.1455135345458984,
+      3.154935836791992,
+      0.24539995193481445
+    ]
+  },
+  "anchors": {
+    "edge_0": [
+      3,
+      0,
+      0
+    ],
+    "edge_1": [
+      1.8369701987210297e-16,
+      3,
+      0
+    ],
+    "edge_2": [
+      -3,
+      3.6739403974420594e-16,
+      0
+    ],
+    "edge_3": [
+      -5.51091059616309e-16,
+      -3,
+      0
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.2
+      ],
+      "size": [
+        4.26,
+        4.26,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        2.37,
+        0,
+        -0.2
+      ],
+      "size": [
+        1.1400000000000001,
+        3.4799999999999995,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        1.4512064569896134e-16,
+        2.37,
+        -0.2
+      ],
+      "size": [
+        3.4799999999999995,
+        1.1400000000000001,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -2.37,
+        2.902412913979227e-16,
+        -0.2
+      ],
+      "size": [
+        1.1400000000000001,
+        3.4799999999999995,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -4.3536193709688407e-16,
+        -2.37,
+        -0.2
+      ],
+      "size": [
+        3.4799999999999995,
+        1.1400000000000001,
+        0.4
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 856036,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/island_large/island_large.glb",
+  "glb": "island_large.glb",
+  "glb_bytes_v001": 1448024,
+  "sha256": "1099565c815b5a2fbcfbac062efe229769ead03256b990e774e68e775ea2ce38",
+  "source_sha256": "306748608ff30c4958ac567e1c7e159443de95dcd1755bcd3ca732736c245724",
+  "vertices": 36861,
+  "bounds_glb": {
+    "min": [
+      -3.1259,
+      -1.5407,
+      -3.1549
+    ],
+    "max": [
+      3.1454,
+      0.2453,
+      3.1425
+    ]
+  },
+  "size_glb": [
+    6.2713,
+    1.786,
+    6.2974
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

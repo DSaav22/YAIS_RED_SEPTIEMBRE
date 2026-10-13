@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAIS · Revisión de capibara v002</title>
+<style>
+body{margin:0;background:#122d30;color:#eef5ef;font:16px/1.6 system-ui}
+main{max-width:1240px;margin:auto;padding:32px}h1{font-size:clamp(26px,4vw,42px);line-height:1.2}
+a{color:#ffd170}.tag{color:#ffd170;font-weight:600;letter-spacing:.08em}
+p{max-width:920px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+figure{margin:0;background:#234347;border-radius:16px;overflow:hidden}img{width:100%;display:block}
+figcaption{padding:14px}small{color:#c0d4cb}.reference{margin:24px 0}.notice{border-left:3px solid #ffd170;padding:12px 20px;background:#234347}
+</style>
+<main>
+<span class="tag">ETAPA 02a · v002 · PENDIENTE DE REVISIÓN</span>
+<h1>Corrección de la mascota</h1>
+<p class="notice">Iteración interna incompleta, sustituida por <a href="../v004/preview.html">v004: abrir la revisión actual</a>. Solo se renderizó la vista tres cuartos de v002.</p>
+<p>Modelo 3D real: hocico vertical, fosas nasales, mejillas anchas, ojos con menos blanco, manos sujetando las correas y pelaje corto esculpido. Todos los renders proceden del mismo archivo Blender; no son nuevas ilustraciones de IA.</p>
+<p><a href="mascot.glb">Modelo GLB</a> · <a href="mascot.blend">Archivo Blender</a> · <a href="../../../../PRODUCCION-3D.md">Plan de producción</a></p>
+<h2>Comparación con la versión anterior</h2>
+<div class="grid">
+<figure><img src="../v001/three-quarter.png" alt="Maqueta anterior v001"><figcaption>v001 · anterior, descartada visualmente</figcaption></figure>
+<figure><img src="three-quarter.png" alt="Nueva revisión v002"><figcaption>v002 · nueva revisión de forma y superficie</figcaption></figure>
+</div>
+<figure class="reference"><img src="../../../references-3d/technical/01-mascot-orthographic-turnaround.png" alt="Hoja artística aprobada"><figcaption>Objetivo artístico aprobado · referencia, no render del modelo entregado</figcaption></figure>
+<p class="notice">Candidato estático, no modelo final ni réplica exacta. Sin rig, animaciones o colisiones. El relieve de pelo aumenta la geometría: 98.064 triángulos, GLB de 2,93 MB. Antes de usarlo en celular habrá que optimizar la superficie y probar el resultado en el motor.</p>
+<p><small>Galería local sin conexión. CPU, dos hilos, 768 × 864 px. La iluminación de estudio no sustituye la prueba visual en PlayCanvas.</small></p>
+</main>
+</html>

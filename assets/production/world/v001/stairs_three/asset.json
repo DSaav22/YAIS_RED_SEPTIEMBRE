@@ -1,0 +1,71 @@
+{
+  "id": "stairs_three",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 564,
+  "bounds": {
+    "min": [
+      -0.6200000047683716,
+      -0.6349999904632568,
+      0.0
+    ],
+    "max": [
+      0.6200000047683716,
+      0.6349999904632568,
+      0.6000000238418579
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        -0.42,
+        0.1
+      ],
+      "size": [
+        1.24,
+        0.43,
+        0.2
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0.0,
+        0.2
+      ],
+      "size": [
+        1.24,
+        0.43,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0.42,
+        0.30000000000000004
+      ],
+      "size": [
+        1.24,
+        0.43,
+        0.6000000000000001
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 15652
+}

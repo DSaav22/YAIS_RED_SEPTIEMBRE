@@ -1,0 +1,50 @@
+{
+  "meshes": 394,
+  "triangles": 148964,
+  "bounds_z_up": {
+    "min": [
+      -0.33555951714515686,
+      -0.4328250288963318,
+      -1.1224440266133229e-09
+    ],
+    "max": [
+      0.33555951714515686,
+      0.3139999806880951,
+      1.2639182806015015
+    ]
+  },
+  "height_m": 1.2639,
+  "id": "child_wheelchair",
+  "label": "Niña en silla de ruedas",
+  "version": "v001",
+  "status": "static_review_candidate",
+  "rig": false,
+  "animations": [],
+  "units": "meters",
+  "front": "-Y",
+  "up": "Z",
+  "reference": "02-primary-child-npcs-turnaround.png",
+  "collision": {
+    "implemented": false,
+    "proposal": "rounded_box",
+    "bounds_z_up": {
+      "min": [
+        -0.33555951714515686,
+        -0.4328250288963318,
+        -1.1224440266133229e-09
+      ],
+      "max": [
+        0.33555951714515686,
+        0.3139999806880951,
+        1.2639182806015015
+      ]
+    }
+  },
+  "limitations": [
+    "Static posed assembly, not a deformation-ready mesh",
+    "Artistic interpretation of approved sheet, new NPC fidelity pending review",
+    "No UV bake, LODs, rig, facial expressions, animations or runtime colliders",
+    "Multiple objects and materials: not yet mobile optimized"
+  ],
+  "glb_bytes": 3444724
+}

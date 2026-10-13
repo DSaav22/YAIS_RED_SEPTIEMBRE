@@ -1,0 +1,82 @@
+{
+  "id": "bridge_straight",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 6844,
+  "bounds": {
+    "min": [
+      -0.8170000314712524,
+      -1.0670000314712524,
+      -0.02499999850988388
+    ],
+    "max": [
+      0.8170000314712524,
+      1.066999912261963,
+      0.8824999928474426
+    ]
+  },
+  "anchors": {
+    "start": [
+      0,
+      -1.06,
+      0.1
+    ],
+    "end": [
+      0,
+      1.06,
+      0.1
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.01
+      ],
+      "size": [
+        1.52,
+        2.08,
+        0.16
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -0.73,
+        0,
+        0.45
+      ],
+      "size": [
+        0.1,
+        2,
+        0.75
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        0.73,
+        0,
+        0.45
+      ],
+      "size": [
+        0.1,
+        2,
+        0.75
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 178496
+}

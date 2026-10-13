@@ -1,0 +1,56 @@
+{
+  "id": "card_sun",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1880,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.06100000441074371,
+      0.005000025033950806
+    ],
+    "max": [
+      0.23499999940395355,
+      0.029999999329447746,
+      0.7150000333786011
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 32620,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/card_sun/card_sun.glb",
+  "glb": "card_sun.glb",
+  "glb_bytes_v001": 52252,
+  "sha256": "429b9d013044d09a2a10f121f1aae0013ee9ddec6b65e81ad3398b2d1bd32ca0",
+  "source_sha256": "2f3f527f2fd23842d9dc47233c7c6893d93ceaaa80ec3bacfa2f31bc9d08c106",
+  "vertices": 1213,
+  "bounds_glb": {
+    "min": [
+      -0.235,
+      0.005,
+      -0.03
+    ],
+    "max": [
+      0.235,
+      0.715,
+      0.061
+    ]
+  },
+  "size_glb": [
+    0.47,
+    0.71,
+    0.091
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

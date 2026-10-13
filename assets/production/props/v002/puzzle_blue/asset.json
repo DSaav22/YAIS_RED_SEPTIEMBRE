@@ -1,0 +1,56 @@
+{
+  "id": "puzzle_blue",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 500,
+  "bounds": {
+    "min": [
+      -0.23000000417232513,
+      -0.042500004172325134,
+      0.07000000774860382
+    ],
+    "max": [
+      0.37599998712539673,
+      0.042500004172325134,
+      0.6759999990463257
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 11288,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/puzzle_blue/puzzle_blue.glb",
+  "glb": "puzzle_blue.glb",
+  "glb_bytes_v001": 18296,
+  "sha256": "ec58caee265f6d39d22ed6ef196fd1ab7db30e4259f687010487587778043f71",
+  "source_sha256": "dc681a3e78537c806b5fb6236c63321e216939b5ba50fdc4ca79add3879be44a",
+  "vertices": 439,
+  "bounds_glb": {
+    "min": [
+      -0.23,
+      0.07,
+      -0.0425
+    ],
+    "max": [
+      0.376,
+      0.676,
+      0.0425
+    ]
+  },
+  "size_glb": [
+    0.606,
+    0.606,
+    0.085
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

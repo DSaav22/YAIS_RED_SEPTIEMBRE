@@ -1,0 +1,31 @@
+{
+  "id": "water_drop",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1792,
+  "bounds": {
+    "min": [
+      -0.23515084385871887,
+      -0.23515084385871887,
+      0.0
+    ],
+    "max": [
+      0.23515084385871887,
+      0.23515084385871887,
+      0.9600000977516174
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 34864
+}

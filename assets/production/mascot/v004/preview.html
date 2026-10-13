@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="es">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>YAIS · Capibara v004</title>
+<style>
+body{margin:0;background:#122d30;color:#eef5ef;font:16px/1.6 system-ui}
+main{max-width:1240px;margin:auto;padding:32px}h1{font-size:clamp(26px,4vw,42px);line-height:1.2}
+a{color:#ffd170}.tag{color:#ffd170;font-weight:600;letter-spacing:.08em}
+p{max-width:920px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+figure{margin:0;background:#234347;border-radius:16px;overflow:hidden}img{width:100%;display:block}
+figcaption{padding:14px}small{color:#c0d4cb}.reference{margin:24px 0}.notice{border-left:3px solid #ffd170;padding:12px 20px;background:#234347}
+.ref-focus{aspect-ratio:768/864;overflow:hidden;position:relative}.ref-focus img{position:absolute;width:438.86%;max-width:none;left:-20%;top:-10.67%}
+</style>
+<main>
+<span class="tag">ETAPA 02a · v004 · REVISIÓN ARTÍSTICA</span>
+<h1>Corrección de la capibara</h1>
+<p>Hocico vertical integrado, fosas nasales, cabeza ancha en las mejillas, orejas menores, ojos con menos blanco, manos marrones sujetando correas y relieve de pelaje fino. Los renders de v004 proceden del mismo archivo Blender entregado.</p>
+<p><a href="mascot.glb">Modelo GLB</a> · <a href="mascot.blend">Archivo Blender</a> · <a href="../../../../PRODUCCION-3D.md">Plan y punto de reanudación</a></p>
+<h2>Referencia aprobada frente al modelo</h2>
+<div class="grid">
+<figure><div class="ref-focus"><img src="../../../references-3d/technical/01-mascot-orthographic-turnaround.png" alt="Vista frontal de la referencia aprobada"></div><figcaption>Referencia aprobada · encuadre de la hoja original</figcaption></figure>
+<figure><img src="front.png" alt="Frente del modelo actual"><figcaption>Modelo v004 · render real, pendiente de aprobación</figcaption></figure>
+</div>
+<h2>Antes y después</h2>
+<div class="grid">
+<figure><img src="../v001/three-quarter.png" alt="Maqueta v001 anterior"><figcaption>v001 · descartada visualmente</figcaption></figure>
+<figure><img src="three-quarter.png" alt="Modelo v004 corregido"><figcaption>v004 · render real del modelo corregido</figcaption></figure>
+</div>
+<figure class="reference"><img src="../../../references-3d/technical/01-mascot-orthographic-turnaround.png" alt="Hoja artística aprobada"><figcaption>Objetivo artístico aprobado · referencia, NO render del modelo entregado</figcaption></figure>
+<h2>Vistas del modelo corregido</h2>
+<div class="grid">
+<figure><img src="front.png" alt="Frente v004"><figcaption>Frente</figcaption></figure>
+<figure><img src="side.png" alt="Perfil v004"><figcaption>Perfil</figcaption></figure>
+<figure><img src="back.png" alt="Espalda v004"><figcaption>Espalda</figcaption></figure>
+</div>
+<p class="notice">Pendiente de aprobación visual. No es una réplica exacta de la ilustración ni la malla móvil final. Sin rig, animaciones o colisiones. 183.182 triángulos; GLB sin compresión: 8,30 MB. La siguiente etapa técnica requiere transferir detalle a texturas, reducir geometría, preparar deformaciones y probar en el teléfono objetivo.</p>
+<p><small>Galería local sin conexión, no visor interactivo. CPU con dos hilos, 768 × 864 px. La iluminación de estudio no sustituye la prueba en PlayCanvas.</small></p>
+</main>
+</html>

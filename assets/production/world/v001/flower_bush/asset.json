@@ -1,0 +1,31 @@
+{
+  "id": "flower_bush",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 5040,
+  "bounds": {
+    "min": [
+      -0.3224000334739685,
+      -0.3224000036716461,
+      0.050604816526174545
+    ],
+    "max": [
+      0.3224000036716461,
+      0.3224000036716461,
+      0.2879999876022339
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 144700
+}

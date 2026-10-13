@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "defaultLocale": "es-BO",
+  "locales": ["es-BO"],
+  "reviewPolicy": { "blockProductionIfPending": true },
+  "encuentros": [
+    {
+      "id": "enc-tomi-mirador",
+      "castId": "tomi",
+      "isla": "isla-mirador",
+      "anclaje": [0.8, -8.0],
+      "ageModes": ["6-8", "9-12"],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_MIRADOR_L001",
+          "anim": "idle",
+          "review": "VALIDAR",
+          "reviewNote": "texto opcional"
+        },
+        {
+          "id": "l002",
+          "speaker": "tomi",
+          "locId": "ENC_TOMI_MIRADOR_L002",
+          "anim": "idle"
+        }
+      ]
+    },
+    {
+      "id": "enc-luna-muelle",
+      "castId": "luna",
+      "isla": "isla-muelle",
+      "anclaje": [-3.2, 1.5],
+      "ageModes": ["9-12"],
+      "lineas": [
+        {
+          "id": "l001",
+          "speaker": "luna",
+          "locId": "ENC_LUNA_MUELLE_L001",
+          "anim": "wave"
+        }
+      ]
+    }
+  ],
+  "localization": {
+    "es-BO": {
+      "ENC_TOMI_MIRADOR_L001": "Línea de prueba 1",
+      "ENC_TOMI_MIRADOR_L002": "Línea de prueba 2",
+      "ENC_LUNA_MUELLE_L001": "Línea de prueba 3"
+    }
+  }
+}

@@ -1,0 +1,537 @@
+{
+  "schemaVersion": "0.1.0",
+  "contentVersion": "0.1.0-draft",
+  "episodeId": "ep01",
+  "slug": "saludo-que-puedo-elegir",
+  "titleLocId": "EP01_TITLE",
+  "status": "draft-not-validated",
+  "updated": "2026-09-17",
+  "source": "wiki/narrative/isla-de-los-acuerdos-guiones.md#1-episodio-1--saludo-que-puedo-elegir-llegada",
+  "reviewPolicy": {
+    "requiredReviewers": ["psicologia", "proteccion-infantil", "docentes-santa-cruz"],
+    "blockProductionIfPending": true,
+    "note": "Todo nodo con review=VALIDAR debe aprobarse antes de grabar audio o publicar."
+  },
+  "defaultLocale": "es-BO",
+  "locales": ["es-BO"],
+  "ageModes": ["6-8", "9-12"],
+  "estimatedPlayMinutes": { "6-8": 13, "9-12": 16 },
+  "privacy": {
+    "persistChoices": false,
+    "persistFlagsOnly": true,
+    "freeTextInput": false,
+    "telemetry": "none",
+    "note": "Las elecciones del jugador existen solo en memoria (sessionVars) y se borran al salir de la escena o del episodio."
+  },
+  "cast": {
+    "capi": { "model": "mascot/v005", "displayNameLocId": "NAME_CAPI", "nameStatus": "PROPUESTA", "voiceColor": "#2E8B7A" },
+    "tomi": { "model": "npc/child_explorer/v001", "displayNameLocId": "NAME_TOMI", "nameStatus": "PROPUESTA", "voiceColor": "#2F6FB5" },
+    "luna": { "model": "npc/child_wheelchair/v002", "displayNameLocId": "NAME_LUNA", "nameStatus": "PROPUESTA", "voiceColor": "#7A4FB0" },
+    "clara": { "model": "npc/educator/v002", "displayNameLocId": "NAME_CLARA", "nameStatus": "PROPUESTA", "voiceColor": "#1F5F9E" },
+    "beto": { "model": "npc/community_guide/v002", "displayNameLocId": "NAME_BETO", "nameStatus": "PROPUESTA", "voiceColor": "#8A5A2B" },
+    "all": { "model": null, "displayNameLocId": "NAME_ALL" }
+  },
+  "props": ["backpack", "compass", "speech_bubble", "three_cards", "pause_sound"],
+  "environment": ["island_large", "path", "water", "bridge_main", "bridge_small", "fence", "bench", "palm", "tree", "cloud", "lighthouse"],
+  "globalUi": {
+    "pause": {
+      "alwaysVisible": true,
+      "promptLocId": "UI_PAUSE_PROMPT",
+      "options": [
+        { "id": "resume", "locId": "UI_PAUSE_RESUME" },
+        { "id": "map", "locId": "UI_PAUSE_MAP" },
+        { "id": "quit", "locId": "UI_PAUSE_QUIT" }
+      ]
+    },
+    "replayLineButton": true,
+    "bodyCompassHud": { "unlockedBy": "s02_brujula", "states": ["calm", "unsure", "uhoh"] }
+  },
+  "progressFlags": [
+    { "id": "ep01.started", "persist": true },
+    { "id": "ep01.completed", "persist": true },
+    { "id": "ep01.lastScene", "persist": true, "type": "sceneId" },
+    { "id": "island.bridge_main", "persist": true },
+    { "id": "island.bench", "persist": true },
+    { "id": "mascot.star_01", "persist": true },
+    { "id": "ep02.unlocked", "persist": true }
+  ],
+  "sessionVars": [
+    { "id": "greetCapi", "persist": false },
+    { "id": "greetTomi", "persist": false },
+    { "id": "greetBeto", "persist": false },
+    { "id": "insistedLuna", "persist": false }
+  ],
+  "entryScene": "s01_llegada",
+  "scenes": [
+    {
+      "id": "s01_llegada",
+      "environment": { "bridge_main": "broken", "lighthouse": "off" },
+      "camera": "dock_wide",
+      "cast": ["capi"],
+      "onEnter": { "setFlags": ["ep01.started"], "setProgress": { "ep01.lastScene": "s01_llegada" } },
+      "entryNode": "s01_n001",
+      "nodes": [
+        { "id": "s01_n001", "type": "line", "speaker": "capi", "locId": "EP01_S01_L001", "anim": "wave", "emotion": "happy", "audio": "vo/es-BO/EP01_S01_L001.ogg", "next": "s01_n002" },
+        { "id": "s01_n002", "type": "line", "speaker": "capi", "locId": "EP01_S01_L002", "anim": "point_star", "emotion": "happy", "audio": "vo/es-BO/EP01_S01_L002.ogg", "next": "s01_n003" },
+        { "id": "s01_n003", "type": "line", "speaker": "capi", "locId": "EP01_S01_L003", "anim": "look_around", "emotion": "surprised_soft", "audio": "vo/es-BO/EP01_S01_L003.ogg", "next": "s01_n004" },
+        { "id": "s01_n004", "type": "line", "speaker": "capi", "locId": "EP01_S01_L004", "anim": "touch_backpack", "emotion": "calm", "audio": "vo/es-BO/EP01_S01_L004.ogg", "next": "s01_n005" },
+        { "id": "s01_n005", "type": "line", "speaker": "capi", "locId": "EP01_S01_L005", "anim": "nod", "emotion": "happy", "audio": "vo/es-BO/EP01_S01_L005.ogg", "next": "s01_n006" },
+        { "id": "s01_n006", "type": "line", "speaker": "capi", "locId": "EP01_S01_L006", "anim": "head_tilt", "emotion": "curious", "audio": "vo/es-BO/EP01_S01_L006.ogg", "next": "s01_c001" },
+        {
+          "id": "s01_c001", "type": "choice",
+          "options": [
+            { "id": "yes", "locId": "EP01_S01_O001", "icon": "icon_star", "next": "s01_n007" },
+            { "id": "look", "locId": "EP01_S01_O002", "icon": "icon_eye", "next": "s01_n008" }
+          ]
+        },
+        { "id": "s01_n007", "type": "line", "speaker": "capi", "locId": "EP01_S01_L007", "anim": "jump", "emotion": "joy", "audio": "vo/es-BO/EP01_S01_L007.ogg", "next": "s01_end" },
+        { "id": "s01_n008", "type": "line", "speaker": "capi", "locId": "EP01_S01_L008", "anim": "sit_bench", "emotion": "calm", "audio": "vo/es-BO/EP01_S01_L008.ogg", "next": "s01_free" },
+        { "id": "s01_free", "type": "minigame", "minigameId": "free_look", "config": { "continueTrigger": "tap_star", "timeLimitSeconds": null }, "next": "s01_end" },
+        { "id": "s01_end", "type": "sceneChange", "scene": "s02_brujula" }
+      ]
+    },
+    {
+      "id": "s02_brujula",
+      "environment": { "bridge_main": "broken" },
+      "camera": "bench_medium",
+      "cast": ["capi"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s02_brujula" } },
+      "entryNode": "s02_n001",
+      "nodes": [
+        { "id": "s02_n001", "type": "line", "speaker": "capi", "locId": "EP01_S02_L001", "anim": "give_compass", "emotion": "happy", "audio": "vo/es-BO/EP01_S02_L001.ogg", "next": "s02_n002" },
+        { "id": "s02_n002", "type": "line", "speaker": "capi", "locId": "EP01_S02_L002", "anim": "hold_compass", "emotion": "calm", "camera": "compass_closeup", "audio": "vo/es-BO/EP01_S02_L002.ogg", "next": "s02_n003" },
+        { "id": "s02_n003", "type": "line", "speaker": "capi", "locId": "EP01_S02_L003", "anim": "idle", "emotion": "calm", "uiEvent": { "compassPoint": "calm" }, "audio": "vo/es-BO/EP01_S02_L003.ogg", "next": "s02_n004" },
+        { "id": "s02_n004", "type": "line", "speaker": "capi", "locId": "EP01_S02_L004", "anim": "scratch_head", "emotion": "unsure", "uiEvent": { "compassPoint": "unsure" }, "audio": "vo/es-BO/EP01_S02_L004.ogg", "next": "s02_n005" },
+        { "id": "s02_n005", "type": "line", "speaker": "capi", "locId": "EP01_S02_L005", "anim": "uh_face_soft", "emotion": "uhoh_soft", "uiEvent": { "compassPoint": "uhoh" }, "audio": "vo/es-BO/EP01_S02_L005.ogg", "next": "s02_n006" },
+        { "id": "s02_n006", "type": "line", "speaker": "capi", "locId": "EP01_S02_L006", "anim": "touch_belly_cheeks", "emotion": "calm", "reviewNote": "Descripción de señales corporales: comprobar pertinencia para 6-8 y que no sugiera contenido sexual.", "audio": "vo/es-BO/EP01_S02_L006.ogg", "next": "s02_n007" },
+        { "id": "s02_n007", "type": "line", "speaker": "capi", "locId": "EP01_S02_L007", "anim": "invite", "emotion": "happy", "audio": "vo/es-BO/EP01_S02_L007.ogg", "next": "s02_m001" },
+        {
+          "id": "s02_m001", "type": "minigame", "minigameId": "body_compass_practice",
+          "config": {
+            "anyAnswerValid": true,
+            "storeAnswers": false,
+            "cards": [
+              { "id": "fruit", "locId": "EP01_S02_T001", "art": "card_fruit" },
+              { "id": "loud_noise", "locId": "EP01_S02_T002", "art": "card_loud_noise" },
+              { "id": "wobbly_bridge", "locId": "EP01_S02_T003", "art": "card_wobbly_bridge" }
+            ],
+            "answers": [
+              { "id": "calm", "locId": "UI_COMPASS_CALM", "icon": "icon_sun" },
+              { "id": "unsure", "locId": "UI_COMPASS_UNSURE", "icon": "icon_cloud" },
+              { "id": "uhoh", "locId": "UI_COMPASS_UHOH", "icon": "icon_drop_alert" }
+            ],
+            "feedbackAfterEachCard": { "speaker": "capi", "locId": "EP01_S02_F001", "anim": "nod" },
+            "feedbackVariantAfterCard": { "cardIndexFrom": 1, "speaker": "capi", "locId": "EP01_S02_F002", "anim": "smile" }
+          },
+          "next": "s02_n008"
+        },
+        { "id": "s02_n008", "type": "line", "speaker": "capi", "locId": "EP01_S02_L008", "anim": "place_compass_hud", "emotion": "happy", "uiEvent": { "unlockHud": "bodyCompass" }, "audio": "vo/es-BO/EP01_S02_L008.ogg", "next": "s02_end" },
+        { "id": "s02_end", "type": "sceneChange", "scene": "s03_saludo_capi" }
+      ]
+    },
+    {
+      "id": "s03_saludo_capi",
+      "environment": { "bridge_main": "broken" },
+      "camera": "capi_medium",
+      "cast": ["capi"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s03_saludo_capi" } },
+      "entryNode": "s03_n001",
+      "nodes": [
+        { "id": "s03_n001", "type": "line", "speaker": "capi", "locId": "EP01_S03_L001", "anim": "open_arms", "emotion": "happy", "audio": "vo/es-BO/EP01_S03_L001.ogg", "next": "s03_n002" },
+        { "id": "s03_n002", "type": "line", "speaker": "capi", "locId": "EP01_S03_L002", "anim": "ask", "emotion": "curious", "audio": "vo/es-BO/EP01_S03_L002.ogg", "next": "s03_c001" },
+        {
+          "id": "s03_c001", "type": "choice", "layout": "greeting_wheel",
+          "options": [
+            { "id": "wave", "locId": "GREET_WAVE", "icon": "icon_greet_wave", "setSession": { "greetCapi": "wave" }, "next": "s03_r001" },
+            { "id": "high_five", "locId": "GREET_HIGH_FIVE", "icon": "icon_greet_high_five", "setSession": { "greetCapi": "high_five" }, "next": "s03_r002" },
+            { "id": "fist_bump", "locId": "GREET_FIST_BUMP", "icon": "icon_greet_fist", "ageModes": ["9-12"], "setSession": { "greetCapi": "fist_bump" }, "next": "s03_r003" },
+            { "id": "hug", "locId": "GREET_HUG", "icon": "icon_greet_hug", "setSession": { "greetCapi": "hug" }, "next": "s03_r004" },
+            { "id": "distance", "locId": "GREET_DISTANCE", "icon": "icon_greet_distance", "setSession": { "greetCapi": "distance" }, "next": "s03_r005" },
+            { "id": "not_today", "locId": "GREET_NOT_TODAY", "icon": "icon_greet_no", "setSession": { "greetCapi": "none" }, "next": "s03_r006" }
+          ]
+        },
+        { "id": "s03_r001", "type": "line", "speaker": "capi", "locId": "EP01_S03_R001", "anim": "greet_wave", "emotion": "joy", "audio": "vo/es-BO/EP01_S03_R001.ogg", "next": "s03_n003" },
+        { "id": "s03_r002", "type": "line", "speaker": "capi", "locId": "EP01_S03_R002", "anim": "greet_high_five", "emotion": "joy", "audio": "vo/es-BO/EP01_S03_R002.ogg", "next": "s03_n003" },
+        { "id": "s03_r003", "type": "line", "speaker": "capi", "locId": "EP01_S03_R003", "anim": "greet_fist_bump", "emotion": "joy", "audio": "vo/es-BO/EP01_S03_R003.ogg", "next": "s03_n003" },
+        { "id": "s03_r004", "type": "line", "speaker": "capi", "locId": "EP01_S03_R004", "anim": "greet_hug_short", "emotion": "joy", "audio": "vo/es-BO/EP01_S03_R004.ogg", "next": "s03_n003" },
+        { "id": "s03_r005", "type": "line", "speaker": "capi", "locId": "EP01_S03_R005", "anim": "greet_distance", "emotion": "joy", "audio": "vo/es-BO/EP01_S03_R005.ogg", "next": "s03_n003" },
+        { "id": "s03_r006", "type": "line", "speaker": "capi", "locId": "EP01_S03_R006", "anim": "nod_smile", "emotion": "warm", "audio": "vo/es-BO/EP01_S03_R006.ogg", "next": "s03_n003" },
+        { "id": "s03_n003", "type": "line", "speaker": "capi", "locId": "EP01_S03_L003", "anim": "star_glow", "emotion": "happy", "audio": "vo/es-BO/EP01_S03_L003.ogg", "next": "s03_n004" },
+        { "id": "s03_n004", "type": "line", "speaker": "capi", "locId": "EP01_S03_L004", "anim": "ask", "emotion": "curious", "audio": "vo/es-BO/EP01_S03_L004.ogg", "next": "s03_c002" },
+        {
+          "id": "s03_c002", "type": "choice",
+          "options": [
+            { "id": "change", "locId": "EP01_S03_O001", "icon": "icon_change", "next": "s03_c001" },
+            { "id": "keep", "locId": "EP01_S03_O002", "icon": "icon_check", "next": "s03_end" }
+          ]
+        },
+        { "id": "s03_end", "type": "sceneChange", "scene": "s04_tomi" }
+      ]
+    },
+    {
+      "id": "s04_tomi",
+      "environment": { "fence": "fallen" },
+      "camera": "path_medium",
+      "cast": ["capi", "tomi"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s04_tomi" } },
+      "entryNode": "s04_n001",
+      "nodes": [
+        { "id": "s04_n001", "type": "line", "speaker": "tomi", "locId": "EP01_S04_L001", "anim": "jump", "emotion": "excited", "audio": "vo/es-BO/EP01_S04_L001.ogg", "next": "s04_n002" },
+        { "id": "s04_n002", "type": "line", "speaker": "tomi", "locId": "EP01_S04_L002", "anim": "run_open_arms", "emotion": "excited", "audio": "vo/es-BO/EP01_S04_L002.ogg", "next": "s04_n003" },
+        { "id": "s04_n003", "type": "line", "speaker": "capi", "locId": "EP01_S04_L003", "anim": "raise_hand_soft", "emotion": "calm", "reaction": { "tomi": "stop_comic" }, "audio": "vo/es-BO/EP01_S04_L003.ogg", "next": "s04_c001" },
+        {
+          "id": "s04_c001", "type": "choice",
+          "options": [
+            { "id": "ask_first", "locId": "EP01_S04_O001", "icon": "icon_speech_question", "next": "s04_f001" },
+            { "id": "hug_fast", "locId": "EP01_S04_O002", "icon": "icon_greet_hug", "next": "s04_f002" },
+            { "id": "dont_know", "locId": "EP01_S04_O003", "icon": "icon_question", "next": "s04_f003" }
+          ]
+        },
+        { "id": "s04_f001", "type": "line", "speaker": "capi", "locId": "EP01_S04_F001", "anim": "thumbs_up", "emotion": "joy", "feedbackTone": "affirm", "audio": "vo/es-BO/EP01_S04_F001.ogg", "next": "s04_n004" },
+        { "id": "s04_f002", "type": "line", "speaker": "capi", "locId": "EP01_S04_F002", "anim": "explain", "emotion": "calm", "feedbackTone": "gentle_redirect", "audio": "vo/es-BO/EP01_S04_F002.ogg", "next": "s04_n004" },
+        { "id": "s04_f003", "type": "line", "speaker": "capi", "locId": "EP01_S04_F003", "anim": "explain", "emotion": "warm", "feedbackTone": "support", "audio": "vo/es-BO/EP01_S04_F003.ogg", "next": "s04_n004" },
+        { "id": "s04_n004", "type": "line", "speaker": "tomi", "locId": "EP01_S04_L004", "anim": "scratch_head_smile", "emotion": "happy", "audio": "vo/es-BO/EP01_S04_L004.ogg", "next": "s04_c002" },
+        {
+          "id": "s04_c002", "type": "choice", "layout": "greeting_wheel",
+          "options": [
+            { "id": "wave", "locId": "GREET_WAVE", "icon": "icon_greet_wave", "setSession": { "greetTomi": "wave" }, "next": "s04_r001" },
+            { "id": "high_five", "locId": "GREET_HIGH_FIVE", "icon": "icon_greet_high_five", "setSession": { "greetTomi": "high_five" }, "next": "s04_r001" },
+            { "id": "fist_bump", "locId": "GREET_FIST_BUMP", "icon": "icon_greet_fist", "ageModes": ["9-12"], "setSession": { "greetTomi": "fist_bump" }, "next": "s04_r001" },
+            { "id": "hug", "locId": "GREET_HUG", "icon": "icon_greet_hug", "setSession": { "greetTomi": "hug" }, "next": "s04_r001" },
+            { "id": "distance", "locId": "GREET_DISTANCE", "icon": "icon_greet_distance", "setSession": { "greetTomi": "distance" }, "next": "s04_r001" },
+            { "id": "no_thanks", "locId": "GREET_NO_THANKS", "icon": "icon_greet_no", "setSession": { "greetTomi": "none" }, "next": "s04_r002" }
+          ]
+        },
+        { "id": "s04_r001", "type": "line", "speaker": "tomi", "locId": "EP01_S04_R001", "anim": "greet_from_session:greetTomi", "emotion": "joy", "audio": "vo/es-BO/EP01_S04_R001.ogg", "next": "s04_n005" },
+        { "id": "s04_r002", "type": "line", "speaker": "tomi", "locId": "EP01_S04_R002", "anim": "greet_distance", "emotion": "happy", "audio": "vo/es-BO/EP01_S04_R002.ogg", "next": "s04_n005" },
+        { "id": "s04_n005", "type": "line", "speaker": "tomi", "locId": "EP01_S04_L005", "anim": "raise_both_hands", "emotion": "excited", "audio": "vo/es-BO/EP01_S04_L005.ogg", "next": "s04_c003" },
+        {
+          "id": "s04_c003", "type": "choice",
+          "options": [
+            { "id": "yes", "locId": "EP01_S04_O004", "icon": "icon_check", "next": "s04_m001" },
+            { "id": "no_thanks", "locId": "GREET_NO_THANKS", "icon": "icon_greet_no", "next": "s04_r004" }
+          ]
+        },
+        {
+          "id": "s04_m001", "type": "minigame", "minigameId": "high_five_rhythm",
+          "config": {
+            "beatsBeforeQuestion": 3,
+            "speedRequired": false,
+            "stopButton": { "locId": "UI_STOP", "alwaysVisible": true, "keyboard": "Space", "onPress": "s04_r003" },
+            "questionNode": "s04_n006"
+          },
+          "next": "s04_n006"
+        },
+        { "id": "s04_n006", "type": "line", "speaker": "capi", "locId": "EP01_S04_L006", "anim": "small_bubble", "emotion": "curious", "audio": "vo/es-BO/EP01_S04_L006.ogg", "next": "s04_c004" },
+        {
+          "id": "s04_c004", "type": "choice",
+          "options": [
+            { "id": "a_bit_more", "locId": "EP01_S04_O005", "icon": "icon_greet_high_five", "next": "s04_f005" },
+            { "id": "stop", "locId": "EP01_S04_O006", "icon": "icon_stop_hand", "next": "s04_r003" }
+          ]
+        },
+        { "id": "s04_r003", "type": "line", "speaker": "tomi", "locId": "EP01_S04_R003", "anim": "lower_hands_smile", "emotion": "happy", "audio": "vo/es-BO/EP01_S04_R003.ogg", "next": "s04_f004" },
+        { "id": "s04_f004", "type": "line", "speaker": "capi", "locId": "EP01_S04_F004", "anim": "nod", "emotion": "warm", "feedbackTone": "affirm", "reviewNote": "Cambiar de idea después de aceptar un juego de contacto.", "audio": "vo/es-BO/EP01_S04_F004.ogg", "next": "s04_end" },
+        { "id": "s04_f005", "type": "line", "speaker": "capi", "locId": "EP01_S04_F005", "anim": "nod", "emotion": "warm", "feedbackTone": "affirm", "preAction": { "minigameExtraBeats": 2 }, "audio": "vo/es-BO/EP01_S04_F005.ogg", "next": "s04_end" },
+        { "id": "s04_r004", "type": "line", "speaker": "tomi", "locId": "EP01_S04_R004", "anim": "shrug_happy", "emotion": "happy", "audio": "vo/es-BO/EP01_S04_R004.ogg", "next": "s04_f006" },
+        { "id": "s04_f006", "type": "line", "speaker": "capi", "locId": "EP01_S04_F006", "anim": "smile", "emotion": "warm", "feedbackTone": "affirm", "audio": "vo/es-BO/EP01_S04_F006.ogg", "next": "s04_end" },
+        { "id": "s04_end", "type": "sceneChange", "scene": "s05_luna" }
+      ]
+    },
+    {
+      "id": "s05_luna",
+      "environment": { "bridge_small": "broken" },
+      "camera": "small_bridge_medium",
+      "cast": ["capi", "luna"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s05_luna" } },
+      "entryNode": "s05_n001",
+      "nodes": [
+        { "id": "s05_n001", "type": "line", "speaker": "luna", "locId": "EP01_S05_L001", "anim": "wave_turn_chair", "emotion": "happy", "audio": "vo/es-BO/EP01_S05_L001.ogg", "next": "s05_n002" },
+        { "id": "s05_n002", "type": "line", "speaker": "capi", "locId": "EP01_S05_L002", "anim": "invite", "emotion": "happy", "audio": "vo/es-BO/EP01_S05_L002.ogg", "next": "s05_c001" },
+        {
+          "id": "s05_c001", "type": "choice",
+          "options": [
+            { "id": "ask", "locId": "EP01_S05_O001", "icon": "icon_speech_question", "next": "s05_r001" },
+            { "id": "offer_fist", "locId": "EP01_S05_O002", "icon": "icon_greet_fist", "next": "s05_r002" },
+            { "id": "hug_no_ask", "locId": "EP01_S05_O003", "icon": "icon_greet_hug", "next": "s05_r003" }
+          ]
+        },
+        { "id": "s05_r001", "type": "line", "speaker": "luna", "locId": "EP01_S05_R001", "anim": "greet_fist_bump", "emotion": "joy", "audio": "vo/es-BO/EP01_S05_R001.ogg", "next": "s05_n003" },
+        { "id": "s05_r002", "type": "line", "speaker": "luna", "locId": "EP01_S05_R002", "anim": "greet_fist_bump", "emotion": "joy", "audio": "vo/es-BO/EP01_S05_R002.ogg", "next": "s05_f001" },
+        { "id": "s05_f001", "type": "line", "speaker": "capi", "locId": "EP01_S05_F001", "anim": "nod", "emotion": "warm", "feedbackTone": "affirm", "audio": "vo/es-BO/EP01_S05_F001.ogg", "next": "s05_n003" },
+        { "id": "s05_r003", "type": "line", "speaker": "luna", "locId": "EP01_S05_R003", "anim": "open_palm_soft", "emotion": "kind", "audio": "vo/es-BO/EP01_S05_R003.ogg", "next": "s05_c002" },
+        {
+          "id": "s05_c002", "type": "choice",
+          "retryPolicy": { "unlimited": true, "showAttemptCount": false },
+          "options": [
+            { "id": "accept", "locId": "EP01_S05_O004", "icon": "icon_check", "next": "s05_r004" },
+            { "id": "insist", "locId": "EP01_S05_O005", "icon": "icon_greet_hug", "setSession": { "insistedLuna": true }, "next": "s05_r005" }
+          ]
+        },
+        { "id": "s05_r004", "type": "line", "speaker": "luna", "locId": "EP01_S05_R004", "anim": "greet_fist_bump", "emotion": "joy", "audio": "vo/es-BO/EP01_S05_R004.ogg", "next": "s05_n003" },
+        { "id": "s05_r005", "type": "line", "speaker": "luna", "locId": "EP01_S05_R005", "anim": "calm_firm", "emotion": "calm", "audio": "vo/es-BO/EP01_S05_R005.ogg", "next": "s05_f002" },
+        { "id": "s05_f002", "type": "line", "speaker": "capi", "locId": "EP01_S05_F002", "anim": "explain", "emotion": "warm", "feedbackTone": "gentle_redirect", "audio": "vo/es-BO/EP01_S05_F002.ogg", "next": "s05_c002" },
+        { "id": "s05_n003", "type": "line", "speaker": "luna", "locId": "EP01_S05_L003", "anim": "touch_wheel", "emotion": "confident", "reviewNote": "Representación de discapacidad y espacio personal de la silla; revisar con personas con discapacidad.", "audio": "vo/es-BO/EP01_S05_L003.ogg", "next": "s05_c003" },
+        {
+          "id": "s05_c003", "type": "choice",
+          "options": [
+            { "id": "understood", "locId": "EP01_S05_O006", "icon": "icon_check", "next": "s05_r006" },
+            { "id": "offer_help", "locId": "EP01_S05_O007", "icon": "icon_speech_question", "next": "s05_r007" }
+          ]
+        },
+        { "id": "s05_r006", "type": "line", "speaker": "luna", "locId": "EP01_S05_R006", "anim": "thumbs_up", "emotion": "joy", "audio": "vo/es-BO/EP01_S05_R006.ogg", "next": "s05_n004" },
+        { "id": "s05_r007", "type": "line", "speaker": "luna", "locId": "EP01_S05_R007", "anim": "smile_roll_forward", "emotion": "confident", "audio": "vo/es-BO/EP01_S05_R007.ogg", "next": "s05_n004" },
+        { "id": "s05_n004", "type": "line", "speaker": "capi", "locId": "EP01_S05_L004", "anim": "jump", "emotion": "joy", "worldEvent": { "plankFliesTo": "bridge_main" }, "audio": "vo/es-BO/EP01_S05_L004.ogg", "next": "s05_end" },
+        { "id": "s05_end", "type": "sceneChange", "scene": "s06_adultos" }
+      ]
+    },
+    {
+      "id": "s06_adultos",
+      "environment": { "bridge_main": "partially_fixed" },
+      "camera": "bridge_end_medium",
+      "cast": ["capi", "beto", "clara"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s06_adultos" } },
+      "entryNode": "s06_n001",
+      "nodes": [
+        { "id": "s06_n001", "type": "line", "speaker": "beto", "locId": "EP01_S06_L001", "anim": "tip_cap", "emotion": "happy", "audio": "vo/es-BO/EP01_S06_L001.ogg", "next": "s06_n002" },
+        { "id": "s06_n002", "type": "line", "speaker": "beto", "locId": "EP01_S06_L002", "anim": "arms_half_open_no_approach", "emotion": "warm", "audio": "vo/es-BO/EP01_S06_L002.ogg", "next": "s06_c001" },
+        {
+          "id": "s06_c001", "type": "choice", "layout": "greeting_wheel",
+          "options": [
+            { "id": "hug", "locId": "GREET_HUG", "icon": "icon_greet_hug", "setSession": { "greetBeto": "hug" }, "next": "s06_r001" },
+            { "id": "wave", "locId": "GREET_WAVE", "icon": "icon_greet_wave", "setSession": { "greetBeto": "wave" }, "next": "s06_r002" },
+            { "id": "high_five", "locId": "GREET_HIGH_FIVE", "icon": "icon_greet_high_five", "setSession": { "greetBeto": "high_five" }, "next": "s06_r002" },
+            { "id": "distance", "locId": "GREET_DISTANCE", "icon": "icon_greet_distance", "setSession": { "greetBeto": "distance" }, "next": "s06_r002" },
+            { "id": "no_thanks", "locId": "GREET_NO_THANKS", "icon": "icon_greet_no", "setSession": { "greetBeto": "none" }, "next": "s06_r003" }
+          ]
+        },
+        { "id": "s06_r001", "type": "line", "speaker": "beto", "locId": "EP01_S06_R001", "anim": "greet_hug_side_short", "emotion": "joy", "audio": "vo/es-BO/EP01_S06_R001.ogg", "next": "s06_b001" },
+        { "id": "s06_r002", "type": "line", "speaker": "beto", "locId": "EP01_S06_R002", "anim": "greet_from_session:greetBeto", "emotion": "joy", "audio": "vo/es-BO/EP01_S06_R002.ogg", "next": "s06_b001" },
+        { "id": "s06_r003", "type": "line", "speaker": "beto", "locId": "EP01_S06_R003", "anim": "cap_on_smile", "emotion": "warm", "audio": "vo/es-BO/EP01_S06_R003.ogg", "next": "s06_b001" },
+        {
+          "id": "s06_b001", "type": "branch",
+          "conditions": [
+            { "if": { "all": [ { "var": "ageMode", "eq": "9-12" }, { "var": "greetBeto", "neq": "hug" } ] }, "next": "s06_n003" }
+          ],
+          "else": "s06_n004"
+        },
+        { "id": "s06_n003", "type": "line", "speaker": "beto", "locId": "EP01_S06_L003", "anim": "playful_one_step", "emotion": "playful", "ageModes": ["9-12"], "reviewNote": "Adulto conocido que insiste en broma: decidir si se mantiene o se usa voz sin modelo.", "audio": "vo/es-BO/EP01_S06_L003.ogg", "next": "s06_c002" },
+        {
+          "id": "s06_c002", "type": "choice", "ageModes": ["9-12"],
+          "options": [
+            { "id": "said_no", "locId": "EP01_S06_O001", "icon": "icon_stop_hand", "next": "s06_r004" },
+            { "id": "leave", "locId": "EP01_S06_O002", "icon": "icon_walk_away", "next": "s06_f001" },
+            { "id": "call_teacher", "locId": "EP01_S06_O003", "icon": "icon_call_adult", "next": "s06_r006" },
+            { "id": "give_in", "locId": "EP01_S06_O004", "icon": "icon_unsure", "next": "s06_r008" }
+          ]
+        },
+        { "id": "s06_r004", "type": "line", "speaker": "beto", "locId": "EP01_S06_R004", "anim": "step_back_hand_chest", "emotion": "apologetic", "audio": "vo/es-BO/EP01_S06_R004.ogg", "next": "s06_n004" },
+        { "id": "s06_f001", "type": "line", "speaker": "capi", "locId": "EP01_S06_F001", "anim": "walk_with_player", "emotion": "warm", "feedbackTone": "affirm", "audio": "vo/es-BO/EP01_S06_F001.ogg", "next": "s06_r005" },
+        { "id": "s06_r005", "type": "line", "speaker": "beto", "locId": "EP01_S06_R005", "anim": "apologize_from_distance", "emotion": "apologetic", "audio": "vo/es-BO/EP01_S06_R005.ogg", "next": "s06_n004" },
+        { "id": "s06_r006", "type": "line", "speaker": "clara", "locId": "EP01_S06_R006", "anim": "arrive_kind_firm", "emotion": "calm", "audio": "vo/es-BO/EP01_S06_R006.ogg", "next": "s06_r007" },
+        { "id": "s06_r007", "type": "line", "speaker": "beto", "locId": "EP01_S06_R007", "anim": "nod_apologetic", "emotion": "apologetic", "audio": "vo/es-BO/EP01_S06_R007.ogg", "next": "s06_n004" },
+        { "id": "s06_r008", "type": "line", "speaker": "beto", "locId": "EP01_S06_R008", "anim": "stop_notice", "emotion": "caring", "reviewNote": "El adulto se detiene al notar duda; no se muestra abrazo.", "audio": "vo/es-BO/EP01_S06_R008.ogg", "next": "s06_f002" },
+        { "id": "s06_f002", "type": "line", "speaker": "capi", "locId": "EP01_S06_F002", "anim": "come_close", "emotion": "warm", "feedbackTone": "support", "reviewPriority": "critical", "reviewNote": "Cláusula de no culpa si no se pudo decir no.", "audio": "vo/es-BO/EP01_S06_F002.ogg", "next": "s06_f003" },
+        { "id": "s06_f003", "type": "line", "speaker": "capi", "locId": "EP01_S06_F003", "anim": "point_horizon", "emotion": "warm", "feedbackTone": "support", "review": "VALIDAR", "reviewPriority": "critical", "reviewNote": "BORRADOR sin aprobar. Propuesta basada en guía verbal de Arianna (2026-09-18, transcrita) tras la escena de Don Beto: reforzar que la recomendación de contar es hacia una persona adulta de confianza real, fuera del juego — nunca hacia Capi u otro NPC. El concepto lo confirma Arianna; falta su aprobación de esta redacción exacta.", "audio": "vo/es-BO/EP01_S06_F003.ogg", "next": "s06_n004" },
+        { "id": "s06_n004", "type": "line", "speaker": "clara", "locId": "EP01_S06_L004", "anim": "arrive_wave_distance", "emotion": "happy", "audio": "vo/es-BO/EP01_S06_L004.ogg", "next": "s06_n005" },
+        { "id": "s06_n005", "type": "line", "speaker": "clara", "locId": "EP01_S06_L005", "anim": "crouch_eye_level", "emotion": "warm", "audio": "vo/es-BO/EP01_S06_L005.ogg", "next": "s06_n006" },
+        { "id": "s06_n006", "type": "line", "speaker": "clara", "locId": "EP01_S06_L006", "anim": "smile", "emotion": "warm", "audio": "vo/es-BO/EP01_S06_L006.ogg", "next": "s06_end" },
+        { "id": "s06_end", "type": "sceneChange", "scene": "s07_reconstruccion" }
+      ]
+    },
+    {
+      "id": "s07_reconstruccion",
+      "environment": { "bridge_main": "partially_fixed" },
+      "camera": "bridge_wide",
+      "cast": ["capi", "tomi", "luna", "beto", "clara"],
+      "onEnter": { "setProgress": { "ep01.lastScene": "s07_reconstruccion" } },
+      "entryNode": "s07_n001",
+      "nodes": [
+        { "id": "s07_n001", "type": "line", "speaker": "capi", "locId": "EP01_S07_L001", "anim": "point_bridge", "emotion": "joy", "audio": "vo/es-BO/EP01_S07_L001.ogg", "next": "s07_m001" },
+        {
+          "id": "s07_m001", "type": "minigame", "minigameId": "bridge_planks",
+          "config": {
+            "anyOrderValid": true,
+            "inputModes": ["tap_tap", "drag"],
+            "cards": [
+              { "id": "i_choose", "locId": "EP01_S07_T001", "prop": "three_cards" },
+              { "id": "change_mind", "locId": "EP01_S07_T002", "prop": "three_cards" },
+              { "id": "respect_no", "locId": "EP01_S07_T003", "prop": "three_cards" }
+            ],
+            "onPlace": { "sfx": "sfx_plank_soft" }
+          },
+          "next": "s07_n002"
+        },
+        { "id": "s07_n002", "type": "line", "speaker": "capi", "locId": "EP01_S07_L002", "anim": "celebrate", "emotion": "joy", "reviewNote": "Frase «mi cuerpo es mío».", "worldEvent": { "restore": ["bridge_main", "bench"] }, "audio": "vo/es-BO/EP01_S07_L002.ogg", "next": "s07_n003" },
+        { "id": "s07_n003", "type": "line", "speaker": "capi", "locId": "EP01_S07_L003", "anim": "compass_pulse", "emotion": "calm", "uiEvent": { "hudPulse": "bodyCompass" }, "audio": "vo/es-BO/EP01_S07_L003.ogg", "next": "s07_n004" },
+        { "id": "s07_n004", "type": "line", "speaker": "capi", "locId": "EP01_S07_L004", "anim": "look_path", "emotion": "curious", "audio": "vo/es-BO/EP01_S07_L004.ogg", "next": "s07_rw001" },
+        {
+          "id": "s07_rw001", "type": "reward",
+          "restore": ["bridge_main", "bench"],
+          "cosmetic": ["mascot.star_01"],
+          "celebration": { "cast": ["capi", "tomi", "luna", "beto", "clara"], "anim": "cross_bridge_celebrate" },
+          "setFlags": ["island.bridge_main", "island.bench", "mascot.star_01"],
+          "conditionalOnPerformance": false,
+          "next": "s07_n005"
+        },
+        { "id": "s07_n005", "type": "line", "speaker": "capi", "locId": "EP01_S07_L005", "anim": "wave", "emotion": "warm", "audio": "vo/es-BO/EP01_S07_L005.ogg", "next": "s07_end" },
+        {
+          "id": "s07_end", "type": "end",
+          "setFlags": ["ep01.completed", "ep02.unlocked"],
+          "clearSessionVars": true,
+          "debriefScreen": {
+            "titleLocId": "DEBRIEF_TITLE",
+            "childLocId": "DEBRIEF_CHILD",
+            "adultQuestionsLocIds": ["EP01_DB_Q001", "EP01_DB_Q002", "EP01_DB_Q003", "EP01_DB_Q004", "EP01_DB_Q005"],
+            "adultQuestionsAgeModes": { "EP01_DB_Q005": ["9-12"] },
+            "activityLocId": "EP01_DB_ACT001",
+            "familyLocIds": ["EP01_DB_FAM001", "EP01_DB_FAM002"],
+            "adultOnly": true
+          }
+        }
+      ]
+    }
+  ],
+  "localization": {
+    "es-BO": {
+      "EP01_TITLE": "Saludo que puedo elegir",
+      "NAME_CAPI": "Capi",
+      "NAME_TOMI": "Tomi",
+      "NAME_LUNA": "Luna",
+      "NAME_CLARA": "Profe Clara",
+      "NAME_BETO": "Don Beto",
+      "NAME_ALL": "Todos",
+      "UI_PAUSE_PROMPT": "Podemos parar cuando quieras.",
+      "UI_PAUSE_RESUME": "Seguir",
+      "UI_PAUSE_MAP": "Volver al mapa",
+      "UI_PAUSE_QUIT": "Terminar por hoy",
+      "UI_STOP": "¡Para!",
+      "UI_COMPASS_CALM": "Todo tranquilo",
+      "UI_COMPASS_UNSURE": "Hmm, no sé",
+      "UI_COMPASS_UHOH": "¡Uh-oh!",
+      "GREET_WAVE": "Con la mano",
+      "GREET_HIGH_FIVE": "Choca cinco",
+      "GREET_FIST_BUMP": "Choque de puños",
+      "GREET_HUG": "Abrazo",
+      "GREET_DISTANCE": "De lejos, con una sonrisa",
+      "GREET_NOT_TODAY": "Hoy no, gracias",
+      "GREET_NO_THANKS": "No, gracias",
+      "EP01_S01_L001": "¡Hola! Te doy la bienvenida a la Isla de los Acuerdos.",
+      "EP01_S01_L002": "Yo soy Capi. Soy la guía de esta isla.",
+      "EP01_S01_L003": "Anoche sopló un viento travieso. ¡Desordenó caminos y puentes!",
+      "EP01_S01_L004": "Aquí arreglamos la isla con acuerdos.",
+      "EP01_S01_L005": "Un acuerdo es algo que decidimos para cuidarnos.",
+      "EP01_S01_L006": "¿Me ayudas a arreglar el primer puente?",
+      "EP01_S01_O001": "¡Sí, vamos!",
+      "EP01_S01_O002": "Primero quiero mirar",
+      "EP01_S01_L007": "¡Genial! Vamos juntos.",
+      "EP01_S01_L008": "Claro. Mira todo lo que quieras. Toca la estrella cuando quieras seguir.",
+      "EP01_S02_L001": "Te regalo algo de mi mochila: una brújula del cuerpo.",
+      "EP01_S02_L002": "No marca el norte. Marca cómo se siente tu cuerpo.",
+      "EP01_S02_L003": "Sol: todo tranquilo.",
+      "EP01_S02_L004": "Nube: hmm, no estoy seguro.",
+      "EP01_S02_L005": "Uh-oh: algo no se siente bien.",
+      "EP01_S02_L006": "Uh-oh puede sentirse como cosquillas raras en la panza, calor en la cara o ganas de alejarte.",
+      "EP01_S02_L007": "¡Probemos! ¿Qué marca tu brújula?",
+      "EP01_S02_T001": "Comer tu fruta favorita.",
+      "EP01_S02_T002": "Un ruido fuerte de repente.",
+      "EP01_S02_T003": "Cruzar un puente que se mueve.",
+      "EP01_S02_F001": "Tu cuerpo te avisa. Aquí no hay respuestas malas.",
+      "EP01_S02_F002": "A veces dos personas sienten distinto. Las dos brújulas valen.",
+      "EP01_S02_L008": "Tu brújula es tuya. Escucharla te ayuda a elegir.",
+      "EP01_S03_L001": "En esta isla, cada quien elige cómo saludar.",
+      "EP01_S03_L002": "¿Cómo quieres saludarme?",
+      "EP01_S03_R001": "¡Hola, hola!",
+      "EP01_S03_R002": "¡Choca esos cinco!",
+      "EP01_S03_R003": "¡Pum! Choque de puños.",
+      "EP01_S03_R004": "¡Un abrazo! Gracias.",
+      "EP01_S03_R005": "¡Hola desde aquí!",
+      "EP01_S03_R006": "Está bien. Hoy no saludamos. Igual somos amigos.",
+      "EP01_S03_L003": "Cualquier saludo vale si tú lo eliges.",
+      "EP01_S03_L004": "Y puedes cambiar de idea. Hasta ahora mismo. ¿Quieres cambiar tu saludo?",
+      "EP01_S03_O001": "Sí, quiero cambiar",
+      "EP01_S03_O002": "Así está bien",
+      "EP01_S04_L001": "¡Hola! Soy Tomi. ¡Estoy explorando la isla!",
+      "EP01_S04_L002": "¡Yo abrazo a todos! ¡Ahí voy!",
+      "EP01_S04_L003": "¡Espera, Tomi! ¿Qué se hace antes de saludar?",
+      "EP01_S04_O001": "Preguntar primero",
+      "EP01_S04_O002": "Abrazar rápido",
+      "EP01_S04_O003": "No sé",
+      "EP01_S04_F001": "¡Eso! Preguntar es una forma de cuidar.",
+      "EP01_S04_F002": "A muchos les gustan los abrazos. A otros no. Por eso preguntamos primero.",
+      "EP01_S04_F003": "Te ayudo: primero se pregunta. Así el otro puede elegir.",
+      "EP01_S04_L004": "¡Ah, verdad! ¿Cómo quieres que te salude?",
+      "EP01_S04_R001": "¡Listo!",
+      "EP01_S04_R002": "¡Está bien! Te saludo de lejos.",
+      "EP01_S04_L005": "¿Jugamos a chocar las manos súper rápido?",
+      "EP01_S04_O004": "¡Sí!",
+      "EP01_S04_L006": "¿Sigues queriendo jugar?",
+      "EP01_S04_O005": "Un poco más",
+      "EP01_S04_O006": "¡Para, ya no quiero!",
+      "EP01_S04_R003": "¡Ok, paro! Gracias por avisarme.",
+      "EP01_S04_F004": "Dijiste que sí y después cambiaste de idea. Eso también se vale.",
+      "EP01_S04_F005": "Muy bien. Si en algún momento ya no quieres, puedes decir «para».",
+      "EP01_S04_R004": "¡Bueno, otro día!",
+      "EP01_S04_F006": "Dijiste que no y Tomi te escuchó. Así se juega.",
+      "EP01_S05_L001": "¡Hola! Soy Luna. Estoy mirando este puente roto.",
+      "EP01_S05_L002": "Ahora te toca a ti. ¿Cómo saludas a Luna?",
+      "EP01_S05_O001": "¿Cómo te gustaría saludar?",
+      "EP01_S05_O002": "¿Chocamos puños?",
+      "EP01_S05_O003": "¡Te doy un abrazo!",
+      "EP01_S05_R001": "¡Gracias por preguntar! Hoy prefiero chocar puños. ¡Pum!",
+      "EP01_S05_R002": "¡Sí! ¡Pum!",
+      "EP01_S05_F001": "Ofrecer un saludo y dejar que elija también es preguntar.",
+      "EP01_S05_R003": "Mmm, hoy no quiero abrazos. Gracias.",
+      "EP01_S05_O004": "Está bien. ¿Qué saludo prefieres?",
+      "EP01_S05_O005": "¡Pero un abrazo es más bonito!",
+      "EP01_S05_R004": "Chocar puños. ¡Pum! Gracias por entender.",
+      "EP01_S05_R005": "Te dije que no, gracias.",
+      "EP01_S05_F002": "Cuando alguien dice no, paramos. Así también cuidarán tu no. ¿Probamos otra vez?",
+      "EP01_S05_L003": "Una cosa más: mi silla es parte de mi espacio. Pregúntame antes de empujarla.",
+      "EP01_S05_O006": "¡Entendido!",
+      "EP01_S05_O007": "¿Te ayudo a cruzar?",
+      "EP01_S05_R006": "¡Genial!",
+      "EP01_S05_R007": "Gracias por preguntar. Hoy puedo sola. Si necesito, te aviso.",
+      "EP01_S05_L004": "Pedir permiso y respetar la respuesta. ¡Eso es un acuerdo!",
+      "EP01_S06_L001": "¡Buenas, buenas! Soy Don Beto. Cuido los caminos de la isla.",
+      "EP01_S06_L002": "¡Qué alegría verte! ¿Me das un abrazo de bienvenida?",
+      "EP01_S06_R001": "¡Gracias! Bienvenida y bienvenido a todos.",
+      "EP01_S06_R002": "¡Claro! Así entonces.",
+      "EP01_S06_R003": "Está bien. ¡Igual me alegra verte!",
+      "EP01_S06_L003": "¡Ándale, un abracito nomás!",
+      "EP01_S06_O001": "Dije que no, gracias.",
+      "EP01_S06_O002": "Me voy con Capi.",
+      "EP01_S06_O003": "Voy a llamar a la profe.",
+      "EP01_S06_O004": "Bueno…",
+      "EP01_S06_R004": "Tienes razón. Perdón por insistir.",
+      "EP01_S06_F001": "Alejarte también es una forma de cuidarte.",
+      "EP01_S06_R005": "¡Tienes razón! Perdón.",
+      "EP01_S06_R006": "Beto, eligió no abrazar. Respetemos eso.",
+      "EP01_S06_R007": "Tienes razón, profe. Perdón.",
+      "EP01_S06_R008": "Espera… te veo dudando. Mejor un saludo con la mano.",
+      "EP01_S06_F002": "A veces cuesta decir no. Si no puedes, no es tu culpa. Y siempre lo puedes contar.",
+      "EP01_S06_F003": "Fuera de la isla, se lo puedes contar a una persona grande de confianza de tu familia o tu escuela.",
+      "EP01_S06_L004": "Hola, soy la profe Clara. Vine a ver el puente.",
+      "EP01_S06_L005": "Puedes ser amable y elegir tu saludo.",
+      "EP01_S06_L006": "Las personas grandes también respetamos tu elección.",
+      "EP01_S07_L001": "¡Mira! Con lo que practicaste, podemos arreglar el puente.",
+      "EP01_S07_T001": "Yo elijo mi saludo.",
+      "EP01_S07_T002": "Puedo cambiar de idea.",
+      "EP01_S07_T003": "Respeto el no de los demás.",
+      "EP01_S07_L002": "Acuerdo de hoy: mi cuerpo es mío. Yo elijo mi saludo y respeto el de los demás.",
+      "EP01_S07_L003": "Y si tu brújula marca uh-oh, lo puedes contar a una persona grande de confianza.",
+      "EP01_S07_L004": "¡Pronto vamos a buscar a esas personas!",
+      "EP01_S07_L005": "Gracias por ayudarme. Ahora conversemos con tu profe o tu familia.",
+      "DEBRIEF_TITLE": "¡A conversar!",
+      "DEBRIEF_CHILD": "¡Arreglaste el puente! Ahora conversa con tu profe o tu familia.",
+      "EP01_DB_Q001": "¿Qué formas de saludar vimos en la isla? ¿Cuál más se les ocurre?",
+      "EP01_DB_Q002": "¿Qué hizo Tomi antes de saludar, después de que Capi lo detuvo? ¿Por qué sirve preguntar?",
+      "EP01_DB_Q003": "Luna dijo «hoy no quiero abrazos». ¿Qué se hace cuando alguien dice no?",
+      "EP01_DB_Q004": "¿Una niña o un niño puede decirle «no, gracias» a un abrazo de una persona grande? ¿Cómo lo puede decir con amabilidad?",
+      "EP01_DB_Q005": "Si alguien insiste aunque dijiste no, ¿qué más puedes hacer?",
+      "EP01_DB_ACT001": "Mi cartel de saludos: dibuja tres saludos que te gustan, sin nombres ni fotos. En parejas, pregunten: «¿Cómo te gustaría que te salude?» y respeten la respuesta.",
+      "EP01_DB_FAM001": "¿Cómo te gusta saludar a la familia cuando llegan visitas?",
+      "EP01_DB_FAM002": "Si no tienes ganas de dar un beso o un abrazo, ¿qué otro saludo podrías hacer?"
+    }
+  }
+}

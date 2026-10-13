@@ -1,0 +1,31 @@
+{
+  "id": "heart_token",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1084,
+  "bounds": {
+    "min": [
+      -0.4000000059604645,
+      -0.03750000149011612,
+      -0.06476777791976929
+    ],
+    "max": [
+      0.4000000059604645,
+      0.03750000149011612,
+      0.6577571630477905
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 56856
+}

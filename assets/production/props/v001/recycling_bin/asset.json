@@ -1,0 +1,37 @@
+{
+  "id": "recycling_bin",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2688,
+  "bounds": {
+    "min": [
+      -0.33000001311302185,
+      -0.2849999964237213,
+      0.0
+    ],
+    "max": [
+      0.33000001311302185,
+      0.2849999964237213,
+      0.7900000214576721
+    ]
+  },
+  "anchors": {
+    "opening": [
+      0,
+      0,
+      0.78
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 116864
+}

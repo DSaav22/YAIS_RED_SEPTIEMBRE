@@ -1,0 +1,1270 @@
+{
+  "version": "v001",
+  "assets": [
+    {
+      "id": "island_large",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 43324,
+      "bounds": {
+        "min": [
+          -3.1260762214660645,
+          -3.1424803733825684,
+          -1.5407148599624634
+        ],
+        "max": [
+          3.1455135345458984,
+          3.154935836791992,
+          0.24539995193481445
+        ]
+      },
+      "anchors": {
+        "edge_0": [
+          3.0,
+          0.0,
+          0
+        ],
+        "edge_1": [
+          1.8369701987210297e-16,
+          3.0,
+          0
+        ],
+        "edge_2": [
+          -3.0,
+          3.6739403974420594e-16,
+          0
+        ],
+        "edge_3": [
+          -5.51091059616309e-16,
+          -3.0,
+          0
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.2
+          ],
+          "size": [
+            4.26,
+            4.26,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            2.37,
+            0.0,
+            -0.2
+          ],
+          "size": [
+            1.1400000000000001,
+            3.4799999999999995,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            1.4512064569896134e-16,
+            2.37,
+            -0.2
+          ],
+          "size": [
+            3.4799999999999995,
+            1.1400000000000001,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            -2.37,
+            2.902412913979227e-16,
+            -0.2
+          ],
+          "size": [
+            1.1400000000000001,
+            3.4799999999999995,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            -4.3536193709688407e-16,
+            -2.37,
+            -0.2
+          ],
+          "size": [
+            3.4799999999999995,
+            1.1400000000000001,
+            0.4
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 1448024
+    },
+    {
+      "id": "island_small",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 39940,
+      "bounds": {
+        "min": [
+          -1.810381293296814,
+          -1.8018741607666016,
+          -1.53262460231781
+        ],
+        "max": [
+          1.8212416172027588,
+          1.809990406036377,
+          0.24539995193481445
+        ]
+      },
+      "anchors": {
+        "edge_0": [
+          1.6,
+          0.0,
+          0
+        ],
+        "edge_1": [
+          9.797174393178826e-17,
+          1.6,
+          0
+        ],
+        "edge_2": [
+          -1.6,
+          1.9594348786357652e-16,
+          0
+        ],
+        "edge_3": [
+          -2.9391523179536476e-16,
+          -1.6,
+          0
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.2
+          ],
+          "size": [
+            2.272,
+            2.272,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            1.2640000000000002,
+            0.0,
+            -0.2
+          ],
+          "size": [
+            0.6080000000000001,
+            1.8559999999999999,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            7.739767770611274e-17,
+            1.2640000000000002,
+            -0.2
+          ],
+          "size": [
+            1.8559999999999999,
+            0.6080000000000001,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            -1.2640000000000002,
+            1.5479535541222547e-16,
+            -0.2
+          ],
+          "size": [
+            0.6080000000000001,
+            1.8559999999999999,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            -2.3219303311833815e-16,
+            -1.2640000000000002,
+            -0.2
+          ],
+          "size": [
+            1.8559999999999999,
+            0.6080000000000001,
+            0.4
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 1264660
+    },
+    {
+      "id": "grass_tile",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 10456,
+      "bounds": {
+        "min": [
+          -1.0,
+          -1.0,
+          -0.23999999463558197
+        ],
+        "max": [
+          1.0,
+          1.0,
+          0.19279998540878296
+        ]
+      },
+      "anchors": {
+        "north": [
+          0,
+          1,
+          0
+        ],
+        "south": [
+          0,
+          -1,
+          0
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.1
+          ],
+          "size": [
+            2,
+            2,
+            0.2
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 296688
+    },
+    {
+      "id": "path_straight",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 10644,
+      "bounds": {
+        "min": [
+          -1.0,
+          -1.0,
+          -0.23999999463558197
+        ],
+        "max": [
+          1.0,
+          1.0,
+          0.19279998540878296
+        ]
+      },
+      "anchors": {
+        "north": [
+          0,
+          1,
+          0
+        ],
+        "south": [
+          0,
+          -1,
+          0
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.1
+          ],
+          "size": [
+            2,
+            2,
+            0.2
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 302432
+    },
+    {
+      "id": "path_corner",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 10504,
+      "bounds": {
+        "min": [
+          -1.0,
+          -1.0,
+          -0.23999999463558197
+        ],
+        "max": [
+          1.0,
+          1.0,
+          0.19279998540878296
+        ]
+      },
+      "anchors": {
+        "north": [
+          0,
+          1,
+          0
+        ],
+        "south": [
+          0,
+          -1,
+          0
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.1
+          ],
+          "size": [
+            2,
+            2,
+            0.2
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 299472
+    },
+    {
+      "id": "water_tile",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 12476,
+      "bounds": {
+        "min": [
+          -1.0,
+          -1.0,
+          -0.17000000178813934
+        ],
+        "max": [
+          1.0,
+          1.0,
+          0.01900000125169754
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 302948
+    },
+    {
+      "id": "bridge_straight",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 6844,
+      "bounds": {
+        "min": [
+          -0.8170000314712524,
+          -1.0670000314712524,
+          -0.02499999850988388
+        ],
+        "max": [
+          0.8170000314712524,
+          1.066999912261963,
+          0.8824999928474426
+        ]
+      },
+      "anchors": {
+        "start": [
+          0,
+          -1.06,
+          0.1
+        ],
+        "end": [
+          0,
+          1.06,
+          0.1
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            -0.01
+          ],
+          "size": [
+            1.52,
+            2.08,
+            0.16
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            -0.73,
+            0,
+            0.45
+          ],
+          "size": [
+            0.1,
+            2,
+            0.75
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.73,
+            0,
+            0.45
+          ],
+          "size": [
+            0.1,
+            2,
+            0.75
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 178496
+    },
+    {
+      "id": "bridge_curved",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 12596,
+      "bounds": {
+        "min": [
+          -0.8075413703918457,
+          -1.9859684705734253,
+          -0.02499999850988388
+        ],
+        "max": [
+          1.026991605758667,
+          1.9859682321548462,
+          0.8824999928474426
+        ]
+      },
+      "anchors": {
+        "start": [
+          -0.236,
+          -1.414,
+          0.1
+        ],
+        "end": [
+          -0.236,
+          1.414,
+          0.1
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            -0.23578643798828125,
+            -1.4142135381698608,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": -0.7853981633974483
+        },
+        {
+          "shape": "box",
+          "center": [
+            -0.031966011971235275,
+            -1.1755704879760742,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": -0.6283185307179586
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.13201305270195007,
+            -0.9079809784889221,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": -0.47123889803846897
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.2521130442619324,
+            -0.6180340051651001,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": -0.3141592653589793
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.3253766894340515,
+            -0.3128689229488373,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": -0.15707963267948966
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.3499999940395355,
+            0.0,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.0
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.3253766894340515,
+            0.3128689229488373,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.15707963267948966
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.2521130442619324,
+            0.6180340051651001,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.3141592653589793
+        },
+        {
+          "shape": "box",
+          "center": [
+            0.13201305270195007,
+            0.9079809784889221,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.47123889803846897
+        },
+        {
+          "shape": "box",
+          "center": [
+            -0.031966011971235275,
+            1.1755704879760742,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.6283185307179586
+        },
+        {
+          "shape": "box",
+          "center": [
+            -0.23578643798828125,
+            1.4142135381698608,
+            0.03999999910593033
+          ],
+          "size": [
+            1.35,
+            0.29,
+            0.13
+          ],
+          "rotation_z": 0.7853981633974483
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 317136
+    },
+    {
+      "id": "fence_rope",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2576,
+      "bounds": {
+        "min": [
+          -0.9869999885559082,
+          -0.08700000494718552,
+          0.0
+        ],
+        "max": [
+          0.9869999885559082,
+          0.08700000494718552,
+          0.8625000715255737
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            0.4
+          ],
+          "size": [
+            1.96,
+            0.14,
+            0.8
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 68568
+    },
+    {
+      "id": "fence_wood",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2568,
+      "bounds": {
+        "min": [
+          -0.9869999885559082,
+          -0.08700000494718552,
+          0.0
+        ],
+        "max": [
+          0.9869999885559082,
+          0.08700000494718552,
+          0.8625000715255737
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            0.4
+          ],
+          "size": [
+            1.96,
+            0.14,
+            0.8
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 69248
+    },
+    {
+      "id": "stairs_three",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 564,
+      "bounds": {
+        "min": [
+          -0.6200000047683716,
+          -0.6349999904632568,
+          0.0
+        ],
+        "max": [
+          0.6200000047683716,
+          0.6349999904632568,
+          0.6000000238418579
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            -0.42,
+            0.1
+          ],
+          "size": [
+            1.24,
+            0.43,
+            0.2
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0.0,
+            0.2
+          ],
+          "size": [
+            1.24,
+            0.43,
+            0.4
+          ]
+        },
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0.42,
+            0.30000000000000004
+          ],
+          "size": [
+            1.24,
+            0.43,
+            0.6000000000000001
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 15652
+    },
+    {
+      "id": "tree_round",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 23772,
+      "bounds": {
+        "min": [
+          -1.0700002908706665,
+          -0.9000000953674316,
+          -0.004999995231628418
+        ],
+        "max": [
+          1.0800000429153442,
+          0.8578242659568787,
+          2.91695499420166
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "capsule",
+          "center": [
+            0,
+            0,
+            0.73
+          ],
+          "radius": 0.2,
+          "height": 1.46,
+          "axis": "z"
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 658944
+    },
+    {
+      "id": "palm",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 31556,
+      "bounds": {
+        "min": [
+          -1.0287606716156006,
+          -1.1287606954574585,
+          0.002499997615814209
+        ],
+        "max": [
+          1.2287607192993164,
+          1.1287606954574585,
+          2.6783034801483154
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "capsule",
+          "center": [
+            0.05,
+            0,
+            1.1
+          ],
+          "radius": 0.13,
+          "height": 2.2,
+          "axis": "z"
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 857144
+    },
+    {
+      "id": "rock_large",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 80,
+      "bounds": {
+        "min": [
+          -0.4827680289745331,
+          -0.39024218916893005,
+          -0.09738674759864807
+        ],
+        "max": [
+          0.48055505752563477,
+          0.39409634470939636,
+          0.7789738178253174
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            -0.0011064857244491577,
+            0.0019270777702331543,
+            0.34079353511333466
+          ],
+          "size": [
+            0.9633230865001678,
+            0.7843385338783264,
+            0.8763605654239655
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 11260
+    },
+    {
+      "id": "rock_small",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 80,
+      "bounds": {
+        "min": [
+          -0.22621791064739227,
+          -0.22754397988319397,
+          -0.03828808665275574
+        ],
+        "max": [
+          0.23656025528907776,
+          0.20559971034526825,
+          0.35084158182144165
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0.005171172320842743,
+            -0.01097213476896286,
+            0.15627674758434296
+          ],
+          "size": [
+            0.46277816593647003,
+            0.4331436902284622,
+            0.3891296684741974
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 11268
+    },
+    {
+      "id": "flower_bush",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 5040,
+      "bounds": {
+        "min": [
+          -0.3224000334739685,
+          -0.3224000036716461,
+          0.050604816526174545
+        ],
+        "max": [
+          0.3224000036716461,
+          0.3224000036716461,
+          0.2879999876022339
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 144700
+    },
+    {
+      "id": "bench",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2068,
+      "bounds": {
+        "min": [
+          -0.8100000023841858,
+          -0.2900000214576721,
+          0.0
+        ],
+        "max": [
+          0.8100000023841858,
+          0.35055601596832275,
+          1.1349999904632568
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            0.52
+          ],
+          "size": [
+            1.7,
+            0.66,
+            1.06
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 55044
+    },
+    {
+      "id": "cloud",
+      "family": "environment",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 2080,
+      "bounds": {
+        "min": [
+          -0.8000001907348633,
+          -0.40000009536743164,
+          -0.0299999862909317
+        ],
+        "max": [
+          0.8200000524520874,
+          0.40000030398368835,
+          0.8899999856948853
+        ]
+      },
+      "anchors": {},
+      "collider_proposals": [],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 53788
+    },
+    {
+      "id": "lighthouse",
+      "family": "architecture",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 29072,
+      "bounds": {
+        "min": [
+          -1.0407745838165283,
+          -0.9360191822052002,
+          0.0
+        ],
+        "max": [
+          1.0478625297546387,
+          1.0839588642120361,
+          4.649999618530273
+        ]
+      },
+      "anchors": {
+        "door": [
+          0,
+          -0.82,
+          0.12
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            1.55
+          ],
+          "size": [
+            1.2,
+            1.2,
+            3.1
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 845640
+    },
+    {
+      "id": "house",
+      "family": "architecture",
+      "units": "meters",
+      "up": "Z",
+      "front": "-Y",
+      "pivot": "local origin; terrain pivot at walk-surface height",
+      "triangles": 27868,
+      "bounds": {
+        "min": [
+          -1.2324000597000122,
+          -1.5449999570846558,
+          0.0
+        ],
+        "max": [
+          1.2324000597000122,
+          1.024999976158142,
+          3.0789999961853027
+        ]
+      },
+      "anchors": {
+        "door": [
+          0,
+          -1.35,
+          0.2
+        ]
+      },
+      "collider_proposals": [
+        {
+          "shape": "box",
+          "center": [
+            0,
+            0,
+            1.3
+          ],
+          "size": [
+            2.02,
+            1.8,
+            2.6
+          ]
+        }
+      ],
+      "colliders_integrated": false,
+      "status": "visual_candidate",
+      "animations": [],
+      "limitations": [
+        "Static closed model; no interiors or gameplay",
+        "Collision descriptors need implementation and testing in engine"
+      ],
+      "glb_bytes": 758208
+    }
+  ],
+  "reference_sheets": [
+    "04-modular-island-kit-orthographic.png",
+    "05-landmarks-architecture-exploded.png"
+  ],
+  "status": "generated_pending_visual_review"
+}

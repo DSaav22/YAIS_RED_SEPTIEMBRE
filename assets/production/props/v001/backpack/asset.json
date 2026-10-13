@@ -1,0 +1,31 @@
+{
+  "id": "backpack",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 12584,
+  "bounds": {
+    "min": [
+      -0.37399527430534363,
+      -0.2826554775238037,
+      0.0
+    ],
+    "max": [
+      0.37399527430534363,
+      0.5850000381469727,
+      0.7708542943000793
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 335000
+}

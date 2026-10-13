@@ -1,0 +1,56 @@
+{
+  "id": "water_drop",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1792,
+  "bounds": {
+    "min": [
+      -0.23515084385871887,
+      -0.23515084385871887,
+      0
+    ],
+    "max": [
+      0.23515084385871887,
+      0.23515084385871887,
+      0.9600000977516174
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 27344,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/water_drop/water_drop.glb",
+  "glb": "water_drop.glb",
+  "glb_bytes_v001": 34864,
+  "sha256": "fd9b463b5f16b517235d034ed71b0e502fa50efe31ab80a36171d23680f1fdfc",
+  "source_sha256": "333a2cec8867d76ed3c8d23a23a31a11b43790db32e2b31c9a6453b77305e578",
+  "vertices": 960,
+  "bounds_glb": {
+    "min": [
+      -0.2352,
+      0,
+      -0.2352
+    ],
+    "max": [
+      0.2352,
+      0.96,
+      0.2352
+    ]
+  },
+  "size_glb": [
+    0.4703,
+    0.96,
+    0.4703
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

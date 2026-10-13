@@ -1,0 +1,56 @@
+{
+  "id": "speech_bubble",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1372,
+  "bounds": {
+    "min": [
+      -0.41999998688697815,
+      -0.0690000057220459,
+      0.02531173825263977
+    ],
+    "max": [
+      0.41999998688697815,
+      0.04500000178813934,
+      0.6899999976158142
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 45608,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/speech_bubble/speech_bubble.glb",
+  "glb": "speech_bubble.glb",
+  "glb_bytes_v001": 81268,
+  "sha256": "353590732b9b69f6624e9384e7480e82c3cb9b4b8ea26a4b31dd55c13a6f264a",
+  "source_sha256": "9a604a1a95cb1f6c283331c138a63969e31efe82603027ca084cb76d737fdcb1",
+  "vertices": 2214,
+  "bounds_glb": {
+    "min": [
+      -0.42,
+      0.0253,
+      -0.045
+    ],
+    "max": [
+      0.42,
+      0.69,
+      0.069
+    ]
+  },
+  "size_glb": [
+    0.84,
+    0.6648,
+    0.114
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

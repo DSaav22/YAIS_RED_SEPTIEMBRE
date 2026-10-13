@@ -1,0 +1,118 @@
+{
+  "id": "island_small",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 39940,
+  "bounds": {
+    "min": [
+      -1.810381293296814,
+      -1.8018741607666016,
+      -1.53262460231781
+    ],
+    "max": [
+      1.8212416172027588,
+      1.809990406036377,
+      0.24539995193481445
+    ]
+  },
+  "anchors": {
+    "edge_0": [
+      1.6,
+      0.0,
+      0
+    ],
+    "edge_1": [
+      9.797174393178826e-17,
+      1.6,
+      0
+    ],
+    "edge_2": [
+      -1.6,
+      1.9594348786357652e-16,
+      0
+    ],
+    "edge_3": [
+      -2.9391523179536476e-16,
+      -1.6,
+      0
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.2
+      ],
+      "size": [
+        2.272,
+        2.272,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        1.2640000000000002,
+        0.0,
+        -0.2
+      ],
+      "size": [
+        0.6080000000000001,
+        1.8559999999999999,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        7.739767770611274e-17,
+        1.2640000000000002,
+        -0.2
+      ],
+      "size": [
+        1.8559999999999999,
+        0.6080000000000001,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -1.2640000000000002,
+        1.5479535541222547e-16,
+        -0.2
+      ],
+      "size": [
+        0.6080000000000001,
+        1.8559999999999999,
+        0.4
+      ]
+    },
+    {
+      "shape": "box",
+      "center": [
+        -2.3219303311833815e-16,
+        -1.2640000000000002,
+        -0.2
+      ],
+      "size": [
+        1.8559999999999999,
+        0.6080000000000001,
+        0.4
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 1264660
+}

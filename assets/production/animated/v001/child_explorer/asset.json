@@ -1,0 +1,71 @@
+{
+  "id": "child_explorer",
+  "label": "Niño explorador",
+  "version": "v001",
+  "source": "npc/v001/child_explorer/child_explorer.blend",
+  "stage": "first_deformation_rig",
+  "rig": true,
+  "bones": 17,
+  "max_influences": 2,
+  "source_meshes": 121,
+  "export_meshes": 1,
+  "triangles": 57600,
+  "clips": [
+    {
+      "name": "Idle",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Walk",
+      "seconds": 1.6,
+      "frames": 49,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Wave",
+      "seconds": 2.4,
+      "frames": 73,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "Listen",
+      "seconds": 3.2,
+      "frames": 97,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    },
+    {
+      "name": "TalkGesture",
+      "seconds": 2.8,
+      "frames": 85,
+      "fps": 30,
+      "loop": true,
+      "in_place": true
+    }
+  ],
+  "in_place": true,
+  "root_motion": false,
+  "blender_axes": "Z-up / front -Y",
+  "gltf_axes": "Y-up / front +Z",
+  "limitations": [
+    "First deformation pass, not final retopology",
+    "No individual fingers or facial/lip-sync rig",
+    "Original dense fur/geometry retained; no mobile FPS claim",
+    "Runtime collision and navigation not included"
+  ],
+  "locomotion": {
+    "clip": "Walk",
+    "meters_per_cycle": 0.18333333333333335,
+    "duration_seconds": 1.6
+  },
+  "glb_bytes": 2049840
+}

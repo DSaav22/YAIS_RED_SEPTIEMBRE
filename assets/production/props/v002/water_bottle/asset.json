@@ -1,0 +1,56 @@
+{
+  "id": "water_bottle",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2080,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.2449999898672104,
+      0.054999977350234985
+    ],
+    "max": [
+      0.29548096656799316,
+      0.23499999940395355,
+      1.086543321609497
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 42616,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/water_bottle/water_bottle.glb",
+  "glb": "water_bottle.glb",
+  "glb_bytes_v001": 71128,
+  "sha256": "d4dbc5e87c7f3363c421050bba8b8b761a224b5d753d8c1c5c55fcb65edb1e88",
+  "source_sha256": "084e54575db8cb183ac31e03a9e07846ca72ae38f9cbe8d6cf7a8a72aa96b877",
+  "vertices": 1719,
+  "bounds_glb": {
+    "min": [
+      -0.235,
+      0.055,
+      -0.235
+    ],
+    "max": [
+      0.2955,
+      1.0865,
+      0.245
+    ]
+  },
+  "size_glb": [
+    0.5305,
+    1.0315,
+    0.4799
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

@@ -1,0 +1,56 @@
+{
+  "id": "path_straight",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 10644,
+  "bounds": {
+    "min": [
+      -1.0,
+      -1.0,
+      -0.23999999463558197
+    ],
+    "max": [
+      1.0,
+      1.0,
+      0.19279998540878296
+    ]
+  },
+  "anchors": {
+    "north": [
+      0,
+      1,
+      0
+    ],
+    "south": [
+      0,
+      -1,
+      0
+    ]
+  },
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        -0.1
+      ],
+      "size": [
+        2,
+        2,
+        0.2
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 302432
+}

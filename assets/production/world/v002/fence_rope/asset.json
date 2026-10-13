@@ -1,0 +1,70 @@
+{
+  "id": "fence_rope",
+  "family": "environment",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2576,
+  "bounds": {
+    "min": [
+      -0.9869999885559082,
+      -0.08700000494718552,
+      0
+    ],
+    "max": [
+      0.9869999885559082,
+      0.08700000494718552,
+      0.8625000715255737
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [
+    {
+      "shape": "box",
+      "center": [
+        0,
+        0,
+        0.4
+      ],
+      "size": [
+        1.96,
+        0.14,
+        0.8
+      ]
+    }
+  ],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 42848,
+  "version": "v002",
+  "derived_from": "assets/production/world/v001/fence_rope/fence_rope.glb",
+  "glb": "fence_rope.glb",
+  "glb_bytes_v001": 68568,
+  "sha256": "67d74a03e634b91d711c158759497559e20ac14424e9b2f1cda99cba520e23ab",
+  "source_sha256": "f0255a9e4a95423f8f4d4d0d3156749719a0b03cce6b59f4cea598909051a7d7",
+  "vertices": 1581,
+  "bounds_glb": {
+    "min": [
+      -0.987,
+      0,
+      -0.087
+    ],
+    "max": [
+      0.987,
+      0.8625,
+      0.087
+    ]
+  },
+  "size_glb": [
+    1.974,
+    0.8625,
+    0.174
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

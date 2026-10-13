@@ -1,0 +1,110 @@
+/* Controles táctiles: joystick para caminar y botones para girar la cámara.
+   Reutiliza los tokens de `tokens.css` (ver `juego.css`): ningún color ni
+   medida nueva se define aquí.
+
+   Fijos abajo, por encima del mundo (mismo z-index que el resto de paneles
+   flotantes de `juego.css`), y sin desbordar a 375 px de ancho: los dos
+   grupos se reparten los bordes de la pantalla y dejan el centro libre para
+   el diálogo. */
+.controles-tactiles {
+  position: fixed;
+  inset-block-end: var(--espacio-2);
+  inset-inline: var(--espacio-2);
+  z-index: 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: var(--espacio-2);
+  pointer-events: none;
+}
+
+.controles-tactiles__joystick,
+.controles-tactiles__camara {
+  pointer-events: auto;
+}
+
+/* El área de arrastre es más grande que el círculo dibujado: un dedo grande
+   sobre una pantalla chica no siempre baja exacto sobre el centro visual, y
+   `pointerdown` tiene que capturarse en toda la zona, no solo en el disco. */
+.controles-tactiles__joystick {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 7rem;
+  block-size: 7rem;
+  border-radius: 50%;
+  /* Anillo translúcido, como el de la captura de referencia: el control se
+     ve, pero no tapa el trozo de mundo que hay debajo. El borde opaco es lo
+     que lo separa del fondo; el relleno puede ser suave. */
+  background-color: color-mix(in srgb, var(--color-superficie) 55%, transparent);
+  border: 3px solid var(--color-acento);
+  backdrop-filter: blur(2px);
+  /* Sin esto, arrastrar el pulgar hace scroll de la página en vez de mover
+     al personaje: es el fallo más común de un joystick táctil mal hecho. */
+  touch-action: none;
+}
+
+/* El pulgar es un adorno dentro del círculo, no el elemento que hay que
+   distinguir: con `opacity: 0.35` ronda 2:1 y no llegaría al 3:1 que pide
+   un elemento no textual. Quien cumple ese 3:1 es el borde de 2px del
+   contenedor, que es lo que dibuja el control contra el mundo. El comentario
+   anterior atribuía aquí el 7.80:1 de `--color-acento` a plena opacidad, que
+   no es lo que se está pintando (revisión de content-guardian). */
+.controles-tactiles__joystick-base {
+  inline-size: 3.25rem;
+  block-size: 3.25rem;
+  border-radius: 50%;
+  background-color: var(--color-acento);
+  opacity: 0.55;
+  /* Lo mueve el componente con `--empuje-x` / `--empuje-y` mientras el dedo
+     arrastra: un joystick cuyo pulgar no se mueve no parece un joystick, y
+     no hay forma de ver cuánto se está pidiendo. */
+  translate: var(--empuje-x, 0) var(--empuje-y, 0);
+}
+
+.controles-tactiles__camara {
+  display: flex;
+  align-items: flex-end;
+  gap: var(--espacio-1);
+}
+
+/* El de saltar es el más grande y el más a la derecha, donde cae el pulgar:
+   es el que más se usa mientras se cruzan las piedras de paso. */
+.controles-tactiles__boton-saltar {
+  order: 1;
+  inline-size: 4.25rem;
+  block-size: 4.25rem;
+  font-size: 1.75rem;
+}
+
+.controles-tactiles__boton-camara {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  inline-size: 3.5rem;
+  block-size: 3.5rem;
+  background-color: color-mix(in srgb, var(--color-superficie) 80%, transparent);
+  border: 3px solid var(--color-acento);
+  /* Redondos, como los botones de acción de la referencia. */
+  border-radius: 50%;
+  color: var(--color-acento);
+  font-size: 1.5rem;
+  line-height: 1;
+  /* `touch-action: manipulation` evita el retraso de 300ms que algunos
+     navegadores móviles aplican antes de disparar el toque, sin desactivar
+     el pellizco para hacer zoom en el resto de la página. */
+  touch-action: manipulation;
+}
+
+@media (max-width: 30rem) {
+  .controles-tactiles {
+    inset-block-end: var(--espacio-1);
+    inset-inline: var(--espacio-1);
+  }
+
+  .controles-tactiles__joystick {
+    inline-size: 6rem;
+    block-size: 6rem;
+  }
+}

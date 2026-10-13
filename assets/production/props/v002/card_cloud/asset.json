@@ -1,0 +1,56 @@
+{
+  "id": "card_cloud",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 1240,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.0729999989271164,
+      0.005000025033950806
+    ],
+    "max": [
+      0.23499999940395355,
+      0.029999999329447746,
+      0.7150000333786011
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 21944,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/card_cloud/card_cloud.glb",
+  "glb": "card_cloud.glb",
+  "glb_bytes_v001": 34732,
+  "sha256": "5f5f99e1052b3a89b612e0c68483c68171e62d510bb0bbd6466e7a45330ca9e8",
+  "source_sha256": "87ade0bf2f58ef3419059a41f85208b0ad530fb55b2008cfcb1f905ad9867882",
+  "vertices": 785,
+  "bounds_glb": {
+    "min": [
+      -0.235,
+      0.005,
+      -0.03
+    ],
+    "max": [
+      0.235,
+      0.715,
+      0.073
+    ]
+  },
+  "size_glb": [
+    0.47,
+    0.71,
+    0.103
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

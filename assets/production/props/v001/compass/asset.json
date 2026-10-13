@@ -1,0 +1,37 @@
+{
+  "id": "compass",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 3376,
+  "bounds": {
+    "min": [
+      -0.3700000047683716,
+      -0.1420000046491623,
+      0.06999999284744263
+    ],
+    "max": [
+      0.3700000047683716,
+      0.060000013560056686,
+      0.9730000495910645
+    ]
+  },
+  "anchors": {
+    "grip": [
+      0,
+      0,
+      0.88
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 104620
+}

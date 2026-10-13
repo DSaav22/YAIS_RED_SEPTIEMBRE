@@ -1,0 +1,56 @@
+{
+  "id": "card_leaf",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 740,
+  "bounds": {
+    "min": [
+      -0.23499999940395355,
+      -0.15000000596046448,
+      0.005000025033950806
+    ],
+    "max": [
+      0.23499999940395355,
+      0.04400000348687172,
+      0.7150000333786011
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 13664,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/card_leaf/card_leaf.glb",
+  "glb": "card_leaf.glb",
+  "glb_bytes_v001": 21172,
+  "sha256": "6e2f4c59b5cfbb4bbc7bc8e103f1e5c824ce7e1f51caf2bbb915e7206d63e6d6",
+  "source_sha256": "35fdd83bb50c126bb3f7a10e880d7f37eae2b944f7ce3cc8572b83e4073040b9",
+  "vertices": 455,
+  "bounds_glb": {
+    "min": [
+      -0.235,
+      0.005,
+      -0.044
+    ],
+    "max": [
+      0.235,
+      0.715,
+      0.15
+    ]
+  },
+  "size_glb": [
+    0.47,
+    0.71,
+    0.194
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

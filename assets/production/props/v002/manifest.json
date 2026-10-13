@@ -1,0 +1,689 @@
+{
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/manifest.json",
+  "stage": "quantized_for_runtime",
+  "lossless": false,
+  "compression": "none",
+  "requires_extensions": [
+    "KHR_mesh_quantization"
+  ],
+  "pipeline": [
+    "dedup",
+    "weld(tolerance=0)",
+    "prune(keepAttributes=false)",
+    "join",
+    "quantize(pos=14,normal=10,color=8,texcoord=12)"
+  ],
+  "note": "Variante optimizada de v001, generada por optimize.mjs. Mismo recuento de triángulos que v001: solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization, soportado de serie por three.js). Sin Draco ni meshopt: el runtime no empaqueta decodificador. v001 queda intacto como fuente y es la referencia de arte. `size_glb` es la caja real medida en el espacio del GLB (Y arriba): [ancho X, alto Y, largo Z] en metros.",
+  "assets": [
+    {
+      "id": "backpack",
+      "glb": "backpack/backpack.glb",
+      "sha256": "2b37cc7b432c1859b126eb62da25d4ee7c664821e950285672563fd86dfe3000",
+      "source_sha256": "689e328a8af2f8dd45a568d35b4ce1c00573885b2e29a846eaa073161f5739ae",
+      "source_glb": "assets/production/props/v001/backpack/backpack.glb",
+      "bytes": 206352,
+      "bytes_v001": 335000,
+      "triangles": 12584,
+      "vertices": 8011,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.374,
+          0,
+          -0.585
+        ],
+        "max": [
+          0.374,
+          0.7709,
+          0.2827
+        ]
+      },
+      "size_glb": [
+        0.748,
+        0.7708,
+        0.8677
+      ]
+    },
+    {
+      "id": "banana_peel",
+      "glb": "banana_peel/banana_peel.glb",
+      "sha256": "469c0ed0a7c0e69abacdbc1fc32719a8b40e2a21f49913be2805539ed1f27bdb",
+      "source_sha256": "eb7d121f59485705c57ea82e496f08b5905188eb6656370f76d5746db863b1c1",
+      "source_glb": "assets/production/props/v001/banana_peel/banana_peel.glb",
+      "bytes": 4576,
+      "bytes_v001": 6792,
+      "triangles": 84,
+      "vertices": 168,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.16,
+          0,
+          -0.09
+        ],
+        "max": [
+          0.19,
+          0.022,
+          0.09
+        ]
+      },
+      "size_glb": [
+        0.35,
+        0.022,
+        0.18
+      ]
+    },
+    {
+      "id": "card_cloud",
+      "glb": "card_cloud/card_cloud.glb",
+      "sha256": "5f5f99e1052b3a89b612e0c68483c68171e62d510bb0bbd6466e7a45330ca9e8",
+      "source_sha256": "87ade0bf2f58ef3419059a41f85208b0ad530fb55b2008cfcb1f905ad9867882",
+      "source_glb": "assets/production/props/v001/card_cloud/card_cloud.glb",
+      "bytes": 21944,
+      "bytes_v001": 34732,
+      "triangles": 1240,
+      "vertices": 785,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.235,
+          0.005,
+          -0.03
+        ],
+        "max": [
+          0.235,
+          0.715,
+          0.073
+        ]
+      },
+      "size_glb": [
+        0.47,
+        0.71,
+        0.103
+      ]
+    },
+    {
+      "id": "card_leaf",
+      "glb": "card_leaf/card_leaf.glb",
+      "sha256": "6e2f4c59b5cfbb4bbc7bc8e103f1e5c824ce7e1f51caf2bbb915e7206d63e6d6",
+      "source_sha256": "35fdd83bb50c126bb3f7a10e880d7f37eae2b944f7ce3cc8572b83e4073040b9",
+      "source_glb": "assets/production/props/v001/card_leaf/card_leaf.glb",
+      "bytes": 13664,
+      "bytes_v001": 21172,
+      "triangles": 740,
+      "vertices": 455,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.235,
+          0.005,
+          -0.044
+        ],
+        "max": [
+          0.235,
+          0.715,
+          0.15
+        ]
+      },
+      "size_glb": [
+        0.47,
+        0.71,
+        0.194
+      ]
+    },
+    {
+      "id": "card_sun",
+      "glb": "card_sun/card_sun.glb",
+      "sha256": "429b9d013044d09a2a10f121f1aae0013ee9ddec6b65e81ad3398b2d1bd32ca0",
+      "source_sha256": "2f3f527f2fd23842d9dc47233c7c6893d93ceaaa80ec3bacfa2f31bc9d08c106",
+      "source_glb": "assets/production/props/v001/card_sun/card_sun.glb",
+      "bytes": 32620,
+      "bytes_v001": 52252,
+      "triangles": 1880,
+      "vertices": 1213,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.235,
+          0.005,
+          -0.03
+        ],
+        "max": [
+          0.235,
+          0.715,
+          0.061
+        ]
+      },
+      "size_glb": [
+        0.47,
+        0.71,
+        0.091
+      ]
+    },
+    {
+      "id": "circle_of_three",
+      "glb": "circle_of_three/circle_of_three.glb",
+      "sha256": "12b5cf76d0ddd297cbefa4c654bbbfa86adc67e83b3695d9a1b92f1a8ce75eb9",
+      "source_sha256": "cae272289f287cc9afbbfcbd5d91ce95a59a294b56b211a19891c74414f7a54f",
+      "source_glb": "assets/production/props/v001/circle_of_three/circle_of_three.glb",
+      "bytes": 42252,
+      "bytes_v001": 67740,
+      "triangles": 2436,
+      "vertices": 1563,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.39,
+          -0.005,
+          -0.22
+        ],
+        "max": [
+          0.39,
+          0.565,
+          0.185
+        ]
+      },
+      "size_glb": [
+        0.78,
+        0.57,
+        0.405
+      ]
+    },
+    {
+      "id": "compass",
+      "glb": "compass/compass.glb",
+      "sha256": "aada4786b2ad43e6186cd7d31cd64089e6fdd768e4501b65754a7588d1d98eab",
+      "source_sha256": "18ee1fbc3ef9db3ea8655f94e600d743e191e5b8ee0e4577029fead56984b7aa",
+      "source_glb": "assets/production/props/v001/compass/compass.glb",
+      "bytes": 63928,
+      "bytes_v001": 104620,
+      "triangles": 3376,
+      "vertices": 2481,
+      "material_primitives": 5,
+      "bounds_glb": {
+        "min": [
+          -0.37,
+          0.07,
+          -0.06
+        ],
+        "max": [
+          0.37,
+          0.973,
+          0.142
+        ]
+      },
+      "size_glb": [
+        0.74,
+        0.903,
+        0.2019
+      ]
+    },
+    {
+      "id": "crumpled_wrapper",
+      "glb": "crumpled_wrapper/crumpled_wrapper.glb",
+      "sha256": "29ed5a586b7c8c34a85b3ae46be79d3fd0450cb4acd1e3c4bd6751403bb4c55e",
+      "source_sha256": "009a6290d4bc15aa1738412d84342d5efc87dc462baf6bfcc92a22e5f945d2ea",
+      "source_glb": "assets/production/props/v001/crumpled_wrapper/crumpled_wrapper.glb",
+      "bytes": 3756,
+      "bytes_v001": 4856,
+      "triangles": 48,
+      "vertices": 96,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.07,
+          0,
+          -0.055
+        ],
+        "max": [
+          0.08,
+          0.045,
+          0.05
+        ]
+      },
+      "size_glb": [
+        0.15,
+        0.045,
+        0.105
+      ]
+    },
+    {
+      "id": "disposable_cup",
+      "glb": "disposable_cup/disposable_cup.glb",
+      "sha256": "4b20e4a21aadd278181c89b59b58b077f76331f484d1e56834085bd43485cdfb",
+      "source_sha256": "aa9af773478721efa97cae2906f0a258ebd3e987c500522cb0870b405dc08875",
+      "source_glb": "assets/production/props/v001/disposable_cup/disposable_cup.glb",
+      "bytes": 3684,
+      "bytes_v001": 5188,
+      "triangles": 56,
+      "vertices": 96,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.05,
+          -0.002,
+          -0.118
+        ],
+        "max": [
+          0.05,
+          0.098,
+          0
+        ]
+      },
+      "size_glb": [
+        0.1,
+        0.1,
+        0.118
+      ]
+    },
+    {
+      "id": "folded_map",
+      "glb": "folded_map/folded_map.glb",
+      "sha256": "7abc9b7d21beeba843f7c7eeea1d18bc0e45235261e779d6f2a28a463d0a57f4",
+      "source_sha256": "bf62f7fd03ac6ba7a2411a339671e50eadad78f00999255c4e10cad211f0766f",
+      "source_glb": "assets/production/props/v001/folded_map/folded_map.glb",
+      "bytes": 55824,
+      "bytes_v001": 91868,
+      "triangles": 3360,
+      "vertices": 2195,
+      "material_primitives": 5,
+      "bounds_glb": {
+        "min": [
+          -0.439,
+          0.015,
+          -0.0376
+        ],
+        "max": [
+          0.439,
+          0.705,
+          0.075
+        ]
+      },
+      "size_glb": [
+        0.8779,
+        0.69,
+        0.1126
+      ]
+    },
+    {
+      "id": "gift_box",
+      "glb": "gift_box/gift_box.glb",
+      "sha256": "8c19b65a7c18b1d223ed9f0de4173860628422ac64d21d3b6ca1430c32c87116",
+      "source_sha256": "24d45b93c27cc06f80687830bb3821f20d22b4b9a9eb3e57612a326ca44d518d",
+      "source_glb": "assets/production/props/v001/gift_box/gift_box.glb",
+      "bytes": 40504,
+      "bytes_v001": 67924,
+      "triangles": 2568,
+      "vertices": 1545,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.325,
+          0,
+          -0.29
+        ],
+        "max": [
+          0.325,
+          0.925,
+          0.29
+        ]
+      },
+      "size_glb": [
+        0.65,
+        0.925,
+        0.58
+      ]
+    },
+    {
+      "id": "heart_token",
+      "glb": "heart_token/heart_token.glb",
+      "sha256": "b4bc2456924b170f22adca2b495bee1f26ef56ba44690a3f865e51032597085f",
+      "source_sha256": "89cfad169261067de2e8c4c4eaacddf914c19fdb5998d6accc83bd74f3f5698a",
+      "source_glb": "assets/production/props/v001/heart_token/heart_token.glb",
+      "bytes": 40580,
+      "bytes_v001": 56856,
+      "triangles": 1084,
+      "vertices": 2052,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.4,
+          -0.0648,
+          -0.0375
+        ],
+        "max": [
+          0.4,
+          0.6578,
+          0.0375
+        ]
+      },
+      "size_glb": [
+        0.8,
+        0.7226,
+        0.075
+      ]
+    },
+    {
+      "id": "pause_button",
+      "glb": "pause_button/pause_button.glb",
+      "sha256": "c6486bdbca1c68b4453d0d33896bd9fbe3cf6f737ac1e0be67108f0a944ad606",
+      "source_sha256": "68b8e5d025bf740c2da1ff2e34bc32071a67b21bec54047891cc76afb051f307",
+      "source_glb": "assets/production/props/v001/pause_button/pause_button.glb",
+      "bytes": 19900,
+      "bytes_v001": 31400,
+      "triangles": 1044,
+      "vertices": 689,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.35,
+          0.04,
+          -0.045
+        ],
+        "max": [
+          0.35,
+          0.74,
+          0.082
+        ]
+      },
+      "size_glb": [
+        0.7,
+        0.7,
+        0.127
+      ]
+    },
+    {
+      "id": "puzzle_blue",
+      "glb": "puzzle_blue/puzzle_blue.glb",
+      "sha256": "ec58caee265f6d39d22ed6ef196fd1ab7db30e4259f687010487587778043f71",
+      "source_sha256": "dc681a3e78537c806b5fb6236c63321e216939b5ba50fdc4ca79add3879be44a",
+      "source_glb": "assets/production/props/v001/puzzle_blue/puzzle_blue.glb",
+      "bytes": 11288,
+      "bytes_v001": 18296,
+      "triangles": 500,
+      "vertices": 439,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.23,
+          0.07,
+          -0.0425
+        ],
+        "max": [
+          0.376,
+          0.676,
+          0.0425
+        ]
+      },
+      "size_glb": [
+        0.606,
+        0.606,
+        0.085
+      ]
+    },
+    {
+      "id": "puzzle_red",
+      "glb": "puzzle_red/puzzle_red.glb",
+      "sha256": "03aab351589de5f82f93d0fa00cb466455736b8e68478ca2c14aeb6e71f16a2d",
+      "source_sha256": "cc5a9c41c18a39398ac359a4ea08a2c2ab3bdf62f29c1f3b4bf30b096bc9aa4c",
+      "source_glb": "assets/production/props/v001/puzzle_red/puzzle_red.glb",
+      "bytes": 11284,
+      "bytes_v001": 18292,
+      "triangles": 500,
+      "vertices": 439,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.23,
+          0.07,
+          -0.0425
+        ],
+        "max": [
+          0.376,
+          0.676,
+          0.0425
+        ]
+      },
+      "size_glb": [
+        0.606,
+        0.606,
+        0.085
+      ]
+    },
+    {
+      "id": "puzzle_yellow",
+      "glb": "puzzle_yellow/puzzle_yellow.glb",
+      "sha256": "6e05e378803b86b2d5884e6919f7c56f2917989799f15658bc1d9811aa665cf6",
+      "source_sha256": "db763595e6258c985d71afd3a320db5502d3cda3466a07db4ce825bb45a87531",
+      "source_glb": "assets/production/props/v001/puzzle_yellow/puzzle_yellow.glb",
+      "bytes": 11272,
+      "bytes_v001": 18280,
+      "triangles": 500,
+      "vertices": 439,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.23,
+          0.07,
+          -0.0425
+        ],
+        "max": [
+          0.376,
+          0.676,
+          0.0425
+        ]
+      },
+      "size_glb": [
+        0.606,
+        0.606,
+        0.085
+      ]
+    },
+    {
+      "id": "recycling_bin",
+      "glb": "recycling_bin/recycling_bin.glb",
+      "sha256": "f96bf8760f7eec2cba03d0644efb77228da6ca165a0896ee171a1462a1d843a8",
+      "source_sha256": "0be4d32b87ec2f963a59105aab46f26f87a7170576b010a0429d718e47ce9c4d",
+      "source_glb": "assets/production/props/v001/recycling_bin/recycling_bin.glb",
+      "bytes": 67576,
+      "bytes_v001": 116864,
+      "triangles": 2688,
+      "vertices": 3051,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.33,
+          0,
+          -0.285
+        ],
+        "max": [
+          0.33,
+          0.79,
+          0.285
+        ]
+      },
+      "size_glb": [
+        0.66,
+        0.79,
+        0.57
+      ]
+    },
+    {
+      "id": "sealed_envelope",
+      "glb": "sealed_envelope/sealed_envelope.glb",
+      "sha256": "106236bbc9e36717d8eec37c587502e790c9690183a8c58c1fa29125b75e9151",
+      "source_sha256": "1a5ffa122557100c06e3abbab98451224ae61821c14503c65a32c3e8d29a5702",
+      "source_glb": "assets/production/props/v001/sealed_envelope/sealed_envelope.glb",
+      "bytes": 60272,
+      "bytes_v001": 105224,
+      "triangles": 2196,
+      "vertices": 2779,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.36,
+          0.01,
+          -0.04
+        ],
+        "max": [
+          0.36,
+          0.51,
+          0.105
+        ]
+      },
+      "size_glb": [
+        0.72,
+        0.5,
+        0.145
+      ]
+    },
+    {
+      "id": "seedling",
+      "glb": "seedling/seedling.glb",
+      "sha256": "bb6503c07ccc93e2c790660a97d6e523e006f74b7c8a551cb1260c3d058f29af",
+      "source_sha256": "32235a8b9372c2f4caf11a65db7d499fa09a252b3926b37b10c7ee06e62f9fd4",
+      "source_glb": "assets/production/props/v001/seedling/seedling.glb",
+      "bytes": 33972,
+      "bytes_v001": 56928,
+      "triangles": 1248,
+      "vertices": 1360,
+      "material_primitives": 6,
+      "bounds_glb": {
+        "min": [
+          -0.3328,
+          -0.025,
+          -0.25
+        ],
+        "max": [
+          0.353,
+          0.672,
+          0.25
+        ]
+      },
+      "size_glb": [
+        0.6858,
+        0.697,
+        0.5
+      ]
+    },
+    {
+      "id": "sound_button",
+      "glb": "sound_button/sound_button.glb",
+      "sha256": "afff86e2f2e702868f377db15f2e5446b512974b5ca2d454585563f84a39a526",
+      "source_sha256": "97384c023dc3ad8abb41ddf69786d44b8bd4ce0a8f313596747398e57dc5c8dd",
+      "source_glb": "assets/production/props/v001/sound_button/sound_button.glb",
+      "bytes": 117340,
+      "bytes_v001": 189964,
+      "triangles": 7096,
+      "vertices": 4509,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.35,
+          0.04,
+          -0.045
+        ],
+        "max": [
+          0.35,
+          0.74,
+          0.09
+        ]
+      },
+      "size_glb": [
+        0.7,
+        0.7,
+        0.135
+      ]
+    },
+    {
+      "id": "speech_bubble",
+      "glb": "speech_bubble/speech_bubble.glb",
+      "sha256": "353590732b9b69f6624e9384e7480e82c3cb9b4b8ea26a4b31dd55c13a6f264a",
+      "source_sha256": "9a604a1a95cb1f6c283331c138a63969e31efe82603027ca084cb76d737fdcb1",
+      "source_glb": "assets/production/props/v001/speech_bubble/speech_bubble.glb",
+      "bytes": 45608,
+      "bytes_v001": 81268,
+      "triangles": 1372,
+      "vertices": 2214,
+      "material_primitives": 2,
+      "bounds_glb": {
+        "min": [
+          -0.42,
+          0.0253,
+          -0.045
+        ],
+        "max": [
+          0.42,
+          0.69,
+          0.069
+        ]
+      },
+      "size_glb": [
+        0.84,
+        0.6648,
+        0.114
+      ]
+    },
+    {
+      "id": "water_bottle",
+      "glb": "water_bottle/water_bottle.glb",
+      "sha256": "d4dbc5e87c7f3363c421050bba8b8b761a224b5d753d8c1c5c55fcb65edb1e88",
+      "source_sha256": "084e54575db8cb183ac31e03a9e07846ca72ae38f9cbe8d6cf7a8a72aa96b877",
+      "source_glb": "assets/production/props/v001/water_bottle/water_bottle.glb",
+      "bytes": 42616,
+      "bytes_v001": 71128,
+      "triangles": 2080,
+      "vertices": 1719,
+      "material_primitives": 3,
+      "bounds_glb": {
+        "min": [
+          -0.235,
+          0.055,
+          -0.235
+        ],
+        "max": [
+          0.2955,
+          1.0865,
+          0.245
+        ]
+      },
+      "size_glb": [
+        0.5305,
+        1.0315,
+        0.4799
+      ]
+    },
+    {
+      "id": "water_drop",
+      "glb": "water_drop/water_drop.glb",
+      "sha256": "fd9b463b5f16b517235d034ed71b0e502fa50efe31ab80a36171d23680f1fdfc",
+      "source_sha256": "333a2cec8867d76ed3c8d23a23a31a11b43790db32e2b31c9a6453b77305e578",
+      "source_glb": "assets/production/props/v001/water_drop/water_drop.glb",
+      "bytes": 27344,
+      "bytes_v001": 34864,
+      "triangles": 1792,
+      "vertices": 960,
+      "material_primitives": 1,
+      "bounds_glb": {
+        "min": [
+          -0.2352,
+          0,
+          -0.2352
+        ],
+        "max": [
+          0.2352,
+          0.96,
+          0.2352
+        ]
+      },
+      "size_glb": [
+        0.4703,
+        0.96,
+        0.4703
+      ]
+    }
+  ],
+  "total_glb_bytes": 978156,
+  "total_glb_bytes_v001": 1591508
+}

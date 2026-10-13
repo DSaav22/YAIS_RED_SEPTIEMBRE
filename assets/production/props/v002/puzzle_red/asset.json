@@ -1,0 +1,56 @@
+{
+  "id": "puzzle_red",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 500,
+  "bounds": {
+    "min": [
+      -0.23000000417232513,
+      -0.042500004172325134,
+      0.07000000774860382
+    ],
+    "max": [
+      0.37599998712539673,
+      0.042500004172325134,
+      0.6759999990463257
+    ]
+  },
+  "anchors": {},
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 11284,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/puzzle_red/puzzle_red.glb",
+  "glb": "puzzle_red.glb",
+  "glb_bytes_v001": 18292,
+  "sha256": "03aab351589de5f82f93d0fa00cb466455736b8e68478ca2c14aeb6e71f16a2d",
+  "source_sha256": "cc5a9c41c18a39398ac359a4ea08a2c2ab3bdf62f29c1f3b4bf30b096bc9aa4c",
+  "vertices": 439,
+  "bounds_glb": {
+    "min": [
+      -0.23,
+      0.07,
+      -0.0425
+    ],
+    "max": [
+      0.376,
+      0.676,
+      0.0425
+    ]
+  },
+  "size_glb": [
+    0.606,
+    0.606,
+    0.085
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}

@@ -1,0 +1,67 @@
+/* Base compartida: reset, tipografía por defecto, foco visible,
+   objetivo táctil reutilizable y `prefers-reduced-motion`
+   (T-001-05, Constitución VII). Depende de los tokens de `tokens.css`;
+   no define colores ni medidas nuevas aquí, solo las aplica. */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0f172a;
+  color: var(--color-texto);
+  font-family: var(--fuente-familia);
+  font-size: var(--fuente-tamano-cuerpo);
+  line-height: var(--fuente-interlineado);
+}
+
+/* Contraste --color-texto sobre --color-fondo: 14.50:1 (texto normal, min 4.5:1). */
+
+:focus-visible {
+  outline: var(--anillo-foco);
+  outline-offset: var(--anillo-foco-separacion);
+}
+
+/* El anillo de foco debe verse "sobre cualquier fondo del sistema"
+   (encargo de T-001-05). Contraste no textual de --color-acento contra
+   los tres fondos que hoy existen, mínimo exigido 3:1:
+     sobre --color-fondo:            6.98:1
+     sobre --color-superficie:       7.80:1
+     sobre --color-borrador-fondo:   6.85:1
+   Si un fondo nuevo baja de 3:1 contra --color-acento, ese fondo no
+   puede usarse detrás de un control enfocable sin revisar el token. */
+
+/* Clase reutilizable para cualquier control interactivo (botón, opción
+   de diálogo, icono con acción): garantiza el objetivo táctil mínimo de
+   AC-6 (44x44px) y da un área de toque cómoda aunque el contenido
+   visual interno sea más pequeño. No fija color ni tipografía: eso lo
+   decide cada componente con los tokens de arriba. */
+.objetivo-tactil {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-inline-size: var(--objetivo-tactil-min);
+  min-block-size: var(--objetivo-tactil-min);
+  padding: var(--espacio-1) var(--espacio-2);
+  gap: var(--espacio-1);
+}
+
+/* AC-7: mientras el usuario tenga prefers-reduced-motion activo, ninguna
+   animación ni transición se ejecuta -incluidas las que agreguen tareas
+   posteriores (cámara, escena, componentes nuevos)-. Sin excepciones. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

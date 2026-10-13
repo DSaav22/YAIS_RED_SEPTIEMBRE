@@ -1,0 +1,62 @@
+{
+  "id": "gift_box",
+  "family": "props",
+  "units": "meters",
+  "up": "Z",
+  "front": "-Y",
+  "pivot": "local origin; terrain pivot at walk-surface height",
+  "triangles": 2568,
+  "bounds": {
+    "min": [
+      -0.32499998807907104,
+      -0.28999999165534973,
+      0
+    ],
+    "max": [
+      0.32499998807907104,
+      0.28999999165534973,
+      0.9249714612960815
+    ]
+  },
+  "anchors": {
+    "lid": [
+      0,
+      0,
+      0.6
+    ]
+  },
+  "collider_proposals": [],
+  "colliders_integrated": false,
+  "status": "visual_candidate",
+  "animations": [],
+  "limitations": [
+    "Static closed model; no interiors or gameplay",
+    "Collision descriptors need implementation and testing in engine"
+  ],
+  "glb_bytes": 40504,
+  "version": "v002",
+  "derived_from": "assets/production/props/v001/gift_box/gift_box.glb",
+  "glb": "gift_box.glb",
+  "glb_bytes_v001": 67924,
+  "sha256": "8c19b65a7c18b1d223ed9f0de4173860628422ac64d21d3b6ca1430c32c87116",
+  "source_sha256": "24d45b93c27cc06f80687830bb3821f20d22b4b9a9eb3e57612a326ca44d518d",
+  "vertices": 1545,
+  "bounds_glb": {
+    "min": [
+      -0.325,
+      0,
+      -0.29
+    ],
+    "max": [
+      0.325,
+      0.925,
+      0.29
+    ]
+  },
+  "size_glb": [
+    0.65,
+    0.925,
+    0.58
+  ],
+  "note": "Variante optimizada de v001: mismo recuento de triángulos, solo cambia la precisión de almacenamiento de los atributos (KHR_mesh_quantization). Sin Draco ni meshopt."
+}
