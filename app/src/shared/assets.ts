@@ -227,7 +227,10 @@ export type PropAssetId =
   | "card_leaf"
   | "card_cloud"
   | "pause_button"
-  | "sound_button";
+  | "sound_button"
+  | "banana_peel"
+  | "disposable_cup"
+  | "crumpled_wrapper";
 
 export interface PropAsset {
   readonly modelUrl: string;
@@ -274,6 +277,9 @@ export const PROP_ASSETS: Readonly<Record<PropAssetId, PropAsset>> = {
   pause_button: { modelUrl: "/assets/props/pause_button/pause_button.glb" },
   // 0.7 x 0.7 x 0.135 m, y 0.04..0.74 — botón de sonido modelado en 3D; sin sitio donde dibujarse todavía
   sound_button: { modelUrl: "/assets/props/sound_button/sound_button.glb" },
+  banana_peel: { modelUrl: "/assets/props/banana_peel/banana_peel.glb" },
+  disposable_cup: { modelUrl: "/assets/props/disposable_cup/disposable_cup.glb" },
+  crumpled_wrapper: { modelUrl: "/assets/props/crumpled_wrapper/crumpled_wrapper.glb" },
 } as const;
 
 /**
@@ -356,4 +362,7 @@ export const PROP_SOURCE_FILES: Readonly<Record<PropAssetId, string>> = {
   card_cloud: "assets/production/props/v002/card_cloud/card_cloud.glb",
   pause_button: "assets/production/props/v002/pause_button/pause_button.glb",
   sound_button: "assets/production/props/v002/sound_button/sound_button.glb",
+  banana_peel: "assets/production/props/v002/banana_peel/banana_peel.glb",
+  disposable_cup: "assets/production/props/v002/disposable_cup/disposable_cup.glb",
+  crumpled_wrapper: "assets/production/props/v002/crumpled_wrapper/crumpled_wrapper.glb",
 } as const;
